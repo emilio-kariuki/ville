@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "457301279566",
+    "project_id": "greendemo-333401",
+    "storage_bucket": "greendemo-333401.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:457301279566:android:08565c1fe9fa7661a4d41f",
+        "android_client_info": {
+          "package_name": "com.example.ville"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "457301279566-onfphfapth14nsal0303ebjd7qh0r7vs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoLGzFiAItCIWKspEwtwvbC3HQW1qfBWM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "457301279566-onfphfapth14nsal0303ebjd7qh0r7vs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

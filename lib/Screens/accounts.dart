@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors_in_immutables, prefer_const_constructors
 
+import 'package:colorful_safe_area/colorful_safe_area.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ville/build/build_icon.dart';
@@ -18,7 +19,8 @@ class _AccountsState extends State<Accounts> {
     final size = MediaQuery.of(context).size;
     return Scaffold(
       extendBody: true,
-      body: SafeArea(
+      body: ColorfulSafeArea(
+        overflowRules: OverflowRules.all(true),
         child: Stack(
           fit: StackFit.expand,
           children: [

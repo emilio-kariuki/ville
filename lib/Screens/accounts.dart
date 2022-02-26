@@ -53,7 +53,7 @@ class _AccountsState extends State<Accounts> {
               ],
             ),
             Padding(
-              padding: const EdgeInsets.only(bottom: 15),
+              padding: const EdgeInsets.only(bottom: 20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -64,11 +64,11 @@ class _AccountsState extends State<Accounts> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 20,bottom: 10),
+              padding: const EdgeInsets.only(left: 20,bottom: 20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Text("Statistics",style: GoogleFonts.roboto(fontSize: 24,color: Color.fromARGB(255, 39, 112, 41),fontWeight: FontWeight.w500))
+                  Text("Statistics",style: GoogleFonts.roboto(fontSize: 23,color: Color.fromARGB(255, 39, 112, 41),fontWeight: FontWeight.w500))
                 ],
               ),
             ),
@@ -95,7 +95,7 @@ class _AccountsState extends State<Accounts> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Text("Recent Posts",style: GoogleFonts.roboto(fontSize: 24,color: Color.fromARGB(255, 39, 112, 41),fontWeight: FontWeight.w500))
+                  Text("Recent Posts",style: GoogleFonts.roboto(fontSize: 23,color: Color.fromARGB(255, 39, 112, 41),fontWeight: FontWeight.w500))
                 ],
               ),
             ),

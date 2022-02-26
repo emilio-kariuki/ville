@@ -47,11 +47,12 @@ class _AccountsState extends State<Accounts> {
                     ))
                ],
                ),
+               Text("Emilio"),
               //  SizedBox(
               //    height: size.height * 0.1,
               //  ),
 
-               AppIcon(iconUrl: 'assets/images/mail.png', func: (){})
+              AppIcon(iconUrl: 'assets/images/mail.png', func: (){})
               
         ],)
       )

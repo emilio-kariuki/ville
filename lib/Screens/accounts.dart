@@ -50,9 +50,9 @@ class _AccountsState extends State<Accounts> {
                SizedBox(
                  height: size.height * 0.1,
                ),
-               Row(children: [
-                 AppIcon(iconUrl: "assets/images/twitter.png", func: (){})
-               ],)
+
+               AppIcon(iconUrl: 'assets/images/mail.png', func: (){})
+              
         ],)
       )
     );

@@ -25,12 +25,13 @@ class _AccountsState extends State<Accounts> {
               child:Image.asset("assets/images/plant.jpg",fit: BoxFit.cover),
             ),
         Positioned(
-          top: 10,
+          top: size.height * 0.2,
             child: Container(
             width: size.width,
-            // height:size.height * 0.3,
+            height:size.height,
             decoration: BoxDecoration(
-              color: Colors.black,
+              borderRadius: BorderRadius.only(topRight: Radius.circular(40),topLeft: Radius.circular(40)),
+              color: Color.fromARGB(255, 255, 255, 255),
             )
               ),
           )

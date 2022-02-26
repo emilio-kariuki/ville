@@ -52,19 +52,37 @@ class _AccountsState extends State<Accounts> {
                 )
               ],
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                AppIcon(iconUrl: "assets/images/mail.png", func: (){}),
-                AppIcon(iconUrl: "assets/images/phone.png", func: (){}),
-                AppIcon(iconUrl: "assets/images/twitter.png", func: (){}),
-              ],
+            Padding(
+              padding: const EdgeInsets.only(bottom: 15),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  AppIcon(iconUrl: "assets/images/mail.png", func: (){}),
+                  AppIcon(iconUrl: "assets/images/phone.png", func: (){}),
+                  AppIcon(iconUrl: "assets/images/twitter.png", func: (){}),
+                ],
+              ),
             ),
-            Row(
-              children: [
-                Text("Statistics",style: GoogleFonts.roboto(fontSize: 26,color: Colors.green))
-              ],
-            )
+            Padding(
+              padding: const EdgeInsets.only(left: 10,bottom: 10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text("Statistics",style: GoogleFonts.roboto(fontSize: 24,color: Color.fromARGB(255, 39, 112, 41),fontWeight: FontWeight.w500))
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 20),
+              child: Row(
+                children: [
+                  Column(children: [
+                    Text("56",style: GoogleFonts.roboto(fontSize: 24,color: Color.fromARGB(255, 39, 112, 41),fontWeight: FontWeight.w500) ),
+                  ],)
+
+                ],
+              ),
+            ),
           ],
         )
       )

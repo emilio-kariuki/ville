@@ -23,13 +23,14 @@ class _AccountsState extends State<Accounts> {
               children: [
                 Container(
                   width: size.width,
-                  height: size.height * 0.24,
+                  height: size.height,
                   child:Image.asset("assets/images/plant.jpg",fit: BoxFit.cover),
                 ),
             Positioned(
               top: 10,
                 child: Container(
                 width: size.width,
+                height:size.height * 0.3,
                 decoration: BoxDecoration(
                   color: Colors.black,
                 )

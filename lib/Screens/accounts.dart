@@ -22,9 +22,19 @@ class _AccountsState extends State<Accounts> {
       extendBody: true,
       body: ColorfulSafeArea(
         overflowRules: OverflowRules.all(true),
-        child: Container(
-          
-        ),
+        child: Stack(
+          alignment: Alignment.center,
+          clipBehavior: Clip.none,
+          children: [
+            Container(
+              height: size.height * 0.22,
+              width: size.width,
+              decoration: BoxDecoration(
+                image: DecorationImage(image: AssetImage("assets/image/plant.jp"))
+              ),
+            )
+          ],
+        )
       )
     );
   }

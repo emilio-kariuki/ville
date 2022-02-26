@@ -29,7 +29,7 @@ class _AccountsState extends State<Accounts> {
               clipBehavior: Clip.none,
               children: [
                 Container(
-                  margin: EdgeInsets.only(bottom: size.height * 0.11),
+                  margin: EdgeInsets.only(bottom: size.height * 0.1),
                   height: size.height * 0.22,
                   width: size.width,
                   decoration: BoxDecoration(
@@ -53,11 +53,16 @@ class _AccountsState extends State<Accounts> {
               ],
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 AppIcon(iconUrl: "assets/images/mail.png", func: (){}),
                 AppIcon(iconUrl: "assets/images/phone.png", func: (){}),
                 AppIcon(iconUrl: "assets/images/twitter.png", func: (){}),
-
+              ],
+            ),
+            Row(
+              children: [
+                Text("Statistics",style: GoogleFonts.roboto(fontSize: 26,color: Colors.green))
               ],
             )
           ],

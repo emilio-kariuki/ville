@@ -114,14 +114,19 @@ class _AccountsState extends State<Accounts> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  ListView(
-                    shrinkWrap: true,
-                    scrollDirection: Axis.horizontal,
-                    // ignore: prefer_const_literals_to_create_immutables
-                    children: [
-                      ListBuilder1(imageUrl: "assets/images/plant.jpg", category: "plastci waste", location: "Dedan kimathi university", action: "Completed"),
-                      ListBuilder1(imageUrl: "assets/images/plant.jpg", category: "plastci waste", location: "Dedan kimathi university", action: "Completed")
-                    ],
+                  Container(
+                    margin: EdgeInsets.all(5.0),
+                    height: size.height * 0.3,
+                    width: size.width * 0.4,
+                    child: ListView(
+                      shrinkWrap: true,
+                      scrollDirection: Axis.horizontal,
+                      // ignore: prefer_const_literals_to_create_immutables
+                      children: [
+                        ListBuilder1(imageUrl: "assets/images/plant.jpg", category: "plastci waste", location: "Dedan kimathi university", action: "Completed"),
+                        ListBuilder1(imageUrl: "assets/images/plant.jpg", category: "plastci waste", location: "Dedan kimathi university", action: "Completed")
+                      ],
+                    ),
                   )
                 ],
               ),

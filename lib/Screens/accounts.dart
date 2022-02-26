@@ -29,7 +29,7 @@ class _AccountsState extends State<Accounts> {
               clipBehavior: Clip.none,
               children: [
                 Container(
-                  margin: EdgeInsets.only(bottom: size.height * 0.1),
+                  margin: EdgeInsets.only(bottom: size.height * 0.07),
                   height: size.height * 0.22,
                   width: size.width,
                   decoration: BoxDecoration(
@@ -51,6 +51,15 @@ class _AccountsState extends State<Accounts> {
                   )
                 )
               ],
+            ),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Center(child: Column(
+                children: [
+                  Text("Jane Doe",style: GoogleFonts.roboto(fontSize: 25,color: Color.fromARGB(255, 18, 51, 19), fontWeight: FontWeight.w700)),
+                  Text("1000 points",style: GoogleFonts.roboto(fontSize: 18,color: Color.fromARGB(255, 18, 51, 19), fontWeight: FontWeight.w600)),
+                ],
+              )),
             ),
             Padding(
               padding: const EdgeInsets.only(bottom: 20),

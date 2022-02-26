@@ -32,7 +32,7 @@ class _AccountsState extends State<Accounts> {
                     child:Image.asset("assets/images/plant.jpg",fit: BoxFit.cover),
                   ),
                   Positioned(
-                    top: size.height * 0.14,
+                    top: size.height * 0.1,
                     child: Container(
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,

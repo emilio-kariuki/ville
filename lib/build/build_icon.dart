@@ -8,11 +8,15 @@ class AppIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BuildContainer(
-      child: GestureDetector(
-        onTap: func,
-        child: Image.asset(iconUrl),
-      ),
+    return Column(
+      children: [
+        BuildContainer(
+          child: GestureDetector(
+            onTap: func,
+            child: Image.asset(iconUrl),
+          ),
+        ),
+      ],
     );
   }
 }

@@ -26,15 +26,13 @@ class _AccountsState extends State<Accounts> {
             ),
         Positioned(
           top: 10,
-            child: Flexible(
-              child: Container(
-              width: size.width,
-              // height:size.height * 0.3,
-              decoration: BoxDecoration(
-                color: Colors.black,
-              )
-                ),
-            ),
+            child: Container(
+            width: size.width,
+            // height:size.height * 0.3,
+            decoration: BoxDecoration(
+              color: Colors.black,
+            )
+              ),
           )
           ],
           

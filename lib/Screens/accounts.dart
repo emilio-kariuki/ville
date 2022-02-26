@@ -23,13 +23,17 @@ class _AccountsState extends State<Accounts> {
           children: [
             FractionallySizedBox(
               alignment: Alignment.topCenter,
-              heightFactor: size.height * 0.2,
-              child: Container(color: Colors.yellow),
+              heightFactor:0.3,
+              child: Container(
+                decoration: BoxDecoration(
+                  image: DecorationImage(image: AssetImage("assets/images/plant.jpg"),fit:BoxFit.cover),
+                ),
+              ),
             ),
             FractionallySizedBox(
-              alignment: Alignment.topCenter,
-              heightFactor: size.height * 0.5,
-              child: Container(color: Color.fromARGB(255, 0, 0, 0)),
+              alignment: Alignment.bottomCenter,
+              heightFactor: 0.7,
+              child: Container(color: Color.fromARGB(255, 150, 44, 44)),
             )
           ],
         ),

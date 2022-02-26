@@ -10,6 +10,7 @@ class BuildContainer extends StatelessWidget {
     return Container(
       height: 45,
       width: 45,
+      margin: EdgeInsets.symmetric(horizontal: 10),
       padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
         color: Color.fromARGB(255, 34, 63, 35),

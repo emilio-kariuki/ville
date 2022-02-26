@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ville/build/build_icon.dart';
+import 'package:ville/build/list_builder.dart';
 
 
 class Accounts extends StatefulWidget {
@@ -108,6 +109,23 @@ class _AccountsState extends State<Accounts> {
                 ],
               ),
             ),
+            Padding(
+              padding: const EdgeInsets.only(left: 20,bottom: 10,top: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  ListView(
+                    scrollDirection: Axis.horizontal,
+                    // ignore: prefer_const_literals_to_create_immutables
+                    children: [
+                      ListBuilder1(imageUrl: "assets/images/plant.jpg", category: "plastci waste", location: "Dedan kimathi university", action: "Completed"),
+                      ListBuilder1(imageUrl: "assets/images/plant.jpg", category: "plastci waste", location: "Dedan kimathi university", action: "Completed")
+                    ],
+                  )
+                ],
+              ),
+            ),
+
           ],
         )
       )

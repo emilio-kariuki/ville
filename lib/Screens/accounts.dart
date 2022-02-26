@@ -47,9 +47,9 @@ class _AccountsState extends State<Accounts> {
                     ))
                ],
                ),
-               SizedBox(
-                 height: size.height * 0.1,
-               ),
+              //  SizedBox(
+              //    height: size.height * 0.1,
+              //  ),
 
                AppIcon(iconUrl: 'assets/images/mail.png', func: (){})
               

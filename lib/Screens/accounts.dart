@@ -23,6 +23,7 @@ class _AccountsState extends State<Accounts> {
               children: [
                 Container(
                   width: size.width,
+                  height: size.height * 0.24,
                   child:Image.asset("assets/images/plant.jpg",fit: BoxFit.cover),
                 ),
             Positioned(

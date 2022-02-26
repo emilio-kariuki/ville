@@ -35,9 +35,13 @@ class _AccountsState extends State<Accounts> {
             ),
             child: Stack(
               children: [
+                Positioned(
+                    child: 
+                  CircleAvatar(backgroundColor: Colors.red,radius: 40,)
+                  ),
                 Column(
                   children: [
-                    
+
                   ],
                 )
               ],)

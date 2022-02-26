@@ -17,28 +17,26 @@ class _AccountsState extends State<Accounts> {
     final size = MediaQuery.of(context).size;
     return Scaffold(
       body: SafeArea(
-        child: Stack(
-          clipBehavior: Clip.none,
+        child: Column(
           children: [
-            Container(
-              width: size.width,
-              height: size.height,
-              child:Image.asset("assets/images/plant.jpg",fit: BoxFit.cover),
-            ),
-        Positioned(
-          top: size.height * 0.2,
-            child: Container(
-            width: size.width,
-            height:size.height,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.only(topRight: Radius.circular(35),topLeft: Radius.circular(35)),
-              color: Color.fromARGB(255, 255, 255, 255),
-            ),
-              ),
-          )
-          ],
-          
-        )
+             Stack(
+               alignment: Alignment.center,
+               clipBehavior: Clip.none,
+               children: [
+                 Container(
+                    width: size.width,
+                    height: size.height * 0.2,
+                    child:Image.asset("assets/images/plant.jpg",fit: BoxFit.cover),
+                  ),
+                  Positioned(
+                    top: size.height * 0.15,
+                    child: CircleAvatar(
+                      backgroundColor: Colors.red,
+                      radius: 40,
+                    ))
+               ],
+               ),
+        ],)
       )
     );
   }

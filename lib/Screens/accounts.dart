@@ -29,7 +29,7 @@ class _AccountsState extends State<Accounts> {
             FractionallySizedBox(
               alignment: Alignment.topCenter,
               heightFactor: size.height * 0.5,
-              child: Container(color: Colors.yellow),
+              child: Container(color: Color.fromARGB(255, 0, 0, 0)),
             )
           ],
         ),

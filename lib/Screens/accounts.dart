@@ -2,6 +2,7 @@
 
 import 'package:colorful_safe_area/colorful_safe_area.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ville/build/build_icon.dart';
 
@@ -26,19 +27,26 @@ class _AccountsState extends State<Accounts> {
           children: [
             FractionallySizedBox(
               alignment: Alignment.topCenter,
-              heightFactor:0.3,
-              child: Container(
+              heightFactor:0.25,
+              child: Stack(
+                alignment: Alignment.center,
+                clipBehavior: Clip.none,
+                children: [
+                  Container(
                 decoration: BoxDecoration(
                   image: DecorationImage(image: AssetImage("assets/images/plant.jpg"),fit:BoxFit.cover),
                 ),
               ),
+              Positioned(
+                top: size.height * 0.05 ,
+                child: CircleAvatar(backgroundColor: Colors.yellow,radius: 40))
+                ],
+              )
             ),
             FractionallySizedBox(
               alignment: Alignment.bottomCenter,
-              heightFactor: 0.7,
-              child: Stack(children: [
-                Container(color: Color.fromARGB(255, 150, 44, 44))
-              ]),
+              heightFactor: 0.75,
+              child: Container(color: Color.fromARGB(255, 150, 44, 44)),
             )
           ],
         ),

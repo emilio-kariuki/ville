@@ -20,7 +20,7 @@ class ListBuilder1 extends StatelessWidget {
     return Container(
         child: Column(children: [
       Container(
-        width: size.width * 0.26,
+        // width: size.width * 0.26,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(30),
               shape: BoxShape.rectangle,

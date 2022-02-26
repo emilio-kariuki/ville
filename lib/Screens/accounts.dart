@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:ville/build/build_icon.dart';
 
 
 class Accounts extends StatefulWidget {
@@ -49,7 +50,9 @@ class _AccountsState extends State<Accounts> {
                SizedBox(
                  height: size.height * 0.1,
                ),
-               Text("Emilio")
+               Row(children: [
+                 AppIcon(iconUrl: "assets/images/twitter.png", func: (){})
+               ],)
         ],)
       )
     );

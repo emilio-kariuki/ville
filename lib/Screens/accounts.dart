@@ -38,16 +38,9 @@ class _AccountsState extends State<Accounts> {
                 ),
                 Positioned(
                   top: size.height * 0.16,
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(100),
-                      shape: BoxShape.circle,
-                      border: Border.all(color: Color.fromARGB(255, 44, 117, 47),width: 5),
-                    ),
-                    child: CircleAvatar(
-                      backgroundImage: AssetImage('assets/images/profile.jpg'),
-                      radius: 50,
-                    ),
+                  child: CircleAvatar(
+                    backgroundImage: AssetImage('assets/images/profile.jpg'),
+                    radius: 50,
                   )
                 )
               ],

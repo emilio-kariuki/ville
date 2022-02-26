@@ -14,9 +14,18 @@ class Accounts extends StatefulWidget {
 class _AccountsState extends State<Accounts> {
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Scaffold(
       body: SafeArea(
-        child: Text("EMilio")
+        child: Column(
+          children: [
+            Container(
+              height: size.height * 0.3,
+              width: size.width,
+              child:Image.asset("assets/images.plant.jpg",fit: BoxFit.cover),
+            )
+          ],
+        )
       )
     );
   }

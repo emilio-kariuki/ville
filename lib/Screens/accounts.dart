@@ -22,33 +22,8 @@ class _AccountsState extends State<Accounts> {
       extendBody: true,
       body: ColorfulSafeArea(
         overflowRules: OverflowRules.all(true),
-        child: Stack(
-          fit: StackFit.expand,
-          children: [
-            FractionallySizedBox(
-              alignment: Alignment.topCenter,
-              heightFactor:0.25,
-              child: Stack(
-                alignment: Alignment.center,
-                clipBehavior: Clip.none,
-                children: [
-                  Container(
-                decoration: BoxDecoration(
-                  image: DecorationImage(image: AssetImage("assets/images/plant.jpg"),fit:BoxFit.cover),
-                ),
-              ),
-              Positioned(
-                top: size.height * 0.05 ,
-                child: CircleAvatar(backgroundColor: Colors.yellow,radius: 40))
-                ],
-              )
-            ),
-            FractionallySizedBox(
-              alignment: Alignment.bottomCenter,
-              heightFactor: 0.75,
-              child: Container(color: Color.fromARGB(255, 150, 44, 44)),
-            )
-          ],
+        child: Container(
+          
         ),
       )
     );

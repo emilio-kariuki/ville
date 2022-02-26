@@ -47,23 +47,10 @@ class _AccountsState extends State<Accounts> {
                     ))
                ],
                ),
-               
                SizedBox(
                  height: size.height * 0.1,
                ),
 
-              //AppIcon(iconUrl: 'assets/images/mail.png', func: (){})
-              Container(alignment: Alignment.center,
-              height: 45,
-              width: 45,
-              decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 34, 63, 35),
-                  borderRadius: BorderRadius.circular(10),
-                  shape: BoxShape.circle,
-                ),
-              )
-
-              
         ],)
       )
     );

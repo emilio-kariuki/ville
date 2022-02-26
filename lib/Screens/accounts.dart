@@ -42,7 +42,7 @@ class _AccountsState extends State<Accounts> {
                     decoration: BoxDecoration(
                       // shape: BoxShape.circle,
                       borderRadius: BorderRadius.circular(100),
-                      border: Border.all(color: Colors.green,width: 4)
+                      border: Border.all(color: Color.fromARGB(255, 46, 119, 49),width: 5)
                     ),
                     child: CircleAvatar(
                       backgroundImage: AssetImage('assets/images/profile.jpg'),
@@ -52,7 +52,14 @@ class _AccountsState extends State<Accounts> {
                 )
               ],
             ),
-            AppIcon(iconUrl: "assets/images/twitter.png", func: (){})
+            Row(
+              children: [
+                AppIcon(iconUrl: "assets/images/mail.png", func: (){}),
+                AppIcon(iconUrl: "assets/images/phone.png", func: (){}),
+                AppIcon(iconUrl: "assets/images/twitter.png", func: (){}),
+
+              ],
+            )
           ],
         )
       )

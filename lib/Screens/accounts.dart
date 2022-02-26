@@ -19,7 +19,9 @@ class _AccountsState extends State<Accounts> {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          child: Image.asset('assets/images/plant.jpg')
+          // height: size.height,
+          // constraints: BoxConstraints.expand(),
+          child: Image.asset('assets/images/plant.jpg',)
         )
       )
     );

@@ -29,10 +29,16 @@ class _AccountsState extends State<Accounts> {
                     child:Image.asset("assets/images/plant.jpg",fit: BoxFit.cover),
                   ),
                   Positioned(
-                    top: size.height * 0.15,
-                    child: CircleAvatar(
-                      backgroundColor: Colors.red,
-                      radius: 40,
+                    top: size.height * 0.14,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        border: Border.all(color: Colors.white,width: 5)
+                      ),
+                      child: CircleAvatar(
+                        backgroundColor: Colors.red,
+                        radius: size.width * 0.15,
+                      ),
                     ))
                ],
                ),

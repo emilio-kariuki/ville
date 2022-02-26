@@ -21,7 +21,7 @@ class _AccountsState extends State<Accounts> {
         child: Container(
           // height: size.height,
           // constraints: BoxConstraints.expand(),
-          child: Image.asset('assets/images/plant.jpg',)
+          child: Image.asset('assets/images/plant.jpg')
         )
       )
     );

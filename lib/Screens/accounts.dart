@@ -22,7 +22,14 @@ class _AccountsState extends State<Accounts> {
           fit: StackFit.expand,
           children: [
             FractionallySizedBox(
-              
+              alignment: Alignment.topCenter,
+              heightFactor: size.height * 0.2,
+              child: Container(color: Colors.yellow),
+            ),
+            FractionallySizedBox(
+              alignment: Alignment.topCenter,
+              heightFactor: size.height * 0.5,
+              child: Container(color: Colors.yellow),
             )
           ],
         ),

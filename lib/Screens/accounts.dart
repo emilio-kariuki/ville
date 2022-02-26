@@ -18,47 +18,14 @@ class _AccountsState extends State<Accounts> {
     final size = MediaQuery.of(context).size;
     return Scaffold(
       body: SafeArea(
-        child: Column(
+        child: Stack(
+          fit: StackFit.expand,
           children: [
-             Expanded(
-               flex: 1,
-               child: Container(
-                 height: size.height * 0.3,
-                 child: Stack(
-                   alignment: Alignment.center,
-                   clipBehavior: Clip.none,
-                   children: [
-                     Container(
-                        width: size.width,
-                        height: size.height * 0.16,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.only(bottomLeft: Radius.circular(30),bottomRight: Radius.circular(30))
-                        ),
-                        child:Image.asset("assets/images/plant.jpg",fit: BoxFit.cover),
-                      ),
-                      Positioned(
-                        top: size.height * 0.1,
-                        child: Container(
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            border: Border.all(color: Colors.white,width: 5)
-                          ),
-                          child: CircleAvatar(
-                            backgroundImage: AssetImage("assets/images/profile.jpg"),
-                            // backgroundColor: Colors.red,
-                            radius: size.width * 0.15,
-                          ),
-                        ))
-                   ],
-                   ),
-               ),
-             ),
-               SizedBox(
-                 height: size.height * 0.1,
-               ),
-               AppIcon(iconUrl: 'assets/images/twitter.png', func: (){})
-
-        ],)
+            FractionallySizedBox(
+              
+            )
+          ],
+        ),
       )
     );
   }

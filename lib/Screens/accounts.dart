@@ -15,9 +15,9 @@ class _AccountsState extends State<Accounts> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      extendBody: true,
-      backgroundColor: Color.fromARGB(255, 245, 96, 10),
-      body: Center(child: Text("Accounts",style: GoogleFonts.roboto(fontSize: 50, color: Colors.white))),
+      body: SafeArea(
+        child: Text("EMilio")
+      )
     );
   }
 }

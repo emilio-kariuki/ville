@@ -40,6 +40,7 @@ class _AccountsState extends State<Accounts> {
                   top: size.height * 0.16,
                   child: Container(
                     decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(100),
                       shape: BoxShape.circle,
                       border: Border.all(color: Color.fromARGB(255, 44, 117, 47),width: 5),
                     ),

@@ -20,10 +20,17 @@ class _AccountsState extends State<Accounts> {
         child: Column(
           children: [
             Container(
-              height: size.height * 0.23,
+              
               width: size.width,
               child:Image.asset("assets/images/plant.jpg",fit: BoxFit.cover),
-            )
+            ),
+            Expanded(
+                child: Container(
+                  width: size.width,
+                  decoration: BoxDecoration(color: Colors.black),
+                  child: Text("Emilio"),
+                )
+              ,)
           ],
         )
       )

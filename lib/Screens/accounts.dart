@@ -22,9 +22,7 @@ class _AccountsState extends State<Accounts> {
       extendBody: true,
       body: ColorfulSafeArea(
         overflowRules: OverflowRules.all(true),
-        child: Column(
-          children: [
-            Stack(
+        child: Stack(
               alignment: Alignment.center,
               clipBehavior: Clip.none,
               children: [
@@ -44,10 +42,8 @@ class _AccountsState extends State<Accounts> {
                   )
                 )
               ],
-            ),
-            AppIcon(iconUrl: "assets/images/twitter.png", func: (){}),
-          ]
-        )
+            )
+
       )
     );
   }

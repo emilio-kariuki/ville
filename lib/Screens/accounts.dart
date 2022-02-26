@@ -115,6 +115,7 @@ class _AccountsState extends State<Accounts> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   ListView(
+                    shrinkWrap: true,
                     scrollDirection: Axis.horizontal,
                     // ignore: prefer_const_literals_to_create_immutables
                     children: [

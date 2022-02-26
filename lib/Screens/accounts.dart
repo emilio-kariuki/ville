@@ -36,7 +36,7 @@ class _AccountsState extends State<Accounts> {
                         border: Border.all(color: Colors.white,width: 5)
                       ),
                       child: CircleAvatar(
-                        backgroundImage: AssetImage("assets/images/plant.jpg"),
+                        backgroundImage: AssetImage("assets/images/profile.jpg"),
                         // backgroundColor: Colors.red,
                         radius: size.width * 0.15,
                       ),

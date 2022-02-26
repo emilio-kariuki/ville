@@ -18,6 +18,7 @@ class _AccountsState extends State<Accounts> {
     return Scaffold(
       body: SafeArea(
         child: Stack(
+          clipBehavior: Clip.none,
           children: [
             Container(
               width: size.width,

@@ -17,6 +17,7 @@ class _AccountsState extends State<Accounts> {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Scaffold(
+      extendBody: true,
       body: SafeArea(
         child: Stack(
           fit: StackFit.expand,
@@ -33,7 +34,9 @@ class _AccountsState extends State<Accounts> {
             FractionallySizedBox(
               alignment: Alignment.bottomCenter,
               heightFactor: 0.7,
-              child: Container(color: Color.fromARGB(255, 150, 44, 44)),
+              child: Stack(children: [
+                Container(color: Color.fromARGB(255, 150, 44, 44))
+              ]),
             )
           ],
         ),

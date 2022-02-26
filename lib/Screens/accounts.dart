@@ -117,7 +117,7 @@ class _AccountsState extends State<Accounts> {
                   Container(
                     margin: EdgeInsets.all(5.0),
                     height: size.height * 0.3,
-                    width: size.width * 0.4,
+                    // width: size.width * 0.3,
                     child: ListView(
                       shrinkWrap: true,
                       scrollDirection: Axis.horizontal,

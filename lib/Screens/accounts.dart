@@ -22,7 +22,9 @@ class _AccountsState extends State<Accounts> {
       extendBody: true,
       body: ColorfulSafeArea(
         overflowRules: OverflowRules.all(true),
-        child: Stack(
+        child: ListView(
+          children: [
+             Stack(
               alignment: Alignment.center,
               clipBehavior: Clip.none,
               children: [
@@ -36,14 +38,23 @@ class _AccountsState extends State<Accounts> {
                 ),
                 Positioned(
                   top: size.height * 0.16,
-                  child: CircleAvatar(
-                    backgroundImage: AssetImage('assets/images/profile.jpg'),
-                    radius: 50,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      // shape: BoxShape.circle,
+                      borderRadius: BorderRadius.circular(100),
+                      border: Border.all(color: Colors.green,width: 4)
+                    ),
+                    child: CircleAvatar(
+                      backgroundImage: AssetImage('assets/images/profile.jpg'),
+                      radius: 50,
+                    ),
                   )
                 )
               ],
-            )
-
+            ),
+            AppIcon(iconUrl: "assets/images/twitter.png", func: (){})
+          ],
+        )
       )
     );
   }

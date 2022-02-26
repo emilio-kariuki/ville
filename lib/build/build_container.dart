@@ -14,7 +14,7 @@ class BuildContainer extends StatelessWidget {
       decoration: BoxDecoration(
         color: Color.fromARGB(255, 34, 63, 35),
         borderRadius: BorderRadius.circular(10),
-        shape: BoxShape.circle,
+        shape: BoxShape.rectangle,
       ),
       child: child,
     );

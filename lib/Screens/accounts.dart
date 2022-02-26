@@ -30,9 +30,17 @@ class _AccountsState extends State<Accounts> {
             width: size.width,
             height:size.height,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.only(topRight: Radius.circular(40),topLeft: Radius.circular(40)),
+              borderRadius: BorderRadius.only(topRight: Radius.circular(35),topLeft: Radius.circular(35)),
               color: Color.fromARGB(255, 255, 255, 255),
-            )
+            ),
+            child: Stack(
+              children: [
+                Column(
+                  children: [
+                    
+                  ],
+                )
+              ],)
               ),
           )
           ],

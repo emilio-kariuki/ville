@@ -64,7 +64,7 @@ class _AccountsState extends State<Accounts> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 10,bottom: 10),
+              padding: const EdgeInsets.only(left: 20,bottom: 10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
@@ -72,14 +72,30 @@ class _AccountsState extends State<Accounts> {
                 ],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 20),
-              child: Row(
-                children: [
-                  Column(children: [
-                    Text("56",style: GoogleFonts.roboto(fontSize: 24,color: Color.fromARGB(255, 39, 112, 41),fontWeight: FontWeight.w500) ),
-                  ],)
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Column(children: [
+                  Text("56",style: GoogleFonts.roboto(fontSize: 21,color: Color.fromARGB(255, 36, 36, 36),fontWeight: FontWeight.w500) ),
+                  Text("Posted",style: GoogleFonts.roboto(fontSize: 19,color: Color.fromARGB(255, 87, 87, 87),fontWeight: FontWeight.w500) )
+                ],),
+                Column(children: [
+                  Text("56",style: GoogleFonts.roboto(fontSize: 21,color: Color.fromARGB(255, 36, 36, 36),fontWeight: FontWeight.w500) ),
+                  Text("Posted",style: GoogleFonts.roboto(fontSize: 19,color: Color.fromARGB(255, 87, 87, 87),fontWeight: FontWeight.w500) )
+                ],),
+                Column(children: [
+                  Text("56",style: GoogleFonts.roboto(fontSize: 21,color: Color.fromARGB(255, 36, 36, 36),fontWeight: FontWeight.w500) ),
+                  Text("Posted",style: GoogleFonts.roboto(fontSize: 19,color: Color.fromARGB(255, 87, 87, 87),fontWeight: FontWeight.w500) )
+                ],)
 
+              ],
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 20,bottom: 10,top: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text("Recent Posts",style: GoogleFonts.roboto(fontSize: 24,color: Color.fromARGB(255, 39, 112, 41),fontWeight: FontWeight.w500))
                 ],
               ),
             ),

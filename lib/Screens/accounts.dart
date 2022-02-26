@@ -30,7 +30,7 @@ class _AccountsState extends State<Accounts> {
               height: size.height * 0.22,
               width: size.width,
               decoration: BoxDecoration(
-                image: DecorationImage(image: AssetImage("assets/image/plant.jp"))
+                image: DecorationImage(image: AssetImage("assets/image/plant.jpg"),fit:BoxFit.cover)
               ),
             )
           ],

@@ -32,6 +32,15 @@ class _AccountsState extends State<Accounts> {
               decoration: BoxDecoration(
                 image: DecorationImage(image: AssetImage("assets/images/plant.jpg"),fit:BoxFit.cover)
               ),
+            ),
+            Positioned(
+              top: size.height * 0.16,
+              child: Container(
+                child: CircleAvatar(
+                  backgroundImage: AssetImage('assets/images/profile.jpg'),
+                  radius: 50,
+                ),
+              )
             )
           ],
         )

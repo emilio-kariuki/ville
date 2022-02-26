@@ -19,18 +19,24 @@ class _AccountsState extends State<Accounts> {
       body: SafeArea(
         child: Column(
           children: [
-            Container(
-              
-              width: size.width,
-              child:Image.asset("assets/images/plant.jpg",fit: BoxFit.cover),
-            ),
-            Expanded(
-                child: Container(
+            Stack(
+              children: [
+                Container(
                   width: size.width,
-                  decoration: BoxDecoration(color: Colors.black),
-                  child: Text("Emilio"),
+                  child:Image.asset("assets/images/plant.jpg",fit: BoxFit.cover),
+                ),
+            Positioned(
+              top: 10,
+                child: Container(
+                width: size.width,
+                decoration: BoxDecoration(
+                  color: Colors.black,
                 )
-              ,)
+                  ),
+              )
+              ],
+              
+            )
           ],
         )
       )

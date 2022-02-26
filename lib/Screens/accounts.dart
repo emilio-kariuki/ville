@@ -22,31 +22,37 @@ class _AccountsState extends State<Accounts> {
       extendBody: true,
       body: ColorfulSafeArea(
         overflowRules: OverflowRules.all(true),
-        child: Stack(
-          alignment: Alignment.center,
-          clipBehavior: Clip.none,
+        child: Column(
           children: [
-            Container(
-              height: size.height * 0.22,
-              width: size.width,
-              decoration: BoxDecoration(
-                image: DecorationImage(image: AssetImage("assets/images/plant.jpg"),fit:BoxFit.cover)
-              ),
+            Stack(
+              alignment: Alignment.center,
+              clipBehavior: Clip.none,
+              children: [
+                Container(
+                  margin: EdgeInsets.only(bottom: size.height * 0.11),
+                  height: size.height * 0.22,
+                  width: size.width,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(image: AssetImage("assets/images/plant.jpg"),fit:BoxFit.cover)
+                  ),
+                ),
+                Positioned(
+                  top: size.height * 0.16,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      border: Border.all(color: Color.fromARGB(255, 44, 117, 47),width: 5),
+                    ),
+                    child: CircleAvatar(
+                      backgroundImage: AssetImage('assets/images/profile.jpg'),
+                      radius: 50,
+                    ),
+                  )
+                )
+              ],
             ),
-            Positioned(
-              top: size.height * 0.16,
-              child: Container(
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  border: Border.all(color: Color.fromARGB(255, 44, 117, 47),width: 5),
-                ),
-                child: CircleAvatar(
-                  backgroundImage: AssetImage('assets/images/profile.jpg'),
-                  radius: 50,
-                ),
-              )
-            )
-          ],
+            AppIcon(iconUrl: "assets/images/twitter.png", func: (){}),
+          ]
         )
       )
     );

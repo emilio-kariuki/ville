@@ -3,8 +3,11 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
 import "package:flutter/material.dart";
 import 'package:google_fonts/google_fonts.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:location_permissions/location_permissions.dart';
 import 'package:ville/build/build_icon.dart';
 import 'package:ville/constants/constants.dart';
+import 'package:geolocator/geolocator.dart'hide ServiceStatus;
 
 class Post extends StatefulWidget {
   Post({Key? key}) : super(key: key);
@@ -14,6 +17,43 @@ class Post extends StatefulWidget {
 }
 
 class _PostState extends State<Post> {
+  GoogleMapController? newGoogleMapController;
+  double? latitude;
+  double? longitude;
+  double? lat;
+  double? long;
+
+  // LatLng ltPosition = LatLng(latitude!, longitude!);
+  getPermission() async {
+    PermissionStatus permission =
+        await LocationPermissions().requestPermissions();
+    ServiceStatus serviceStatus =
+        await LocationPermissions().checkServiceStatus();
+    // bool isOpened = await LocationPermissions().openAppSettings();
+    bool isShown =
+        await LocationPermissions().shouldShowRequestPermissionRationale();
+    var locate = await Geolocator.getCurrentPosition(
+      desiredAccuracy: LocationAccuracy.best,
+    );
+    // print(locate.longitude);
+    latitude = locate.latitude;
+    longitude = locate.longitude;
+    lat = locate.latitude;
+    long = locate.longitude;
+  }
+
+  getLocation() {
+    getPermission().then((locate) {
+      print(longitude);
+      print(latitude);
+      LatLng ltPosition = LatLng(latitude!, longitude!);
+      CameraPosition cameraPosition =
+          CameraPosition(target: ltPosition, zoom: 10);
+      // ignore: unused_local_variable
+      newGoogleMapController
+          ?.animateCamera(CameraUpdate.newCameraPosition(cameraPosition));
+    });
+  }
    List<String> items = [
     'maize',
     "spinach",

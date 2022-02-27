@@ -28,7 +28,7 @@ class _LineChartSample2State extends State<LineChartSample2> {
                 borderRadius: BorderRadius.all(
                   Radius.circular(18),
                 ),
-                color: Color(0xff232d37)),
+                color: Color.fromARGB(255, 248, 248, 248)),
             child: Padding(
               padding: const EdgeInsets.only(
                   right: 18.0, left: 12.0, top: 24, bottom: 12),

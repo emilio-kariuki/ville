@@ -402,6 +402,7 @@ class _PostState extends State<Post> {
             padding: const EdgeInsets.all(8.0),
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
+                  fixedSize: Size(size.width * 0.4, size.height * 0.04),
                   primary: kGreen,
                   shape:  RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10.0),

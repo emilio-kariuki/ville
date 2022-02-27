@@ -147,6 +147,7 @@ class _AccountsState extends State<Accounts> {
                     ),
                     Expanded(
                       child: ListView.builder(
+                        physics: ClampingScrollPhysics(),
                         shrinkWrap: true,
                         scrollDirection: Axis.horizontal,
                         itemCount: 10,

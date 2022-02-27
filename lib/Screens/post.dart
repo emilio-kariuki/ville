@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:dropdown_button2/dropdown_button2.dart';
 import "package:flutter/material.dart";
 import 'package:google_fonts/google_fonts.dart';
@@ -125,7 +127,7 @@ class _PostState extends State<Post> {
             ),
           ),
            Padding(
-             padding: const EdgeInsets.all(8.0),
+             padding: const EdgeInsets.only(left:20,right:20,top: 10),
              child: DropdownButton2(
                value: selectedType,
                onChanged: (value) {
@@ -172,10 +174,9 @@ class _PostState extends State<Post> {
                      BorderRadius.circular(10),
                  border: Border.all(
                    width: 1,
-                   color: Color.fromARGB(255, 86, 87, 88),
+                   color: Color.fromARGB(255, 87, 86, 86),
                  ),
-                 color: Color.fromARGB(
-                     255, 255, 255, 255),
+                 color: Color.fromARGB(255, 238, 237, 237),
                ),
                buttonElevation: 5,
                itemHeight: 40,

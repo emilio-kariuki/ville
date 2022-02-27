@@ -215,7 +215,7 @@ class _AccountsState extends State<Accounts> {
                       children: [
                         BuildCirlce(imageUrl: 'assets/images/cup1.png'),
                         BuildCirlce(imageUrl: 'assets/images/cup2.png'),
-                        BuildCirlce(imageUrl: 'assets/images/cup2.png'),
+                        BuildCirlce(imageUrl: 'assets/images/cup3.png'),
                       ],
                     )
 

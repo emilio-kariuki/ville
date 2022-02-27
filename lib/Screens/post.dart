@@ -129,6 +129,7 @@ class _PostState extends State<Post> {
            Padding(
              padding: const EdgeInsets.only(left:20,right:20,top: 10),
              child: DropdownButton2(
+               hint:Text("Choose waste"),
                value: selectedType,
                onChanged: (value) {
                  setState(() {

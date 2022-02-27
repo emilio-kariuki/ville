@@ -145,7 +145,16 @@ class _AccountsState extends State<Accounts> {
                         ],
                       ),
                     ),
-                   
+                    Container(
+                      height: 200,
+                      child: ListView.builder(
+                        // physics: ClampingScrollPhysics(),
+                        shrinkWrap: true,
+                        scrollDirection: Axis.horizontal,
+                        itemCount: 15,
+                        itemBuilder: (BuildContext context, int index) => Center(child: ListBuilder1(imageUrl: 'assets/images/plant.jpg',category: "plastic",location: "Dedan Kimathi University",action: "Completed",)),
+                      ),
+                    ),
                   ],
                 ),
               )),

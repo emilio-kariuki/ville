@@ -142,7 +142,7 @@ class _PostState extends State<Post> {
                      .arrow_forward_ios_outlined,
                ),
                iconSize: 18,
-               iconEnabledColor: Colors.indigo,
+               iconEnabledColor: kGreen,
                iconDisabledColor: Color.fromARGB(
                    255, 255, 255, 255),
                buttonHeight: size.height * 0.07,
@@ -156,8 +156,7 @@ class _PostState extends State<Post> {
                            style: GoogleFonts
                                .notoSerif(
                                    fontSize: 18,
-                                   color: Colors
-                                       .indigo,
+                                   color: kGreen,
                                    fontWeight:
                                        FontWeight
                                            .w600),

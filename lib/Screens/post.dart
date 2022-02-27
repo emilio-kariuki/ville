@@ -231,6 +231,19 @@ class _PostState extends State<Post> {
               controller: title,
             ),
           ),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 10, left: 15),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Text("Images",
+                    style: GoogleFonts.robotoCondensed(
+                        fontSize: 23,
+                        color: kGreen,
+                        fontWeight: FontWeight.w600)),
+              ],
+            ),
+          ),
         ]),
       ),
     ));

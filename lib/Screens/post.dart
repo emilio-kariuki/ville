@@ -323,7 +323,7 @@ class _PostState extends State<Post> {
                                 child: Image.file(
                                   image!,
                                   width: size.width,
-                                  height: size.height * 0.16,
+                                  height: size.height * 0.2,
                                   fit: BoxFit.cover,
                                 ),
                               )
@@ -331,7 +331,7 @@ class _PostState extends State<Post> {
                                 style: GoogleFonts.roboto(
                                     color: Colors.white)),
                       ),
-                      height: size.height * 0.3,
+                      height: size.height * 0.2,
                       width: size.width,
                       decoration: BoxDecoration(
                         color: Color.fromARGB(255, 255, 255, 255),

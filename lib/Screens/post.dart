@@ -42,7 +42,7 @@ class _PostState extends State<Post> {
                       filled: true,
                       hintStyle: TextStyle(color: Colors.grey[800]),
                       focusColor: Colors.red,
-                      hintText: "Email",
+                      hintText: "Summary of the waste",
                       prefixIcon: Icon(Icons.mail,color: Colors.blueGrey[900]),
                       fillColor: Colors.grey[200]),
                   controller: title,

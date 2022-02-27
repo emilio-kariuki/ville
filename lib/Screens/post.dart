@@ -1,13 +1,17 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'dart:io';
+
 import 'package:dropdown_button2/dropdown_button2.dart';
 import "package:flutter/material.dart";
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:location_permissions/location_permissions.dart';
 import 'package:ville/build/build_icon.dart';
 import 'package:ville/constants/constants.dart';
 import 'package:geolocator/geolocator.dart'hide ServiceStatus;
+import 'package:image_picker/image_picker.dart';
 
 class Post extends StatefulWidget {
   Post({Key? key}) : super(key: key);
@@ -73,6 +77,22 @@ class _PostState extends State<Post> {
     ''
   ];
   String ?selectedType;
+  File? image;
+  ImagePicker picker = ImagePicker();
+
+  void takePhoto(ImageSource source) async {
+    final image = await picker.pickImage(source: source);
+    try {
+      if (image == null) return;
+
+      final imageTempo = File(image.path);
+      setState(() {
+        this.image = imageTempo;
+      });
+    } on PlatformException catch (e) {
+      print("Failed to pick image $e");
+    }
+  }
 
   final title = TextEditingController();
   final description = TextEditingController();

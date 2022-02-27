@@ -1,3 +1,4 @@
+import 'package:dropdown_button2/dropdown_button2.dart';
 import "package:flutter/material.dart";
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ville/build/build_icon.dart';
@@ -11,6 +12,26 @@ class Post extends StatefulWidget {
 }
 
 class _PostState extends State<Post> {
+   List<String> items = [
+    'maize',
+    "spinach",
+    "kales",
+    "beans",
+    "cabbage",
+    "Sorghum",
+    "peas",
+    "green grams",
+    "carrots",
+    "onions",
+    'Tomatoes',
+    "potatoes",
+    'capcicum',
+    'coriander',
+    'pumpkins',
+    ''
+  ];
+  String ?selectedType;
+
   final title = TextEditingController();
   final description = TextEditingController();
   @override
@@ -103,6 +124,80 @@ class _PostState extends State<Post> {
               ],
             ),
           ),
+           Padding(
+             padding: const EdgeInsets.all(8.0),
+             child: DropdownButton2(
+               value: selectedType,
+               onChanged: (value) {
+                 setState(() {
+                   selectedType =
+                       value as String;
+                   print(selectedType);
+                 });
+               },
+               icon: const Icon(
+                 Icons
+                     .arrow_forward_ios_outlined,
+               ),
+               iconSize: 18,
+               iconEnabledColor: Colors.indigo,
+               iconDisabledColor: Color.fromARGB(
+                   255, 255, 255, 255),
+               buttonHeight: size.height * 0.07,
+               buttonWidth: size.width ,
+               items: items
+                   .map((item) =>
+                       DropdownMenuItem<String>(
+                         value: item,
+                         child: Text(
+                           item,
+                           style: GoogleFonts
+                               .notoSerif(
+                                   fontSize: 18,
+                                   color: Colors
+                                       .indigo,
+                                   fontWeight:
+                                       FontWeight
+                                           .w600),
+                           overflow: TextOverflow
+                               .ellipsis,
+                         ),
+                       ))
+                   .toList(),
+               buttonPadding:
+                   const EdgeInsets.only(
+                       left: 14, right: 14),
+               buttonDecoration: BoxDecoration(
+                 borderRadius:
+                     BorderRadius.circular(10),
+                 border: Border.all(
+                   width: 1,
+                   color: Color.fromARGB(255, 86, 87, 88),
+                 ),
+                 color: Color.fromARGB(
+                     255, 255, 255, 255),
+               ),
+               buttonElevation: 5,
+               itemHeight: 40,
+               itemPadding:
+                   const EdgeInsets.only(
+                       left: 14, right: 14),
+               dropdownMaxHeight: 200,
+               dropdownWidth: 200,
+               dropdownPadding:
+                   EdgeInsets.only(top: 3),
+               dropdownDecoration: BoxDecoration(
+                 color: Color.fromARGB(
+                     255, 238, 235, 235),
+               ),
+               dropdownElevation: 5,
+               scrollbarRadius:
+                   const Radius.circular(20),
+               scrollbarThickness: 10,
+               scrollbarAlwaysShow: true,
+               offset: const Offset(18, -50),
+             ),
+           ),
         ]),
       ),
     ));

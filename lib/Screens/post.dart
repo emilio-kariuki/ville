@@ -14,6 +14,7 @@ class _PostState extends State<Post> {
   final title = TextEditingController();
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Scaffold(
         // backgroundColor: Color.fromARGB(255, 245, 96, 10),
         body: SafeArea(
@@ -32,25 +33,25 @@ class _PostState extends State<Post> {
           ),
         ),
         Padding(
-                padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-                child: TextFormField(
-                  maxLength: 15,
-                  decoration: InputDecoration(
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10.0),
-                      ),
-                      // icon: Icon(Icons.person,size:30,color: Colors.black),
-                      filled: true,
-                      hintStyle: TextStyle(color: Colors.grey[800]),
-                      focusColor: Colors.red,
-                      hintText: "Summary of the waste",
-                      // suffixText: "10",
-                      // prefixIcon: Icon(Icons.mail,color: Colors.blueGrey[900]),
-                      fillColor: Colors.grey[200]),
-                  controller: title,
+          padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+          child: TextFormField(
+            maxLength: 15,
+            decoration: InputDecoration(
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10.0),
                 ),
-              ),
-              Padding(
+                // icon: Icon(Icons.person,size:30,color: Colors.black),
+                filled: true,
+                hintStyle: TextStyle(color: Colors.grey[800]),
+                focusColor: Colors.red,
+                hintText: "Summary of the waste",
+                // suffixText: "10",
+                // prefixIcon: Icon(Icons.mail,color: Colors.blueGrey[900]),
+                fillColor: Colors.grey[200]),
+            controller: title,
+          ),
+        ),
+        Padding(
           padding: const EdgeInsets.only(bottom: 10, left: 15, top: 10),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -63,7 +64,25 @@ class _PostState extends State<Post> {
             ],
           ),
         ),
-        
+        Padding(
+          padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+          child: TextFormField(
+            maxLength: 15,
+            decoration: InputDecoration(
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                // icon: Icon(Icons.person,size:30,color: Colors.black),
+                filled: true,
+                hintStyle: TextStyle(color: Colors.grey[800]),
+                focusColor: Colors.red,
+                hintText: "Summary of the waste",
+                // suffixText: "10",
+                // prefixIcon: Icon(Icons.mail,color: Colors.blueGrey[900]),
+                fillColor: Colors.grey[200]),
+            controller: title,
+          ),
+        ),
       ]),
     ));
   }

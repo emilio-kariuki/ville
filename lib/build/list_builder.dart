@@ -19,6 +19,7 @@ class ListBuilder1 extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Container(
+      padding: EdgeInsets.all(10),
       // width: 60,
         child: Column(children: [
       Container(

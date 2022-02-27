@@ -2,6 +2,7 @@
 
 import 'dart:io';
 import 'dart:async';
+import 'package:colorful_safe_area/colorful_safe_area.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import "package:flutter/material.dart";
 import 'package:flutter/services.dart';
@@ -102,7 +103,8 @@ class _PostState extends State<Post> {
     final size = MediaQuery.of(context).size;
     return Scaffold(
         // backgroundColor: Color.fromARGB(255, 245, 96, 10),
-        body: SafeArea(
+        body: ColorfulSafeArea(
+          overflowRules: OverflowRules.all(true),
       child: SingleChildScrollView(
         child: Column(children: [
           Padding(

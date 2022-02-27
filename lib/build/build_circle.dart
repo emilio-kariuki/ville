@@ -8,6 +8,6 @@ class BuildCirlce extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BuildRound(
-      child: Image.asset(imageUrl));
+      child: Image.asset(imageUrl,height: 60));
   }
 }

@@ -398,6 +398,17 @@ class _PostState extends State<Post> {
               ],
             ),
           ),
+          ElevatedButton(
+            onPressed:(){},
+            child: Padding(
+                      padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
+                      child: Text("Post",
+                          style: GoogleFonts.robotoCondensed(
+                              fontSize: 23,
+                              color: Color.fromARGB(255, 255, 255, 255),
+                              fontWeight: FontWeight.bold)),
+                    )
+          )
         ]),
       ),
     ));

@@ -12,6 +12,7 @@ class Post extends StatefulWidget {
 
 class _PostState extends State<Post> {
   final title = TextEditingController();
+  final description = TextEditingController();
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -67,7 +68,8 @@ class _PostState extends State<Post> {
         Padding(
           padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
           child: TextFormField(
-            maxLength: 15,
+            // style: TextStyle(height:10),
+            maxLength: 110,
             decoration: InputDecoration(
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10.0),
@@ -80,7 +82,7 @@ class _PostState extends State<Post> {
                 // suffixText: "10",
                 // prefixIcon: Icon(Icons.mail,color: Colors.blueGrey[900]),
                 fillColor: Colors.grey[200]),
-            controller: title,
+            controller: description,
           ),
         ),
       ]),

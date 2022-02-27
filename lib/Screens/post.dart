@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'dart:io';
-
+import 'dart:async';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import "package:flutter/material.dart";
 import 'package:flutter/services.dart';
@@ -10,7 +10,7 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:location_permissions/location_permissions.dart';
 import 'package:ville/build/build_icon.dart';
 import 'package:ville/constants/constants.dart';
-import 'package:geolocator/geolocator.dart'hide ServiceStatus;
+import 'package:geolocator/geolocator.dart' hide ServiceStatus;
 import 'package:image_picker/image_picker.dart';
 
 class Post extends StatefulWidget {
@@ -58,7 +58,8 @@ class _PostState extends State<Post> {
           ?.animateCamera(CameraUpdate.newCameraPosition(cameraPosition));
     });
   }
-   List<String> items = [
+
+  List<String> items = [
     'maize',
     "spinach",
     "kales",
@@ -76,7 +77,7 @@ class _PostState extends State<Post> {
     'pumpkins',
     ''
   ];
-  String ?selectedType;
+  String? selectedType;
   File? image;
   ImagePicker picker = ImagePicker();
 
@@ -158,7 +159,7 @@ class _PostState extends State<Post> {
               // style: TextStyle(height:10),
               maxLength: 360,
               decoration: InputDecoration(
-                // contentPadding: const EdgeInsets.symmetric(vertical: 40.0),
+                  // contentPadding: const EdgeInsets.symmetric(vertical: 40.0),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10.0),
                   ),
@@ -186,80 +187,64 @@ class _PostState extends State<Post> {
               ],
             ),
           ),
-           Padding(
-             padding: const EdgeInsets.only(left:20,right:20,top: 10),
-             child: DropdownButton2(
-               hint:Text("Choose waste"),
-               value: selectedType,
-               onChanged: (value) {
-                 setState(() {
-                   selectedType =
-                       value as String;
-                   print(selectedType);
-                 });
-               },
-               icon: const Icon(
-                 Icons
-                     .arrow_forward_ios_outlined,
-               ),
-               iconSize: 18,
-               iconEnabledColor: kGreen,
-               iconDisabledColor: Color.fromARGB(
-                   255, 255, 255, 255),
-               buttonHeight: size.height * 0.07,
-               buttonWidth: size.width ,
-               items: items
-                   .map((item) =>
-                       DropdownMenuItem<String>(
-                         value: item,
-                         child: Text(
-                           item,
-                           style: GoogleFonts
-                               .notoSerif(
-                                   fontSize: 18,
-                                   color: kGreen,
-                                   fontWeight:
-                                       FontWeight
-                                           .w600),
-                           overflow: TextOverflow
-                               .ellipsis,
-                         ),
-                       ))
-                   .toList(),
-               buttonPadding:
-                   const EdgeInsets.only(
-                       left: 14, right: 14),
-               buttonDecoration: BoxDecoration(
-                 borderRadius:
-                     BorderRadius.circular(10),
-                 border: Border.all(
-                   width: 1,
-                   color: Color.fromARGB(255, 87, 86, 86),
-                 ),
-                 color: Color.fromARGB(255, 238, 237, 237),
-               ),
-               buttonElevation: 5,
-               itemHeight: 40,
-               itemPadding:
-                   const EdgeInsets.only(
-                       left: 14, right: 14),
-               dropdownMaxHeight: 200,
-               dropdownWidth: 200,
-               dropdownPadding:
-                   EdgeInsets.only(top: 3),
-               dropdownDecoration: BoxDecoration(
-                 color: Color.fromARGB(
-                     255, 238, 235, 235),
-               ),
-               dropdownElevation: 5,
-               scrollbarRadius:
-                   const Radius.circular(20),
-               scrollbarThickness: 10,
-               scrollbarAlwaysShow: true,
+          Padding(
+            padding: const EdgeInsets.only(left: 20, right: 20, top: 10),
+            child: DropdownButton2(
+              hint: Text("Choose waste"),
+              value: selectedType,
+              onChanged: (value) {
+                setState(() {
+                  selectedType = value as String;
+                  print(selectedType);
+                });
+              },
+              icon: const Icon(
+                Icons.arrow_forward_ios_outlined,
+              ),
+              iconSize: 18,
+              iconEnabledColor: kGreen,
+              iconDisabledColor: Color.fromARGB(255, 255, 255, 255),
+              buttonHeight: size.height * 0.07,
+              buttonWidth: size.width,
+              items: items
+                  .map((item) => DropdownMenuItem<String>(
+                        value: item,
+                        child: Text(
+                          item,
+                          style: GoogleFonts.notoSerif(
+                              fontSize: 18,
+                              color: kGreen,
+                              fontWeight: FontWeight.w600),
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ))
+                  .toList(),
+              buttonPadding: const EdgeInsets.only(left: 14, right: 14),
+              buttonDecoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                border: Border.all(
+                  width: 1,
+                  color: Color.fromARGB(255, 87, 86, 86),
+                ),
+                color: Color.fromARGB(255, 238, 237, 237),
+              ),
+              buttonElevation: 5,
+              itemHeight: 40,
+              itemPadding: const EdgeInsets.only(left: 14, right: 14),
+              dropdownMaxHeight: 200,
+              dropdownWidth: 200,
+              dropdownPadding: EdgeInsets.only(top: 3),
+              dropdownDecoration: BoxDecoration(
+                color: Color.fromARGB(255, 238, 235, 235),
+              ),
+              dropdownElevation: 5,
+              scrollbarRadius: const Radius.circular(20),
+              scrollbarThickness: 10,
+              scrollbarAlwaysShow: true,
               //  offset: const Offset(18, -50),
-             ),
-           ),
-           Padding(
+            ),
+          ),
+          Padding(
             padding: const EdgeInsets.only(bottom: 10, left: 15, top: 10),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -304,142 +289,115 @@ class _PostState extends State<Post> {
               ],
             ),
           ),
-           Padding(
-             padding: const EdgeInsets.only(left:20,right:20,top:8),
-             child: Stack(
-                children: [
-                  Material(
-                    color: Color.fromARGB(255, 247, 247, 247),
-                    elevation: 20,
-                    borderRadius: BorderRadius.circular(20),
-                    child: Container(
-                      //  color: Colors.grey,
-                      // color: Color.fromARGB(255, 36, 47, 53),
-                      child: Center(
-                        child: image != null
-                            ? ClipRRect(
-                                borderRadius:
-                                    BorderRadius.circular(20),
-                                child: Image.file(
-                                  image!,
-                                  width: size.width,
-                                  height: size.height * 0.2,
-                                  fit: BoxFit.cover,
-                                ),
-                              )
-                            : Text("Select Image",
-                                style: GoogleFonts.roboto(
-                                    color: Colors.white)),
-                      ),
-                      height: size.height * 0.2,
-                      width: size.width,
-                      decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 255, 255, 255),
-                        boxShadow: [
-                          BoxShadow(
-                            color:
-                                Color.fromARGB(255, 163, 165, 165)
-                                    .withOpacity(0.6),
-                            spreadRadius: 5,
-                            blurRadius: 7,
-                            offset: Offset(0,
-                                3), // changes position of shadow
-                          ),
-                        ],
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      // image: image
+          Padding(
+            padding: const EdgeInsets.only(left: 20, right: 20, top: 8),
+            child: Stack(
+              children: [
+                Material(
+                  color: Color.fromARGB(255, 247, 247, 247),
+                  elevation: 20,
+                  borderRadius: BorderRadius.circular(20),
+                  child: Container(
+                    //  color: Colors.grey,
+                    // color: Color.fromARGB(255, 36, 47, 53),
+                    child: Center(
+                      child: image != null
+                          ? ClipRRect(
+                              borderRadius: BorderRadius.circular(20),
+                              child: Image.file(
+                                image!,
+                                width: size.width,
+                                height: size.height * 0.2,
+                                fit: BoxFit.cover,
+                              ),
+                            )
+                          : Text("Select Image",
+                              style: GoogleFonts.roboto(color: Colors.white)),
                     ),
+                    height: size.height * 0.2,
+                    width: size.width,
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 255, 255, 255),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Color.fromARGB(255, 163, 165, 165)
+                              .withOpacity(0.6),
+                          spreadRadius: 5,
+                          blurRadius: 7,
+                          offset: Offset(0, 3), // changes position of shadow
+                        ),
+                      ],
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    // image: image
                   ),
-                  Positioned(
-                      top: 5,
-                      right: 5,
-                      child: IconButton(
-                          onPressed: () {
-                            // takePhoto(ImageSource.camera);
-                            setState(() {
-                              showDialog<String>(
-                                context: context,
-                                builder: (BuildContext context) =>
-                                    Container(
-                                  width: size.width,
-                                  height: size.height * 0.2,
-                                  decoration: BoxDecoration(
-                                    //border: Border.all(color: Color.fromARGB(255, 182, 36, 116),width:1 ),
-                                    borderRadius:
-                                        BorderRadius.circular(10),
-                                  ),
-                                  child: AlertDialog(
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(
-                                                20)),
-                                    contentPadding:
-                                        EdgeInsets.all(5),
-                                    title: const Text(
-                                        'choose image from: '),
-                                    content:
-                                        SingleChildScrollView(
-                                      child: ListBody(children: [
-                                        ListTile(
-                                          selectedColor:
-                                              Colors.grey,
-                                          onTap: () {
-                                            takePhoto(ImageSource
-                                                .camera);
-                                            Navigator.pop(
-                                                context);
-                                          },
-                                          leading: Icon(
-                                              Icons.camera,
-                                              color: Colors
-                                                  .blueGrey[900]),
-                                          title: Text("Camera"),
-                                        ),
-                                        ListTile(
-                                          selectedColor:
-                                              Colors.grey,
-                                          onTap: () {
-                                            setState(() {
-                                              takePhoto(
-                                                  ImageSource
-                                                      .gallery);
-                                              Navigator.pop(
-                                                  context);
-                                            });
-                                          },
-                                          leading: Icon(
-                                              Icons.layers,
-                                              color: Colors
-                                                  .blueGrey[900]),
-                                          title: GestureDetector(
-                                              onTap: () {
-                                                setState(() {
-                                                  takePhoto(
-                                                      ImageSource
-                                                          .gallery);
-                                                  Navigator.pop(
-                                                      context);
-                                                });
-                                              },
-                                              child: Text(
-                                                  "Gallery")),
-                                        ),
-                                      ]),
-                                    ),
+                ),
+                Positioned(
+                    top: 5,
+                    right: 5,
+                    child: IconButton(
+                        onPressed: () {
+                          // takePhoto(ImageSource.camera);
+                          setState(() {
+                            showDialog<String>(
+                              context: context,
+                              builder: (BuildContext context) => Container(
+                                width: size.width,
+                                height: size.height * 0.2,
+                                decoration: BoxDecoration(
+                                  //border: Border.all(color: Color.fromARGB(255, 182, 36, 116),width:1 ),
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: AlertDialog(
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(20)),
+                                  contentPadding: EdgeInsets.all(5),
+                                  title: const Text('choose image from: '),
+                                  content: SingleChildScrollView(
+                                    child: ListBody(children: [
+                                      ListTile(
+                                        selectedColor: Colors.grey,
+                                        onTap: () {
+                                          takePhoto(ImageSource.camera);
+                                          Navigator.pop(context);
+                                        },
+                                        leading: Icon(Icons.camera,
+                                            color: Colors.blueGrey[900]),
+                                        title: Text("Camera"),
+                                      ),
+                                      ListTile(
+                                        selectedColor: Colors.grey,
+                                        onTap: () {
+                                          setState(() {
+                                            takePhoto(ImageSource.gallery);
+                                            Navigator.pop(context);
+                                          });
+                                        },
+                                        leading: Icon(Icons.layers,
+                                            color: Colors.blueGrey[900]),
+                                        title: GestureDetector(
+                                            onTap: () {
+                                              setState(() {
+                                                takePhoto(ImageSource.gallery);
+                                                Navigator.pop(context);
+                                              });
+                                            },
+                                            child: Text("Gallery")),
+                                      ),
+                                    ]),
                                   ),
                                 ),
-                              );
-                            });
-                          },
-                          icon: Icon(Icons.add_a_photo,
-                              size: 30,
-                              color: image != null
-                                  ? Colors.white
-                                  : Colors.black)))
-                ],
-              ),
-           ),
+                              ),
+                            );
+                          });
+                        },
+                        icon: Icon(Icons.add_a_photo,
+                            size: 30,
+                            color:
+                                image != null ? Colors.white : Colors.black)))
+              ],
+            ),
+          ),
         ]),
       ),
     ));

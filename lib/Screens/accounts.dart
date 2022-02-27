@@ -16,6 +16,9 @@ class Accounts extends StatefulWidget {
 }
 
 class _AccountsState extends State<Accounts> {
+  String name = "Jane Doe";
+  String point = '1000';
+  // String points = point.toString();
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -33,30 +36,55 @@ class _AccountsState extends State<Accounts> {
                         padding: const EdgeInsets.all(8.0),
                         child: Container(
                           decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            border: Border.all(color: kGreen,width: 5)
-                          ),
+                              shape: BoxShape.circle,
+                              border: Border.all(color: kGreen, width: 5)),
                           child: CircleAvatar(
                             radius: 50,
-                            backgroundImage: AssetImage("assets/images/profile.jpg"),
+                            backgroundImage:
+                                AssetImage("assets/images/profile.jpg"),
                           ),
                         ),
                       ),
                     ),
+                    Text(name,
+                        style: GoogleFonts.robotoCondensed(
+                            fontSize: 23,
+                            color: kGreen,
+                            fontWeight: FontWeight.w600)),
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 5),
+                      child: Text("$point points",
+                          style: GoogleFonts.robotoCondensed(
+                              fontSize: 18,
+                              color: kBlack,
+                              fontWeight: FontWeight.normal)),
+                    ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        AppIcon(iconUrl: "assets/images/mail.png", func: (){}),
-                        AppIcon(iconUrl: "assets/images/phone.png", func: (){}),
-                        AppIcon(iconUrl: "assets/images/twitter.png", func: (){}),
-
+                        AppIcon(iconUrl: "assets/images/mail.png", func: () {}),
+                        AppIcon(
+                            iconUrl: "assets/images/phone.png", func: () {}),
+                        AppIcon(
+                            iconUrl: "assets/images/twitter.png", func: () {}),
                       ],
-                    )
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Text("Statistics",
+                              style: GoogleFonts.robotoCondensed(
+                                  fontSize: 23,
+                                  color: kGreen,
+                                  fontWeight: FontWeight.w600)),
+                        ],
+                      ),
+                    ),
                   ],
-                          ),
-              )
-              ),
-        )
-    );
+                ),
+              )),
+        ));
   }
 }

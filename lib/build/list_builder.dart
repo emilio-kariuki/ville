@@ -20,9 +20,11 @@ class ListBuilder1 extends StatelessWidget {
     return Container(
         child: Column(children: [
       Container(
+        height: size.height * 0.1,
+        width: 50,
         // width: size.width * 0.26,
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(30),
+              borderRadius: BorderRadius.circular(20),
               shape: BoxShape.rectangle,
               image: DecorationImage(
                 image: AssetImage(imageUrl),

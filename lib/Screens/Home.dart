@@ -8,6 +8,7 @@ import 'package:ville/Screens/notifications.dart';
 import 'package:ville/Screens/post.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:ville/constants/constants.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -57,6 +58,7 @@ class _HomeState extends State<Home> {
         ),
       ),
       bottomNavigationBar: CurvedNavigationBar(
+        buttonBackgroundColor: kGreen,
         animationDuration: Duration(milliseconds: 400),
         backgroundColor: Colors.transparent,
         index: index,

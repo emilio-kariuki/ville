@@ -24,26 +24,37 @@ class _AccountsState extends State<Accounts> {
         body: SafeArea(
           child: ColorfulSafeArea(
               overflowRules: OverflowRules.all(true),
-              child: Column(
-                // ignore: prefer_const_literals_to_create_immutables
-                children: [
-                  Center(
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          border: Border.all(color: kGreen,width: 5)
-                        ),
-                        child: CircleAvatar(
-                          radius: 50,
-                          backgroundImage: AssetImage("assets/images/profile.jpg"),
+              child: SingleChildScrollView(
+                child: Column(
+                  // ignore: prefer_const_literals_to_create_immutables
+                  children: [
+                    Center(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            border: Border.all(color: kGreen,width: 5)
+                          ),
+                          child: CircleAvatar(
+                            radius: 50,
+                            backgroundImage: AssetImage("assets/images/profile.jpg"),
+                          ),
                         ),
                       ),
                     ),
-                  )
-                ],
-            )
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        AppIcon(iconUrl: "assets/images/mail.png", func: (){}),
+                        AppIcon(iconUrl: "assets/images/phone.png", func: (){}),
+                        AppIcon(iconUrl: "assets/images/twitter.png", func: (){}),
+
+                      ],
+                    )
+                  ],
+                          ),
+              )
               ),
         )
     );

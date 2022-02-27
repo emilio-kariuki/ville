@@ -147,6 +147,7 @@ class _AccountsState extends State<Accounts> {
                     ),
                     Container(
                       height: size.height * 0.35,
+                      // width: 100,
                       child: ListView.builder(
                         physics: ClampingScrollPhysics(),
                         shrinkWrap: true,

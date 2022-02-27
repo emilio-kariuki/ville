@@ -150,9 +150,7 @@ class _AccountsState extends State<Accounts> {
                         shrinkWrap: true,
                         scrollDirection: Axis.horizontal,
                         itemCount: 10,
-                        itemBuilder: (BuildContext context, int index) => Card(
-                              child: ListBuilder1(imageUrl: 'assets/images/plant.jpg',category: 'Plastic Waste',location: 'Dedan Kimathi University',action: "Waiting",)
-                            ),
+                        itemBuilder: (BuildContext context, int index) => ListBuilder1(imageUrl: 'assets/images/plant.jpg',category: 'Plastic Waste',location: 'Dedan Kimathi University',action: "Waiting",),
                       ),
                     ),
                   ],

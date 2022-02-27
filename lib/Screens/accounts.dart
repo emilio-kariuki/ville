@@ -19,7 +19,7 @@ class _AccountsState extends State<Accounts> {
   String name = "Jane Doe";
   String point = '1000';
   String collected = '56';
-  String recyled = '4';
+  String recycled = '4';
   String posted = '14';
   // String points = point.toString();
   @override
@@ -73,7 +73,7 @@ class _AccountsState extends State<Accounts> {
                       ],
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(10.0),
+                      padding: const EdgeInsets.only(top: 10,bottom: 10,left: 15),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
@@ -86,22 +86,64 @@ class _AccountsState extends State<Accounts> {
                       ),
                     ),
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Column(
                           children: [
                             Text(posted,
                                 style: GoogleFonts.robotoCondensed(
                                     fontSize: 18,
-                                    color: kBlack,
+                                    color: kGrey,
                                     fontWeight: FontWeight.w600)),
                             Text('Posted',
                                 style: GoogleFonts.robotoCondensed(
                                     fontSize: 20,
-                                    color: kBlack,
+                                    color: kGrey,
+                                    fontWeight: FontWeight.w600)),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            Text(recycled,
+                                style: GoogleFonts.robotoCondensed(
+                                    fontSize: 18,
+                                    color: kGrey,
+                                    fontWeight: FontWeight.w600)),
+                            Text('Recycled',
+                                style: GoogleFonts.robotoCondensed(
+                                    fontSize: 20,
+                                    color: kGrey,
+                                    fontWeight: FontWeight.w600)),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            Text(collected,
+                                style: GoogleFonts.robotoCondensed(
+                                    fontSize: 18,
+                                    color: kGrey,
+                                    fontWeight: FontWeight.w600)),
+                            Text('Collected',
+                                style: GoogleFonts.robotoCondensed(
+                                    fontSize: 20,
+                                    color: kGrey,
                                     fontWeight: FontWeight.w600)),
                           ],
                         ),
                       ],
+                    ),
+                     Padding(
+                      padding: const EdgeInsets.only(top: 10,bottom: 10,left: 15),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Text("Statistics",
+                              style: GoogleFonts.robotoCondensed(
+                                  fontSize: 23,
+                                  color: kGreen,
+                                  fontWeight: FontWeight.w600)),
+                        ],
+                      ),
                     ),
                   ],
                 ),

@@ -14,7 +14,7 @@ class _PostState extends State<Post> {
   Widget build(BuildContext context) {
     return Scaffold(
       // backgroundColor: Color.fromARGB(255, 245, 96, 10),
-      body: Center(child: Text("Post",style: GoogleFonts.roboto(fontSize: 50, color: Colors.white))),
+      body: Text("Post",style: GoogleFonts.roboto(fontSize: 50, color: Colors.white)),
     );
   }
 }

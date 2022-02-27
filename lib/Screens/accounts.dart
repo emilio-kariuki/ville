@@ -27,16 +27,18 @@ class _AccountsState extends State<Accounts> {
               child: Column(
                 // ignore: prefer_const_literals_to_create_immutables
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        border: Border.all(color: kGreen,width: 5)
-                      ),
-                      child: CircleAvatar(
-                        radius: 50,
-                        backgroundImage: AssetImage("assets/images/profile.jpg"),
+                  Center(
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          border: Border.all(color: kGreen,width: 5)
+                        ),
+                        child: CircleAvatar(
+                          radius: 50,
+                          backgroundImage: AssetImage("assets/images/profile.jpg"),
+                        ),
                       ),
                     ),
                   )

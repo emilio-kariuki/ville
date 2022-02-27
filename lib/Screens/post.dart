@@ -31,7 +31,7 @@ class _PostState extends State<Post> {
                Padding(
                 padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
                 child: Expanded(
-                  flex: 1,
+                  // flex: 1,
                   child: TextFormField(
                     decoration: InputDecoration(
                         border: OutlineInputBorder(

@@ -158,7 +158,7 @@ class _AccountsState extends State<Accounts> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 20, bottom: 10, top: 20),
+                  padding: const EdgeInsets.only(left: 20, bottom: 10, top: 10),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [

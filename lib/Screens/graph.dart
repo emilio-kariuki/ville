@@ -67,13 +67,13 @@ class _LineChartSample2State extends State<LineChartSample2> {
         drawVerticalLine: true,
         getDrawingHorizontalLine: (value) {
           return FlLine(
-            color: Color.fromARGB(255, 173, 177, 180),
+            color: Color.fromARGB(255, 255, 255, 255),
             strokeWidth: 1,
           );
         },
         getDrawingVerticalLine: (value) {
           return FlLine(
-            color: Color.fromARGB(255, 141, 147, 151),
+            color: Color.fromARGB(255, 255, 255, 255),
             strokeWidth: 1,
           );
         },

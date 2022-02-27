@@ -156,6 +156,19 @@ class _AccountsState extends State<Accounts> {
                         itemBuilder: (BuildContext context, int index) => Center(child: ListBuilder1(imageUrl: 'assets/images/plant.jpg',category: "plastic",location: "Dedan Kimathi University",action: "Completed",)),
                       ),
                     ),
+                     Padding(
+                      padding: const EdgeInsets.only(bottom: 10,left: 15),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Text("Lastweek",
+                              style: GoogleFonts.robotoCondensed(
+                                  fontSize: 23,
+                                  color: kGreen,
+                                  fontWeight: FontWeight.w600)),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               )),

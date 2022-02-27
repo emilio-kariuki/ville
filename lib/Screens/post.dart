@@ -74,7 +74,7 @@ class _PostState extends State<Post> {
             // style: TextStyle(height:10),
             maxLength: 110,
             decoration: InputDecoration(
-              contentPadding: const EdgeInsets.symmetric(vertical: 40.0),
+              // contentPadding: const EdgeInsets.symmetric(vertical: 40.0),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10.0),
                 ),

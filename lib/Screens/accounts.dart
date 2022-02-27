@@ -18,6 +18,9 @@ class Accounts extends StatefulWidget {
 class _AccountsState extends State<Accounts> {
   String name = "Jane Doe";
   String point = '1000';
+  String collected = '56';
+  String recyled = '4';
+  String posted = '14';
   // String points = point.toString();
   @override
   Widget build(BuildContext context) {
@@ -81,6 +84,24 @@ class _AccountsState extends State<Accounts> {
                                   fontWeight: FontWeight.w600)),
                         ],
                       ),
+                    ),
+                    Row(
+                      children: [
+                        Column(
+                          children: [
+                            Text(posted,
+                                style: GoogleFonts.robotoCondensed(
+                                    fontSize: 18,
+                                    color: kBlack,
+                                    fontWeight: FontWeight.w600)),
+                            Text('Posted',
+                                style: GoogleFonts.robotoCondensed(
+                                    fontSize: 20,
+                                    color: kBlack,
+                                    fontWeight: FontWeight.w600)),
+                          ],
+                        ),
+                      ],
                     ),
                   ],
                 ),

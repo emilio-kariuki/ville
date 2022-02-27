@@ -123,9 +123,9 @@ class _AccountsState extends State<Accounts> {
                       scrollDirection: Axis.horizontal,
                       // ignore: prefer_const_literals_to_create_immutables
                       children: [
-                        ListBuilder1(imageUrl: "assets/images/plant.jpg", category: "plastci waste", location: "Dedan kimathi university", action: "Completed"),
+                        ListBuilder1(imageUrl: "assets/images/plant.jpg", category: "plastic waste", location: "Dedan kimathi university", action: "Completed"),
                         SizedBox(width: 10),
-                        ListBuilder1(imageUrl: "assets/images/plant.jpg", category: "plastci waste", location: "Dedan kimathi university", action: "Completed")
+                        ListBuilder1(imageUrl: "assets/images/plant.jpg", category: "plastic waste", location: "Dedan kimathi university", action: "Completed")
                       ],
                     ),
                   )

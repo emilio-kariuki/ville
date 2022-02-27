@@ -195,7 +195,7 @@ class _PostState extends State<Post> {
                    const Radius.circular(20),
                scrollbarThickness: 10,
                scrollbarAlwaysShow: true,
-               offset: const Offset(18, -50),
+              //  offset: const Offset(18, -50),
              ),
            ),
         ]),

@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ville/Screens/graph.dart';
+import 'package:ville/build/build_circle.dart';
 import 'package:ville/build/build_icon.dart';
 import 'package:ville/build/list_builder.dart';
 import 'package:ville/constants/constants.dart';
@@ -208,6 +209,14 @@ class _AccountsState extends State<Accounts> {
                         ],
                       ),
                     ),
+
+                    Row(
+                      children: [
+                        BuildCirlce(imageUrl: 'assets/images/cup1.png'),
+                        BuildCirlce(imageUrl: 'assets/images/cup2.png'),
+                        BuildCirlce(imageUrl: 'assets/images/cup2.png'),
+                      ],
+                    )
 
                   ],
                 ),

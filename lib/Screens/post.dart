@@ -198,6 +198,19 @@ class _PostState extends State<Post> {
               //  offset: const Offset(18, -50),
              ),
            ),
+           Padding(
+            padding: const EdgeInsets.only(bottom: 10, left: 15, top: 10),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Text("Location",
+                    style: GoogleFonts.robotoCondensed(
+                        fontSize: 23,
+                        color: kGreen,
+                        fontWeight: FontWeight.w600)),
+              ],
+            ),
+          ),
         ]),
       ),
     ));

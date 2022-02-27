@@ -17,33 +17,32 @@ class ListBuilder1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    return Material(
-      elevation: 10,
-      child: Container(
-          child: Column(children: [
-        Container(
-          height: size.height * 0.14,
-          width: 70,
-          // width: size.width * 0.26,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                shape: BoxShape.rectangle,
-                image: DecorationImage(
-                  image: AssetImage(imageUrl),
-                  fit: BoxFit.cover,
-                ))),
-        SizedBox(height: size.height * 0.02),
-        Text(category,
-            style: GoogleFonts.roboto(
-                fontSize: 18, color: Color.fromARGB(255, 61, 122, 63))),
-        SizedBox(height: size.height * 0.02),
-        Text(location,
-            style: GoogleFonts.roboto(
-                fontSize: 18, color: Color.fromARGB(255, 68, 70, 68))),
-        SizedBox(height: size.height * 0.02),
-        // ignore: deprecated_member_use
-        FlatButton(onPressed: () {}, child: Text(action),color: Colors.green)
-      ])),
-    );
+    return Container(
+        child: Column(children: [
+      Container(
+        height: size.height * 0.14,
+        width: 70,
+        // width: size.width * 0.26,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              shape: BoxShape.rectangle,
+              image: DecorationImage(
+                image: AssetImage(imageUrl),
+                fit: BoxFit.cover,
+              ))),
+      SizedBox(height: size.height * 0.02),
+      Text(category,
+          style: GoogleFonts.roboto(
+              fontSize: 18, color: Color.fromARGB(255, 61, 122, 63))),
+      SizedBox(height: size.height * 0.02),
+      Text(location,
+           overflow: TextOverflow.ellipsis,
+           softWrap: false,
+          style: GoogleFonts.roboto(
+              fontSize: 18, color: Color.fromARGB(255, 68, 70, 68))),
+      SizedBox(height: size.height * 0.02),
+      // ignore: deprecated_member_use
+      FlatButton(onPressed: () {}, child: Text(action),color: Colors.green)
+    ]));
   }
 }

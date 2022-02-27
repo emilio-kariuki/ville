@@ -8,7 +8,7 @@ class BuildRound extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Container(
-      height: size.height * 0.1,
+      height: size.height * 0.02,
       margin: const EdgeInsets.symmetric(horizontal: 10),
       padding: const EdgeInsets.all(5),
       decoration: BoxDecoration(

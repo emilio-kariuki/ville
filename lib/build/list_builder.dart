@@ -37,7 +37,7 @@ class ListBuilder1 extends StatelessWidget {
       SizedBox(height: size.height * 0.02),
       Text(location,
            overflow: TextOverflow.ellipsis,
-           softWrap: false,
+           softWrap: true,
           style: GoogleFonts.roboto(
               fontSize: 18, color: Color.fromARGB(255, 68, 70, 68))),
       SizedBox(height: size.height * 0.02),

@@ -30,22 +30,19 @@ class _PostState extends State<Post> {
                       fontWeight: FontWeight.w600)),
                Padding(
                 padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
-                child: Expanded(
-                  // flex: 1,
-                  child: TextFormField(
-                    decoration: InputDecoration(
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(30.0),
-                        ),
-                        // icon: Icon(Icons.person,size:30,color: Colors.black),
-                        filled: true,
-                        hintStyle: TextStyle(color: Colors.grey[800]),
-                        focusColor: Colors.red,
-                        hintText: "Email",
-                        prefixIcon: Icon(Icons.mail,color: Colors.blueGrey[900]),
-                        fillColor: Colors.grey[200]),
-                    controller: title,
-                  ),
+                child: TextFormField(
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(30.0),
+                      ),
+                      // icon: Icon(Icons.person,size:30,color: Colors.black),
+                      filled: true,
+                      hintStyle: TextStyle(color: Colors.grey[800]),
+                      focusColor: Colors.red,
+                      hintText: "Email",
+                      prefixIcon: Icon(Icons.mail,color: Colors.blueGrey[900]),
+                      fillColor: Colors.grey[200]),
+                  controller: title,
                 ),
               ),
             ],

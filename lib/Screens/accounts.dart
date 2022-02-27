@@ -137,7 +137,7 @@ class _AccountsState extends State<Accounts> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          Text("Statistics",
+                          Text("Recent Posts",
                               style: GoogleFonts.robotoCondensed(
                                   fontSize: 23,
                                   color: kGreen,

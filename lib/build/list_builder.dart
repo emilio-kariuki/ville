@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import 'package:google_fonts/google_fonts.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 
 class ListBuilder1 extends StatelessWidget {
   final String imageUrl;
@@ -18,10 +19,11 @@ class ListBuilder1 extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Container(
+      // width: 60,
         child: Column(children: [
       Container(
         height: size.height * 0.14,
-        width: 70,
+         width: 80,
         // width: size.width * 0.26,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
@@ -35,7 +37,7 @@ class ListBuilder1 extends StatelessWidget {
           style: GoogleFonts.roboto(
               fontSize: 18, color: Color.fromARGB(255, 61, 122, 63))),
       SizedBox(height: size.height * 0.02),
-      Text(location,
+      AutoSizeText(location,
            textAlign: TextAlign.center,
            overflow: TextOverflow.ellipsis,
            softWrap: true,

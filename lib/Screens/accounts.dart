@@ -211,6 +211,7 @@ class _AccountsState extends State<Accounts> {
                     ),
 
                     Row(
+                      // ignore: prefer_const_literals_to_create_immutables
                       children: [
                         BuildCirlce(imageUrl: 'assets/images/cup1.png'),
                         BuildCirlce(imageUrl: 'assets/images/cup2.png'),

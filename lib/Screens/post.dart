@@ -72,7 +72,7 @@ class _PostState extends State<Post> {
             maxLines: 10,
             keyboardType: TextInputType.multiline,
             // style: TextStyle(height:10),
-            maxLength: 110,
+            maxLength: 360,
             decoration: InputDecoration(
               // contentPadding: const EdgeInsets.symmetric(vertical: 40.0),
                 border: OutlineInputBorder(

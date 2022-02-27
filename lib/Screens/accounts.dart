@@ -171,6 +171,31 @@ class _AccountsState extends State<Accounts> {
                       ),
                     ),
                     LineChartSample2(),
+                     Padding(
+                      padding: const EdgeInsets.only(bottom: 10,left: 15),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Text("Saved",
+                              style: GoogleFonts.robotoCondensed(
+                                  fontSize: 23,
+                                  color: kGreen,
+                                  fontWeight: FontWeight.w600)),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      height: size.height * 0.35,
+                      // width: 100,
+                      child: ListView.builder(
+                        physics: ClampingScrollPhysics(),
+                        shrinkWrap: true,
+                        scrollDirection: Axis.horizontal,
+                        itemCount: 15,
+                        itemBuilder: (BuildContext context, int index) => Center(child: ListBuilder1(imageUrl: 'assets/images/plant.jpg',category: "plastic",location: "Dedan Kimathi University",action: "Collect",)),
+                      ),
+                    ),
+
                   ],
                 ),
               )),

@@ -290,142 +290,142 @@ class _PostState extends State<Post> {
             ),
           ),
           Padding(
-                            padding: const EdgeInsets.only(
-                                left: 8, right: 8, top: 20),
-                            child: Stack(
-                              children: [
-                                Material(
-                                  color: Color.fromARGB(255, 36, 47, 53),
-                                  elevation: 20,
-                                  borderRadius: BorderRadius.circular(20),
-                                  child: Container(
-                                    //  color: Colors.grey,
-                                    // color: Color.fromARGB(255, 36, 47, 53),
-                                    child: Center(
-                                      child: image != null
-                                          ? ClipRRect(
-                                              borderRadius:
-                                                  BorderRadius.circular(20),
-                                              child: Image.file(
-                                                image!,
-                                                width: size.width,
-                                                height: size.height * 0.32,
-                                                fit: BoxFit.cover,
-                                              ),
-                                            )
-                                          : Text("Select Image",
-                                              style: GoogleFonts.roboto(
-                                                  color: Colors.white)),
-                                    ),
-                                    height: size.height * 0.3,
-                                    width: size.width,
-                                    decoration: BoxDecoration(
-                                      color: Colors.blueGrey[800],
-                                      boxShadow: [
-                                        BoxShadow(
-                                          color:
-                                              Color.fromARGB(255, 163, 165, 165)
-                                                  .withOpacity(0.6),
-                                          spreadRadius: 5,
-                                          blurRadius: 7,
-                                          offset: Offset(0,
-                                              3), // changes position of shadow
+              padding: const EdgeInsets.only(
+                  left: 8, right: 8, top: 20),
+              child: Stack(
+                children: [
+                  Material(
+                    color: Color.fromARGB(255, 36, 47, 53),
+                    elevation: 20,
+                    borderRadius: BorderRadius.circular(20),
+                    child: Container(
+                      //  color: Colors.grey,
+                      // color: Color.fromARGB(255, 36, 47, 53),
+                      child: Center(
+                        child: image != null
+                            ? ClipRRect(
+                                borderRadius:
+                                    BorderRadius.circular(20),
+                                child: Image.file(
+                                  image!,
+                                  width: size.width,
+                                  height: size.height * 0.32,
+                                  fit: BoxFit.cover,
+                                ),
+                              )
+                            : Text("Select Image",
+                                style: GoogleFonts.roboto(
+                                    color: Colors.white)),
+                      ),
+                      height: size.height * 0.3,
+                      width: size.width,
+                      decoration: BoxDecoration(
+                        color: Colors.blueGrey[800],
+                        boxShadow: [
+                          BoxShadow(
+                            color:
+                                Color.fromARGB(255, 163, 165, 165)
+                                    .withOpacity(0.6),
+                            spreadRadius: 5,
+                            blurRadius: 7,
+                            offset: Offset(0,
+                                3), // changes position of shadow
+                          ),
+                        ],
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      // image: image
+                    ),
+                  ),
+                  Positioned(
+                      top: 5,
+                      right: 5,
+                      child: IconButton(
+                          onPressed: () {
+                            // takePhoto(ImageSource.camera);
+                            setState(() {
+                              showDialog<String>(
+                                context: context,
+                                builder: (BuildContext context) =>
+                                    Container(
+                                  width: size.width,
+                                  height: size.height * 0.2,
+                                  decoration: BoxDecoration(
+                                    //border: Border.all(color: Color.fromARGB(255, 182, 36, 116),width:1 ),
+                                    borderRadius:
+                                        BorderRadius.circular(10),
+                                  ),
+                                  child: AlertDialog(
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(
+                                                20)),
+                                    contentPadding:
+                                        EdgeInsets.all(5),
+                                    title: const Text(
+                                        'choose image from: '),
+                                    content:
+                                        SingleChildScrollView(
+                                      child: ListBody(children: [
+                                        ListTile(
+                                          selectedColor:
+                                              Colors.grey,
+                                          onTap: () {
+                                            takePhoto(ImageSource
+                                                .camera);
+                                            Navigator.pop(
+                                                context);
+                                          },
+                                          leading: Icon(
+                                              Icons.camera,
+                                              color: Colors
+                                                  .blueGrey[900]),
+                                          title: Text("Camera"),
                                         ),
-                                      ],
-                                      borderRadius: BorderRadius.circular(20),
+                                        ListTile(
+                                          selectedColor:
+                                              Colors.grey,
+                                          onTap: () {
+                                            setState(() {
+                                              takePhoto(
+                                                  ImageSource
+                                                      .gallery);
+                                              Navigator.pop(
+                                                  context);
+                                            });
+                                          },
+                                          leading: Icon(
+                                              Icons.layers,
+                                              color: Colors
+                                                  .blueGrey[900]),
+                                          title: GestureDetector(
+                                              onTap: () {
+                                                setState(() {
+                                                  takePhoto(
+                                                      ImageSource
+                                                          .gallery);
+                                                  Navigator.pop(
+                                                      context);
+                                                });
+                                              },
+                                              child: Text(
+                                                  "Gallery")),
+                                        ),
+                                      ]),
                                     ),
-                                    // image: image
                                   ),
                                 ),
-                                Positioned(
-                                    top: 5,
-                                    right: 5,
-                                    child: IconButton(
-                                        onPressed: () {
-                                          // takePhoto(ImageSource.camera);
-                                          setState(() {
-                                            showDialog<String>(
-                                              context: context,
-                                              builder: (BuildContext context) =>
-                                                  Container(
-                                                width: size.width,
-                                                height: size.height * 0.2,
-                                                decoration: BoxDecoration(
-                                                  //border: Border.all(color: Color.fromARGB(255, 182, 36, 116),width:1 ),
-                                                  borderRadius:
-                                                      BorderRadius.circular(10),
-                                                ),
-                                                child: AlertDialog(
-                                                  shape: RoundedRectangleBorder(
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              20)),
-                                                  contentPadding:
-                                                      EdgeInsets.all(5),
-                                                  title: const Text(
-                                                      'choose image from: '),
-                                                  content:
-                                                      SingleChildScrollView(
-                                                    child: ListBody(children: [
-                                                      ListTile(
-                                                        selectedColor:
-                                                            Colors.grey,
-                                                        onTap: () {
-                                                          takePhoto(ImageSource
-                                                              .camera);
-                                                          Navigator.pop(
-                                                              context);
-                                                        },
-                                                        leading: Icon(
-                                                            Icons.camera,
-                                                            color: Colors
-                                                                .blueGrey[900]),
-                                                        title: Text("Camera"),
-                                                      ),
-                                                      ListTile(
-                                                        selectedColor:
-                                                            Colors.grey,
-                                                        onTap: () {
-                                                          setState(() {
-                                                            takePhoto(
-                                                                ImageSource
-                                                                    .gallery);
-                                                            Navigator.pop(
-                                                                context);
-                                                          });
-                                                        },
-                                                        leading: Icon(
-                                                            Icons.layers,
-                                                            color: Colors
-                                                                .blueGrey[900]),
-                                                        title: GestureDetector(
-                                                            onTap: () {
-                                                              setState(() {
-                                                                takePhoto(
-                                                                    ImageSource
-                                                                        .gallery);
-                                                                Navigator.pop(
-                                                                    context);
-                                                              });
-                                                            },
-                                                            child: Text(
-                                                                "Gallery")),
-                                                      ),
-                                                    ]),
-                                                  ),
-                                                ),
-                                              ),
-                                            );
-                                          });
-                                        },
-                                        icon: Icon(Icons.add_a_photo,
-                                            size: 30,
-                                            color: image != null
-                                                ? Colors.white
-                                                : Colors.black)))
-                              ],
-                            ),
-                          ),
+                              );
+                            });
+                          },
+                          icon: Icon(Icons.add_a_photo,
+                              size: 30,
+                              color: image != null
+                                  ? Colors.white
+                                  : Colors.black)))
+                ],
+              ),
+            ),
 
         ]),
       ),

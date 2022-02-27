@@ -98,6 +98,7 @@ class _LineChartSample2State extends State<LineChartSample2> {
                 return 'JUN';
               case 8:
                 return 'SEP';
+              
             }
             return '';
           },
@@ -119,6 +120,7 @@ class _LineChartSample2State extends State<LineChartSample2> {
                 return '30k';
               case 5:
                 return '50k';
+              
             }
             return '';
           },
@@ -197,6 +199,7 @@ class _LineChartSample2State extends State<LineChartSample2> {
                 return 'JUN';
               case 8:
                 return 'SEP';
+              
             }
             return '';
           },
@@ -218,6 +221,7 @@ class _LineChartSample2State extends State<LineChartSample2> {
                 return '30k';
               case 5:
                 return '50k';
+              
             }
             return '';
           },

@@ -124,7 +124,7 @@ class _AccountsState extends State<Accounts> {
                       // ignore: prefer_const_literals_to_create_immutables
                       children: [
                         ListBuilder1(imageUrl: "assets/images/plant.jpg", category: "plastci waste", location: "Dedan kimathi university", action: "Completed"),
-                        SizedBox(width: 10),add
+                        SizedBox(width: 10),
                         ListBuilder1(imageUrl: "assets/images/plant.jpg", category: "plastci waste", location: "Dedan kimathi university", action: "Completed")
                       ],
                     ),

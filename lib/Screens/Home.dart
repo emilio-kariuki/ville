@@ -21,11 +21,11 @@ class _HomeState extends State<Home> {
   PageController controller = PageController(initialPage: 0);
   int index = 0;
   final items = [
-    Icon(Icons.map, size: 30),
-    Icon(Icons.layers, size: 30),
-    Icon(Icons.add, size: 30),
-    Icon(Icons.notifications, size: 30),
-    Icon(Icons.person, size: 30),
+    Icon(Icons.map, size: 30,color:Colors.white),
+    Icon(Icons.layers, size: 30,color:Colors.white),
+    Icon(Icons.add, size: 30,color:Colors.white),
+    Icon(Icons.notifications, size: 30,color:Colors.white),
+    Icon(Icons.person, size: 30,color:Colors.white),
   ];
   final screen = [
     Mapp(),

@@ -50,6 +50,7 @@ class DisplayItems extends StatelessWidget {
                           fit: BoxFit.cover,
                         ))),
                 Container(
+                  padding:const EdgeInsets.all(6),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -68,12 +69,12 @@ class DisplayItems extends StatelessWidget {
                 )
                 ],
               ),
-              Positioned(
-                top: 5,
-                right: 5,
-                child: AppIcon(
-                  iconUrl: "assets/images/mail.png",
-                  func: (){},)),
+              // Positioned(
+              //   top: 5,
+              //   right: 5,
+              //   child: AppIcon(
+              //     iconUrl: "assets/images/mail.png",
+              //     func: (){},)),
               Positioned(
                 bottom: 5,
                 right: 5,

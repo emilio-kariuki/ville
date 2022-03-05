@@ -29,6 +29,7 @@ class _ItemsState extends State<Items> {
                           child: TextFormField(
                             maxLength: 15,
                             decoration: InputDecoration(
+                              prefixIcon: Icon(Icons.search),
                                 border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(10.0),
                                 ),

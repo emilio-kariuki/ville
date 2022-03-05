@@ -23,7 +23,7 @@ class _ItemsState extends State<Items> {
       child: Scaffold(
           appBar: AppBar(
             bottom: PreferredSize(
-              preferredSize: Size(size.width,100),
+              preferredSize: Size(size.width,80),
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: TabBar(
@@ -50,7 +50,7 @@ class _ItemsState extends State<Items> {
               ),
             ),
             title: Padding(
-              padding: const EdgeInsets.only(top:10),
+              padding: const EdgeInsets.only(top:5),
               child: Container(
                 child: Row(
                   children: [

@@ -11,16 +11,39 @@ class Items extends StatefulWidget {
 }
 
 class _ItemsState extends State<Items> {
-  
   @override
   Widget build(BuildContext context) {
+    final title = TextEditingController();
     return Scaffold(
-      body: ColorfulSafeArea(
-        overflowRules: const OverflowRules.all(true),
-        child:Column(children: [
-        
-        ],)
-      )
-    );
+        body: ColorfulSafeArea(
+            overflowRules: const OverflowRules.all(true),
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                      child: TextFormField(
+                        maxLength: 15,
+                        decoration: InputDecoration(
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10.0),
+                            ),
+                            // icon: Icon(Icons.person,size:30,color: Colors.black),
+                            filled: true,
+                            hintStyle: TextStyle(color: Colors.grey[800]),
+                            focusColor: Colors.red,
+                            hintText: "Summary of the waste",
+                            // suffixText: "10",
+                            // prefixIcon: Icon(Icons.mail,color: Colors.blueGrey[900]),
+                            fillColor: Colors.grey[200]),
+                        controller: title,
+                      ),
+                    ),
+                    
+                  ],
+                ),
+              ],
+            )));
   }
 }

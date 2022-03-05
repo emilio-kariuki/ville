@@ -25,14 +25,11 @@ class _ItemsState extends State<Items> {
         // ignore: prefer_const_literals_to_create_immutables
         tabs: [
           Tab(
-            child: Container(
-              height: 70,
-              child: Column(
-                children: [
-                  Icon(Icons.flight,color: Colors.black),
-                  Icon(Icons.flight,color: Colors.black)
-                ],
-              ),
+            child: Column(
+              children: [
+                Icon(Icons.flight,color: Colors.black),
+                Icon(Icons.flight,color: Colors.black)
+              ],
             ),
             ),
           Tab(icon: Icon(Icons.directions_transit,color: Colors.black)),

@@ -30,13 +30,13 @@ class _GlassState extends State<Glass> {
               ),
               DisplayItems(
                 category: "plastics",
-                imageUrl: 'assets/images/p2.jpg',
+                imageUrl: 'assets/images/g1.jpg',
                 location: 'Chuka University,Chuka',
                 distance: 500,
               ),
               DisplayItems(
                 category: "plastics",
-                imageUrl: 'assets/images/p3.jpg',
+                imageUrl: 'assets/images/g2.jpg',
                 location: 'Kisii University,Kisii',
                 distance: 240,
               ),
@@ -48,7 +48,7 @@ class _GlassState extends State<Glass> {
               ),
               DisplayItems(
                 category: "plastics",
-                imageUrl: 'assets/images/p5.jpg',
+                imageUrl: 'assets/images/g1.jpg',
                 location: 'University of Nairobi,Nairobi',
                 distance: 2000,
               ),

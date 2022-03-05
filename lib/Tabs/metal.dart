@@ -24,31 +24,31 @@ class _MetalState extends State<Metal> {
             children: [
               DisplayItems(
                 category: "plastics",
-                imageUrl: 'assets/images/pastic.jpg',
+                imageUrl: 'assets/images/m1.jpg',
                 location: 'Dedan Kimathi University,Nyeri',
                 distance: 2000,
               ),
               DisplayItems(
                 category: "plastics",
-                imageUrl: 'assets/images/p2.jpg',
+                imageUrl: 'assets/images/m2.jpg',
                 location: 'Chuka University,Chuka',
                 distance: 500,
               ),
               DisplayItems(
                 category: "plastics",
-                imageUrl: 'assets/images/p3.jpg',
+                imageUrl: 'assets/images/m3.jpg',
                 location: 'Kisii University,Kisii',
                 distance: 240,
               ),
               DisplayItems(
                 category: "plastics",
-                imageUrl: 'assets/images/p4.jpg',
+                imageUrl: 'assets/images/m1.jpg',
                 location: 'Mt Kenya University,thika',
                 distance: 60,
               ),
               DisplayItems(
                 category: "plastics",
-                imageUrl: 'assets/images/p5.jpg',
+                imageUrl: 'assets/images/m3.jpg',
                 location: 'University of Nairobi,Nairobi',
                 distance: 2000,
               ),

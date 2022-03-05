@@ -31,7 +31,7 @@ class DisplayItems extends StatelessWidget {
             borderRadius: BorderRadius.circular(20),
           ),
           child: Stack(
-            alignment: Alignment.center,
+            //alignment: Alignment.center,
             children: [
               Column(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -46,7 +46,10 @@ class DisplayItems extends StatelessWidget {
                         image: AssetImage(imageUrl),
                         fit: BoxFit.cover,
                       ))),
-              Text(category,
+              Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(category,
                   style: GoogleFonts.roboto(
                       fontSize: 24, color: Color.fromARGB(255, 7, 6, 12))),
               const SizedBox(height: 5),
@@ -55,6 +58,8 @@ class DisplayItems extends StatelessWidget {
               const SizedBox(height: 5),
               Text('$distance km',
                   style: GoogleFonts.roboto(fontSize: 15, color: Colors.grey)),
+                ],
+              )
               ],
             ),
             Positioned(

@@ -24,24 +24,29 @@ class _ItemsState extends State<Items> {
           appBar: AppBar(
             bottom: PreferredSize(
               preferredSize: Size(size.width,100),
-              child: TabBar(
-                indicator: BoxDecoration(
-                  borderRadius: BorderRadius.circular(25),
-                color: Color.fromARGB(255, 18, 20, 29),),
-                // isScrollable: true,
-                // ignore: prefer_const_literals_to_create_immutables
-                tabs: [
-                Tab(
-                  icon: Icon(Icons.flight,size: 50),
-                  text:("Plastic")),
-                Tab(icon: Icon(Icons.directions_transit)),
-                Tab(icon: Icon(Icons.directions_car)),
-                  
-                ],
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: TabBar(
+                  indicator: BoxDecoration(
+                    borderRadius: BorderRadius.circular(25),
+                  color: Color.fromARGB(255, 18, 20, 29),),
+                  // isScrollable: true,
+                  // ignore: prefer_const_literals_to_create_immutables
+                  tabs: [
+                  Tab(
+                    child:Indicate(imageUrl: "assets/images/plant.jpg"),
+                    text: 'plastics'
+                    
+                    ),
+                  Tab(icon: Icon(Icons.directions_transit)),
+                  Tab(icon: Icon(Icons.directions_car)),
+                    
+                  ],
+                ),
               ),
             ),
             title: Padding(
-              padding: const EdgeInsets.only(top:30),
+              padding: const EdgeInsets.only(top:10),
               child: Container(
                 child: Row(
                   children: [
@@ -54,7 +59,7 @@ class _ItemsState extends State<Items> {
                             border: OutlineInputBorder(
                               borderSide: const BorderSide(
                                   color: Colors.white, width: 2.0),
-                              borderRadius: BorderRadius.circular(30.0),
+                              borderRadius: BorderRadius.circular(25.0),
                             ),
                             // icon: Icon(Icons.person,size:30,color: Colors.black),
                             filled: true,

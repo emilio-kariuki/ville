@@ -24,29 +24,26 @@ class _ItemsState extends State<Items> {
           appBar: AppBar(
             bottom: PreferredSize(
               preferredSize: Size(size.width,80),
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: TabBar(
-                  indicatorColor: Colors.amberAccent,
-                  // isScrollable: true,
-                  // ignore: prefer_const_literals_to_create_immutables
-                  tabs: [
-                  Tab(
-                    child:Row(
-                      children: [
-                        Indicate(imageUrl: "assets/images/pastic.jpg"),
-                        SizedBox(width: 4),
-                        Text("Plastivs",style:GoogleFonts.roboto(color: Colors.black))
-                      ],
-                    ),
-                    
-                    
-                    ),
-                  Tab(icon: Icon(Icons.directions_transit)),
-                  Tab(icon: Icon(Icons.directions_car)),
-                    
-                  ],
-                ),
+              child: TabBar(
+                indicatorColor: Colors.amberAccent,
+                // isScrollable: true,
+                // ignore: prefer_const_literals_to_create_immutables
+                tabs: [
+                Tab(
+                  child:Row(
+                    children: [
+                      Indicate(imageUrl: "assets/images/pastic.jpg"),
+                      SizedBox(width: 4),
+                      Text("Plastivs",style:GoogleFonts.roboto(color: Colors.black))
+                    ],
+                  ),
+                  
+                  
+                  ),
+                Tab(icon: Icon(Icons.directions_transit)),
+                Tab(icon: Icon(Icons.directions_car)),
+                  
+                ],
               ),
             ),
             title: Padding(

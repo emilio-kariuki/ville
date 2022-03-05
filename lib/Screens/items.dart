@@ -26,7 +26,7 @@ class _ItemsState extends State<Items> {
               preferredSize: Size(size.width,100),
               child: TabBar(
                 indicator: BoxDecoration(
-                  borderRadius: BorderRadius.circular(30),
+                  borderRadius: BorderRadius.circular(25),
                 color: Color.fromARGB(255, 18, 20, 29),),
                 // isScrollable: true,
                 // ignore: prefer_const_literals_to_create_immutables

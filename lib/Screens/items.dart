@@ -24,6 +24,7 @@ class _ItemsState extends State<Items> {
           appBar: AppBar(
             bottom: TabBar(
               indicator: BoxDecoration(
+                borderRadius: BorderRadius.circular(50),
               color: Colors.greenAccent,
               image: DecorationImage(
                   image: AssetImage('assets/images/placeholder.png'),

@@ -17,7 +17,7 @@ class _PlasticState extends State<Plastic> {
     return Scaffold(
       body: DisplayItems(
         category: "plastics",
-        imageUrl: 'assets/images/pastic.png',
+        imageUrl: 'assets/images/pastic.jpg',
         location: 'Dedan Kimathi University',
         distance: 2000,
       ),

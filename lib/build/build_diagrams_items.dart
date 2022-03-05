@@ -19,18 +19,18 @@ class DisplayItems extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    return Material(
-      elevation: 10,
-      borderRadius: BorderRadius.circular(20),
-      child: Container(
-          height: size.height * 0.3,
-          width: size.width,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
-            color: Colors.white,
-          ),
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Material(
+        elevation: 10,
+        borderRadius: BorderRadius.circular(20),
+        child: Container(
+            height: size.height * 0.3,
+            width: size.width,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              color: Colors.white,
+            ),
             child: Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
@@ -86,9 +86,9 @@ class DisplayItems extends StatelessWidget {
                     func: (){},))
                 ],
                 ),
+            )
             ),
-          )
-          ),
+      ),
     );
   }
 }

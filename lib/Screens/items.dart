@@ -21,6 +21,7 @@ class _ItemsState extends State<Items> {
       child: Scaffold(
         appBar: AppBar(
       bottom: TabBar(
+        isScrollable: true,
         // ignore: prefer_const_literals_to_create_immutables
         tabs: [
           Tab(

@@ -49,6 +49,13 @@ class _ItemsState extends State<Items> {
                       ],
                     ),
                   ),
+                  TabBar(
+                      tabs: [
+                        Tab(icon: Icon(Icons.flight)),
+                        Tab(icon: Icon(Icons.directions_transit)),
+                        Tab(icon: Icon(Icons.directions_car)),
+                      ],
+                    ),
                 ],
               )),
         ));

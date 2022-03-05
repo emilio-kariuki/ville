@@ -4,6 +4,7 @@ import 'package:colorful_safe_area/colorful_safe_area.dart';
 import "package:flutter/material.dart";
 import 'package:google_fonts/google_fonts.dart';
 import 'package:material_floating_search_bar/material_floating_search_bar.dart';
+import 'package:ville/Screens/post.dart';
 import 'package:ville/build/type_indicator.dart';
 import 'package:ville/constants/constants.dart';
 
@@ -75,7 +76,7 @@ class _ItemsState extends State<Items> {
               overflowRules: const OverflowRules.all(true),
               child: TabBarView(
                 children: [
-                  Icon(Icons.flight, size: 350),
+                  Post(),
                   Icon(Icons.directions_transit, size: 350),
                   Icon(Icons.directions_car, size: 350),
                 ],

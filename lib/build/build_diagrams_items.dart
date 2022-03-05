@@ -35,7 +35,7 @@ class DisplayItems extends StatelessWidget {
                 height: size.height * 0.14,
                 width: size.width,
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.only(topLeft: Radius.circular(20)),
                     shape: BoxShape.rectangle,
                     image: DecorationImage(
                       image: AssetImage(imageUrl),

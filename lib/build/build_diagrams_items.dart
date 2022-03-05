@@ -81,7 +81,7 @@ class DisplayItems extends StatelessWidget {
                 //     iconUrl: "assets/images/mail.png",
                 //     func: (){},)),
                 Positioned(
-                  bottom: 5,
+                  bottom: 10,
                   right: 5,
                   child: AppIcon(
                     iconUrl: "assets/images/add.png",

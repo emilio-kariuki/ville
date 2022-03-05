@@ -12,7 +12,12 @@ class _CollectState extends State<Collect> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
+      body: Stack(
+        alignment: Alignment.center,
+        children: [
+          
+        ]
+      )
     );
   }
 }

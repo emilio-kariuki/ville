@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import 'package:google_fonts/google_fonts.dart';
+import 'package:ville/build/build_icon.dart';
 import 'package:ville/constants/constants.dart';
 
 class DisplayItems extends StatelessWidget {
@@ -47,11 +48,22 @@ class DisplayItems extends StatelessWidget {
             Text(location,
                 style: GoogleFonts.roboto(fontSize: 24, color: kGreen)),
             const SizedBox(height: 5),
-            Text(distance.toString(),
+            Text('$distance km',
                 style: GoogleFonts.roboto(fontSize: 15, color: Colors.grey)),
             ],
           ),
-          // Positioned(child: child)
+          Positioned(
+            top: 5,
+            right: 5,
+            child: AppIcon(
+              iconUrl: "assets/images/mail.png",
+              func: (){},)),
+          Positioned(
+            bottom: 5,
+            right: 5,
+            child: AppIcon(
+              iconUrl: "assets/images/mail.png",
+              func: (){},))
           ],
           )
         );

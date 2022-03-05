@@ -5,6 +5,7 @@ import "package:flutter/material.dart";
 import 'package:google_fonts/google_fonts.dart';
 import 'package:material_floating_search_bar/material_floating_search_bar.dart';
 import 'package:ville/build/type_indicator.dart';
+import 'package:ville/constants/constants.dart';
 
 class Items extends StatefulWidget {
   const Items({Key? key}) : super(key: key);
@@ -25,7 +26,9 @@ class _ItemsState extends State<Items> {
             bottom: PreferredSize(
               preferredSize: Size(size.width,80),
               child: TabBar(
-                indicatorColor: Colors.amberAccent,
+                indicatorWeight: 6,
+                indicatorSize: TabBarIndicatorSize.tab,
+                indicatorColor: kGreen,
                 // isScrollable: true,
                 // ignore: prefer_const_literals_to_create_immutables
                 tabs: [

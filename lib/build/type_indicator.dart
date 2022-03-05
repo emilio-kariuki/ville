@@ -3,8 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 
 class Indicate extends StatelessWidget {
   final String imageUrl;
-  final String action;
-  const Indicate({Key? key, required this.imageUrl, required this.action}) : super(key: key);
+  
+  const Indicate({Key? key, required this.imageUrl}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

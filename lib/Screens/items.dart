@@ -28,7 +28,7 @@ class _ItemsState extends State<Items> {
           // ignore: prefer_const_literals_to_create_immutables
           tabs: [
             Tab(
-              child: Indicate(imageUrl: 'assets/images/plant.jpg', action: "Plastic"),
+              child: Indicate(imageUrl: 'assets/images/plant.jpg'),
               text: "plastic",
               ),
             Tab(icon: Icon(Icons.directions_transit,color: Colors.black)),

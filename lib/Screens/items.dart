@@ -27,10 +27,7 @@ class _ItemsState extends State<Items> {
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: TabBar(
-                  indicator: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                  // color: Color.fromARGB(255, 255, 255, 255),
-                  ),
+                  indicatorColor: Colors.amberAccent,
                   // isScrollable: true,
                   // ignore: prefer_const_literals_to_create_immutables
                   tabs: [

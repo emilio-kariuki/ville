@@ -8,12 +8,14 @@ class DisplayItems extends StatelessWidget {
   final String location;
   final String category;
   final int distance;
+  final Function() func;
   const DisplayItems(
       {Key? key,
       required this.imageUrl,
       required this.category,
       required this.location,
-      required this.distance})
+      required this.distance, 
+      required this.func})
       : super(key: key);
 
   @override
@@ -41,55 +43,63 @@ class DisplayItems extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Container(
-                      height: size.height * 0.17,
-                      width: size.width,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.only(topLeft: Radius.circular(20),topRight: Radius.circular(20)),
-                          shape: BoxShape.rectangle,
-                          image: DecorationImage(
-                            image: AssetImage(imageUrl),
-                            fit: BoxFit.cover,
-                          ))),
-                  Padding(
-                    padding: const EdgeInsets.only(left:10,top:8),
-                    child: Container(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Text(category,
-                          style: GoogleFonts.roboto(
-                              fontSize: 20, color: Color.fromARGB(255, 7, 6, 12),fontWeight: FontWeight.w500)),
-                      const SizedBox(height: 5),
-                      Text(location,
-                          style: GoogleFonts.roboto(fontSize: 22, color: kGreen,fontWeight: FontWeight.w500)),
-                      const SizedBox(height: 5),
-                      Text('$distance km',
-                          style: GoogleFonts.roboto(fontSize: 15, color: Colors.grey)),
-                        ],
-                      ),
-                    ),
-                  )
-                  ],
-                ),
-                // Positioned(
-                //   top: 5,
-                //   right: 5,
-                //   child: AppIcon(
-                //     iconUrl: "assets/images/mail.png",
-                //     func: (){},)),
-                Positioned(
-                  bottom: 10,
-                  right: 5,
-                  child: AppIcon(
-                    iconUrl: "assets/images/add.png",
-                    func: (){},))
+                    children: [
+                      Container(
+                          height: size.height * 0.17,
+                          width: size.width,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(20),
+                                  topRight: Radius.circular(20)),
+                              shape: BoxShape.rectangle,
+                              image: DecorationImage(
+                                image: AssetImage(imageUrl),
+                                fit: BoxFit.cover,
+                              ))),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10, top: 8),
+                        child: Container(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Text(category,
+                                  style: GoogleFonts.roboto(
+                                      fontSize: 20,
+                                      color: Color.fromARGB(255, 7, 6, 12),
+                                      fontWeight: FontWeight.w500)),
+                              const SizedBox(height: 5),
+                              Text(location,
+                                  style: GoogleFonts.roboto(
+                                      fontSize: 22,
+                                      color: kGreen,
+                                      fontWeight: FontWeight.w500)),
+                              const SizedBox(height: 5),
+                              Text('$distance km',
+                                  style: GoogleFonts.roboto(
+                                      fontSize: 15, color: Colors.grey)),
+                            ],
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                  // Positioned(
+                  //   top: 5,
+                  //   right: 5,
+                  //   child: AppIcon(
+                  //     iconUrl: "assets/images/mail.png",
+                  //     func: (){},)),
+                  Positioned(
+                      bottom: 10,
+                      right: 5,
+                      child: AppIcon(
+                        iconUrl: "assets/images/add.png",
+                        func: () {},
+                      ))
                 ],
-                ),
-            )
-            ),
+              ),
+            )),
       ),
     );
   }

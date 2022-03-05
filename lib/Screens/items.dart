@@ -28,14 +28,21 @@ class _ItemsState extends State<Items> {
                 padding: const EdgeInsets.all(8.0),
                 child: TabBar(
                   indicator: BoxDecoration(
-                    borderRadius: BorderRadius.circular(25),
-                  color: Color.fromARGB(255, 18, 20, 29),),
+                    borderRadius: BorderRadius.circular(15),
+                  // color: Color.fromARGB(255, 255, 255, 255),
+                  ),
                   // isScrollable: true,
                   // ignore: prefer_const_literals_to_create_immutables
                   tabs: [
                   Tab(
-                    child:Indicate(imageUrl: "assets/images/plant.jpg"),
-                    text: 'plastics'
+                    child:Row(
+                      children: [
+                        Indicate(imageUrl: "assets/images/plant.jpg"),
+                        SizedBox(width: 4),
+                        Text("Plastivs",style:GoogleFonts.roboto(color: Colors.black))
+                      ],
+                    ),
+                    
                     
                     ),
                   Tab(icon: Icon(Icons.directions_transit)),

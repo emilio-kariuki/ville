@@ -27,7 +27,7 @@ class _ItemsState extends State<Items> {
                         Flexible(
                           flex:1,
                           child: TextFormField(
-                            maxLength: 15,
+                            // maxLength: 15,
                             decoration: InputDecoration(
                               prefixIcon: Icon(Icons.search),
                                 border: OutlineInputBorder(
@@ -40,7 +40,7 @@ class _ItemsState extends State<Items> {
                                 hintText: "Summary of the waste",
                                 // suffixText: "10",
                                 // prefixIcon: Icon(Icons.mail,color: Colors.blueGrey[900]),
-                                fillColor: Colors.grey[200]),
+                                fillColor: Color.fromARGB(255, 255, 255, 255)),
                             controller: title,
                           ),
                         ),

@@ -25,10 +25,7 @@ class _ItemsState extends State<Items> {
             bottom: TabBar(
               indicator: BoxDecoration(
                 borderRadius: BorderRadius.circular(50),
-              color: Colors.greenAccent,
-              image: DecorationImage(
-                  image: AssetImage('assets/images/placeholder.png'),
-                  fit: BoxFit.fitWidth)),
+              color: Color.fromARGB(255, 18, 20, 29),),
               // isScrollable: true,
               // ignore: prefer_const_literals_to_create_immutables
               tabs: [

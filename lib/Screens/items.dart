@@ -34,7 +34,7 @@ class _ItemsState extends State<Items> {
                   Tab(
                     child:Row(
                       children: [
-                        Indicate(imageUrl: "assets/images/plastic.jpg"),
+                        Indicate(imageUrl: "assets/images/pastic.jpg"),
                         SizedBox(width: 4),
                         Text("Plastivs",style:GoogleFonts.roboto(color: Colors.black))
                       ],

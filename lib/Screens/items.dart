@@ -26,6 +26,7 @@ class _ItemsState extends State<Items> {
             bottom: PreferredSize(
               preferredSize: Size(size.width,80),
               child: TabBar(
+                // indicatorPadding: EdgeInsets.only(left:50,right:10),
                 indicatorWeight: 6,
                 indicatorSize: TabBarIndicatorSize.tab,
                 indicatorColor: kGreen,

@@ -26,56 +26,59 @@ class DisplayItems extends StatelessWidget {
           borderRadius: BorderRadius.circular(20),
           color: Colors.white,
         ),
-        child: Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
-          ),
-          child: Stack(
-            //alignment: Alignment.center,
-            children: [
-              Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Container(
-                  height: size.height * 0.17,
-                  width: size.width,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.only(topLeft: Radius.circular(20),topRight: Radius.circular(20)),
-                      shape: BoxShape.rectangle,
-                      image: DecorationImage(
-                        image: AssetImage(imageUrl),
-                        fit: BoxFit.cover,
-                      ))),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Text(category,
-                  style: GoogleFonts.roboto(
-                      fontSize: 24, color: Color.fromARGB(255, 7, 6, 12))),
-              const SizedBox(height: 5),
-              Text(location,
-                  style: GoogleFonts.roboto(fontSize: 24, color: kGreen)),
-              const SizedBox(height: 5),
-              Text('$distance km',
-                  style: GoogleFonts.roboto(fontSize: 15, color: Colors.grey)),
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+            ),
+            child: Stack(
+              //alignment: Alignment.center,
+              children: [
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Container(
+                    height: size.height * 0.17,
+                    width: size.width,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.only(topLeft: Radius.circular(20),topRight: Radius.circular(20)),
+                        shape: BoxShape.rectangle,
+                        image: DecorationImage(
+                          image: AssetImage(imageUrl),
+                          fit: BoxFit.cover,
+                        ))),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text(category,
+                    style: GoogleFonts.roboto(
+                        fontSize: 24, color: Color.fromARGB(255, 7, 6, 12))),
+                const SizedBox(height: 5),
+                Text(location,
+                    style: GoogleFonts.roboto(fontSize: 24, color: kGreen)),
+                const SizedBox(height: 5),
+                Text('$distance km',
+                    style: GoogleFonts.roboto(fontSize: 15, color: Colors.grey)),
+                  ],
+                )
                 ],
-              )
+              ),
+              Positioned(
+                top: 5,
+                right: 5,
+                child: AppIcon(
+                  iconUrl: "assets/images/mail.png",
+                  func: (){},)),
+              Positioned(
+                bottom: 5,
+                right: 5,
+                child: AppIcon(
+                  iconUrl: "assets/images/mail.png",
+                  func: (){},))
               ],
-            ),
-            Positioned(
-              top: 5,
-              right: 5,
-              child: AppIcon(
-                iconUrl: "assets/images/mail.png",
-                func: (){},)),
-            Positioned(
-              bottom: 5,
-              right: 5,
-              child: AppIcon(
-                iconUrl: "assets/images/mail.png",
-                func: (){},))
-            ],
-            ),
+              ),
+          ),
         )
         );
   }

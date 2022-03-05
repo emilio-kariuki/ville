@@ -22,13 +22,13 @@ class _ItemsState extends State<Items> {
       child: Scaffold(
         appBar: AppBar(
       bottom: PreferredSize(
-        preferredSize: Size(200,200),
+        preferredSize: Size(200,90),
         child: TabBar(
           isScrollable: true,
           // ignore: prefer_const_literals_to_create_immutables
           tabs: [
             Tab(
-              child: Indicate(imageUrl: 'assets/images/plant.jpg'),
+              // child: Indicate(imageUrl: 'assets/images/plant.jpg'),
               text: "plastic",
               ),
             Tab(icon: Icon(Icons.directions_transit,color: Colors.black)),

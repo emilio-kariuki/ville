@@ -5,6 +5,9 @@ import "package:flutter/material.dart";
 import 'package:google_fonts/google_fonts.dart';
 import 'package:material_floating_search_bar/material_floating_search_bar.dart';
 import 'package:ville/Screens/post.dart';
+import 'package:ville/Tabs/glass.dart';
+import 'package:ville/Tabs/metal.dart';
+import 'package:ville/Tabs/organic.dart';
 import 'package:ville/Tabs/plastic.dart';
 import 'package:ville/build/type_indicator.dart';
 import 'package:ville/constants/constants.dart';
@@ -22,7 +25,7 @@ class _ItemsState extends State<Items> {
     final size = MediaQuery.of(context).size;
     final title = TextEditingController();
     return DefaultTabController(
-      length: 3,
+      length: 4,
       child: Scaffold(
           appBar: AppBar(
               backgroundColor: Colors.white,
@@ -36,6 +39,7 @@ class _ItemsState extends State<Items> {
                 tabs: [
                 Tab(icon: Icon(Icons.directions_boat,color: kGreen)),
                 Tab(icon: Icon(Icons.directions_transit,color: kGreen)),
+                Tab(icon: Icon(Icons.directions_car,color:kGreen)),
                 Tab(icon: Icon(Icons.directions_car,color:kGreen)),
                   
                 ],
@@ -77,10 +81,12 @@ class _ItemsState extends State<Items> {
             child: ColorfulSafeArea(
               overflowRules: const OverflowRules.all(true),
               child: TabBarView(
+                // ignore: prefer_const_literals_to_create_immutables
                 children: [
                   Plastic(),
-                  Icon(Icons.directions_transit, size: 350),
-                  Icon(Icons.directions_car, size: 350),
+                  Metal(),
+                  Glass(),
+                  Organic(),
                 ],
               ),
             ),

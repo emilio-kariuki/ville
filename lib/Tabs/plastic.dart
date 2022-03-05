@@ -6,7 +6,7 @@ import 'package:ville/build/build_diagrams_items.dart';
 
 
 class Plastic extends StatefulWidget {
-  Plastic({Key? key}) : super(key: key);
+  const Plastic({Key? key}) : super(key: key);
 
   @override
   State<Plastic> createState() => _PlasticState();

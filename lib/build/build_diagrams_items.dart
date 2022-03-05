@@ -20,12 +20,12 @@ class DisplayItems extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(5.0),
       child: Material(
         elevation: 10,
         borderRadius: BorderRadius.circular(20),
         child: Container(
-            height: size.height * 0.28,
+            height: size.height * 0.29,
             width: size.width,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),

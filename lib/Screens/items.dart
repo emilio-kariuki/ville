@@ -23,12 +23,47 @@ class _ItemsState extends State<Items> {
       bottom: TabBar(
         // ignore: prefer_const_literals_to_create_immutables
         tabs: [
-          Tab(icon: Icon(Icons.flight,color: Colors.black)),
+          Tab(
+            child: Column(
+              children: [
+                Icon(Icons.flight,color: Colors.black),
+                Icon(Icons.flight,color: Colors.black)
+              ],
+            ),
+            ),
           Tab(icon: Icon(Icons.directions_transit,color: Colors.black)),
           Tab(icon: Icon(Icons.directions_car,color: Colors.black)),
         ],
       ),
-      title: Text('Tabs Demo'),
+      title: Container(
+        child:Row(
+          children: [
+            Flexible(
+                  flex:1,
+                  child: TextFormField(
+                    // maxLength: 15,
+                    decoration: InputDecoration(
+                      prefixIcon: Icon(Icons.search),
+                        border: OutlineInputBorder(
+                          borderSide: const BorderSide(color: Colors.white, width: 2.0),
+                          borderRadius: BorderRadius.circular(30.0),
+                        ),
+                        // icon: Icon(Icons.person,size:30,color: Colors.black),
+                        filled: true,
+                        hintStyle: TextStyle(color: Color.fromARGB(255, 117, 117, 117),fontWeight: FontWeight.w500),
+                        focusColor: Colors.red,
+                        hintText: "Search for plastics,wastes...",
+                        // suffixText: "10",
+                        // prefixIcon: Icon(Icons.mail,color: Colors.blueGrey[900]),
+                        fillColor: Color.fromARGB(255, 255, 255, 255)),
+                    controller: title,
+                  ),
+                ),
+                Icon(Icons.refresh,size:35),
+          ],
+        ),
+      ),
+      
     ),
           body: SafeArea(
             child: ColorfulSafeArea(

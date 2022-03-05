@@ -31,20 +31,21 @@ class _ItemsState extends State<Items> {
                             decoration: InputDecoration(
                               prefixIcon: Icon(Icons.search),
                                 border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(10.0),
+                                  borderSide: const BorderSide(color: Colors.white, width: 2.0),
+                                  borderRadius: BorderRadius.circular(30.0),
                                 ),
                                 // icon: Icon(Icons.person,size:30,color: Colors.black),
                                 filled: true,
-                                hintStyle: TextStyle(color: Colors.grey[800]),
+                                hintStyle: TextStyle(color: Color.fromARGB(255, 117, 117, 117),fontWeight: FontWeight.w500),
                                 focusColor: Colors.red,
-                                hintText: "Summary of the waste",
+                                hintText: "Search for plastics,wastes...",
                                 // suffixText: "10",
                                 // prefixIcon: Icon(Icons.mail,color: Colors.blueGrey[900]),
                                 fillColor: Color.fromARGB(255, 255, 255, 255)),
                             controller: title,
                           ),
                         ),
-                        Icon(Icons.refresh,size: 40)
+                        Icon(Icons.refresh,size: 35)
                       ],
                     ),
                   ),

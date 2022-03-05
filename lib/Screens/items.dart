@@ -23,6 +23,11 @@ class _ItemsState extends State<Items> {
       child: Scaffold(
           appBar: AppBar(
             bottom: TabBar(
+              indicator: BoxDecoration(
+              color: Colors.greenAccent,
+              image: DecorationImage(
+                  image: AssetImage('assets/images/placeholder.png'),
+                  fit: BoxFit.fitWidth)),
               isScrollable: true,
               // ignore: prefer_const_literals_to_create_immutables
               tabs: [

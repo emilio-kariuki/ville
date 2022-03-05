@@ -33,9 +33,10 @@ class DisplayItems extends StatelessWidget {
               borderRadius: BorderRadius.circular(20),
             ),
             child: Stack(
-              //alignment: Alignment.center,
+              // alignment: Alignment.s,
               children: [
                 Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Container(
@@ -48,19 +49,22 @@ class DisplayItems extends StatelessWidget {
                           image: AssetImage(imageUrl),
                           fit: BoxFit.cover,
                         ))),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Text(category,
-                    style: GoogleFonts.roboto(
-                        fontSize: 24, color: Color.fromARGB(255, 7, 6, 12))),
-                const SizedBox(height: 5),
-                Text(location,
-                    style: GoogleFonts.roboto(fontSize: 24, color: kGreen)),
-                const SizedBox(height: 5),
-                Text('$distance km',
-                    style: GoogleFonts.roboto(fontSize: 15, color: Colors.grey)),
-                  ],
+                Container(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text(category,
+                      style: GoogleFonts.roboto(
+                          fontSize: 24, color: Color.fromARGB(255, 7, 6, 12))),
+                  const SizedBox(height: 5),
+                  Text(location,
+                      style: GoogleFonts.roboto(fontSize: 24, color: kGreen)),
+                  const SizedBox(height: 5),
+                  Text('$distance km',
+                      style: GoogleFonts.roboto(fontSize: 15, color: Colors.grey)),
+                    ],
+                  ),
                 )
                 ],
               ),

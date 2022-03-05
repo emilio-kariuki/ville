@@ -57,10 +57,10 @@ class DisplayItems extends StatelessWidget {
                     children: [
                       Text(category,
                       style: GoogleFonts.roboto(
-                          fontSize: 24, color: Color.fromARGB(255, 7, 6, 12))),
+                          fontSize: 20, color: Color.fromARGB(255, 7, 6, 12))),
                   const SizedBox(height: 5),
                   Text(location,
-                      style: GoogleFonts.roboto(fontSize: 24, color: kGreen)),
+                      style: GoogleFonts.roboto(fontSize: 22, color: kGreen,fontWeight: FontWeight.w500)),
                   const SizedBox(height: 5),
                   Text('$distance km',
                       style: GoogleFonts.roboto(fontSize: 15, color: Colors.grey)),

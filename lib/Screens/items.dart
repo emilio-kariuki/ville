@@ -19,6 +19,17 @@ class _ItemsState extends State<Items> {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
+        appBar: AppBar(
+      bottom: TabBar(
+        // ignore: prefer_const_literals_to_create_immutables
+        tabs: [
+          Tab(icon: Icon(Icons.flight,color: Colors.black)),
+          Tab(icon: Icon(Icons.directions_transit,color: Colors.black)),
+          Tab(icon: Icon(Icons.directions_car,color: Colors.black)),
+        ],
+      ),
+      title: Text('Tabs Demo'),
+    ),
           body: SafeArea(
             child: ColorfulSafeArea(
                 overflowRules: const OverflowRules.all(true),
@@ -61,6 +72,13 @@ class _ItemsState extends State<Items> {
                           Tab(icon: Icon(Icons.directions_car,color: Colors.black)),
                         ],
                       ),
+                    TabBarView(
+                      children: [
+                        Icon(Icons.flight, size: 350),
+                        Icon(Icons.directions_transit, size: 350),
+                        Icon(Icons.directions_car, size: 350),
+                      ],
+                    ),
                   ],
                 )),
           )),

@@ -25,7 +25,7 @@ class DisplayItems extends StatelessWidget {
         elevation: 10,
         borderRadius: BorderRadius.circular(20),
         child: Container(
-            height: size.height * 0.3,
+            height: size.height * 0.28,
             width: size.width,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
@@ -52,22 +52,24 @@ class DisplayItems extends StatelessWidget {
                             image: AssetImage(imageUrl),
                             fit: BoxFit.cover,
                           ))),
-                  Container(
-                    padding:const EdgeInsets.all(6),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Text(category,
-                        style: GoogleFonts.roboto(
-                            fontSize: 20, color: Color.fromARGB(255, 7, 6, 12),fontWeight: FontWeight.w500)),
-                    const SizedBox(height: 5),
-                    Text(location,
-                        style: GoogleFonts.roboto(fontSize: 22, color: kGreen,fontWeight: FontWeight.w500)),
-                    const SizedBox(height: 5),
-                    Text('$distance km',
-                        style: GoogleFonts.roboto(fontSize: 15, color: Colors.grey)),
-                      ],
+                  Padding(
+                    padding: const EdgeInsets.only(left:10,top:8),
+                    child: Container(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Text(category,
+                          style: GoogleFonts.roboto(
+                              fontSize: 20, color: Color.fromARGB(255, 7, 6, 12),fontWeight: FontWeight.w500)),
+                      const SizedBox(height: 5),
+                      Text(location,
+                          style: GoogleFonts.roboto(fontSize: 22, color: kGreen,fontWeight: FontWeight.w500)),
+                      const SizedBox(height: 5),
+                      Text('$distance km',
+                          style: GoogleFonts.roboto(fontSize: 15, color: Colors.grey)),
+                        ],
+                      ),
                     ),
                   )
                   ],

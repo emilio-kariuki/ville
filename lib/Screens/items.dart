@@ -23,15 +23,17 @@ class _ItemsState extends State<Items> {
       child: Scaffold(
           appBar: AppBar(
             bottom: PreferredSize(
-              preferredSize: Size(size.width,90),
+              preferredSize: Size(size.width,100),
               child: TabBar(
                 indicator: BoxDecoration(
-                  borderRadius: BorderRadius.circular(50),
+                  borderRadius: BorderRadius.circular(30),
                 color: Color.fromARGB(255, 18, 20, 29),),
                 // isScrollable: true,
                 // ignore: prefer_const_literals_to_create_immutables
                 tabs: [
-                Tab(icon: Icon(Icons.flight),),
+                Tab(
+                  icon: Icon(Icons.flight,size: 50),
+                  text:("Plastic")),
                 Tab(icon: Icon(Icons.directions_transit)),
                 Tab(icon: Icon(Icons.directions_car)),
                   

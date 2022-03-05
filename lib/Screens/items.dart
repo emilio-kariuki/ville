@@ -37,10 +37,10 @@ class _ItemsState extends State<Items> {
                 // isScrollable: true,
                 // ignore: prefer_const_literals_to_create_immutables
                 tabs: [
-                Tab(icon: Icon(Icons.directions_boat,color: kGreen)),
-                Tab(icon: Icon(Icons.directions_transit,color: kGreen)),
-                Tab(icon: Icon(Icons.directions_car,color:kGreen)),
-                Tab(icon: Icon(Icons.directions_car,color:kGreen)),
+                Tab(icon: Icon(Icons.directions_boat,color: kGreen),child:Text("Plastic",style: GoogleFonts.roboto(fontSize:18,color: kGreen,fontWeight:FontWeight.w500))),
+                Tab(icon: Icon(Icons.directions_transit,color: kGreen),child:Text("Metal",style: GoogleFonts.roboto(fontSize:18,color: kGreen,fontWeight:FontWeight.w500))),
+                Tab(icon: Icon(Icons.directions_car,color:kGreen),child:Text("Glass",style: GoogleFonts.roboto(fontSize:18,color: kGreen,fontWeight:FontWeight.w500))),
+                Tab(icon: Icon(Icons.directions_car,color:kGreen),child:Text("Organic",style: GoogleFonts.roboto(fontSize:18,color: kGreen,fontWeight:FontWeight.w500))),
                   
                 ],
               ),

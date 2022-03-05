@@ -22,32 +22,18 @@ class _ItemsState extends State<Items> {
       length: 3,
       child: Scaffold(
           appBar: AppBar(
-            bottom: PreferredSize(
-              preferredSize: Size(200, 90),
-              child: TabBar(
-                isScrollable: true,
-                // ignore: prefer_const_literals_to_create_immutables
-                tabs: [
-                  Tab(
-                    child: Container(
-                        height: size.height * 40,
-                        width: 40,
-                        // width: size.width * 0.26,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            shape: BoxShape.rectangle,
-                            image: DecorationImage(
-                              image: AssetImage('assets/images/plant.jpg'),
-                              fit: BoxFit.cover,
-                            ))),
-                    text: "plastic",
-                  ),
-                  Tab(
-                      icon:
-                          Icon(Icons.directions_transit, color: Colors.black)),
-                  Tab(icon: Icon(Icons.directions_car, color: Colors.black)),
-                ],
-              ),
+            bottom: TabBar(
+              isScrollable: true,
+              // ignore: prefer_const_literals_to_create_immutables
+              tabs: [
+                Tab(
+                    icon:
+                        Icon(Icons.directions_transit, color: Colors.black)),
+                Tab(
+                    icon:
+                        Icon(Icons.directions_transit, color: Colors.black)),
+                Tab(icon: Icon(Icons.directions_car, color: Colors.black)),
+              ],
             ),
             title: Container(
               child: Row(

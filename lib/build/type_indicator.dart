@@ -12,6 +12,16 @@ class Indicate extends StatelessWidget {
     return Container(
         height: size.height * 0.2,
         width: size.width * 0.1,
-         );
+        child: Container(
+            height: size.height * 40,
+            width: 40,
+            // width: size.width * 0.26,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                shape: BoxShape.rectangle,
+                image: DecorationImage(
+                  image: AssetImage(imageUrl),
+                  fit: BoxFit.cover,
+                ))));
   }
 }

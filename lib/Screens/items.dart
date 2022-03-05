@@ -23,65 +23,50 @@ class _ItemsState extends State<Items> {
       length: 3,
       child: Scaffold(
           appBar: AppBar(
-            bottom: PreferredSize(
-              preferredSize: Size(size.width,80),
-              child: TabBar(
-                // indicatorPadding: EdgeInsets.only(left:50,right:10),
-                indicatorWeight: 6,
-                indicatorSize: TabBarIndicatorSize.tab,
-                indicatorColor: kGreen,
-                // isScrollable: true,
-                // ignore: prefer_const_literals_to_create_immutables
-                tabs: [
-                Tab(
-                  child:Row(
-                    children: [
-                      Indicate(imageUrl: "assets/images/pastic.jpg"),
-                      SizedBox(width: 4),
-                      Text("Plastivs",style:GoogleFonts.roboto(color: Colors.black))
-                    ],
-                  ),
-                  
-                  
-                  ),
-                Tab(icon: Icon(Icons.directions_transit)),
-                Tab(icon: Icon(Icons.directions_car)),
-                  
-                ],
-              ),
+            backgroundColor: Colors.white,
+            bottom: TabBar(
+              // indicatorPadding: EdgeInsets.only(left:50,right:10),
+              indicatorWeight: 4,
+              indicatorSize: TabBarIndicatorSize.tab,
+              indicatorColor: kGreen,
+              // isScrollable: true,
+              // ignore: prefer_const_literals_to_create_immutables
+              tabs: [
+              Tab(icon: Icon(Icons.directions_boat,color: kGreen)),
+              Tab(icon: Icon(Icons.directions_transit,color: kGreen)),
+              Tab(icon: Icon(Icons.directions_car,color:kGreen)),
+                
+              ],
             ),
-            title: Padding(
-              padding: const EdgeInsets.only(top:5),
-              child: Container(
-                child: Row(
-                  children: [
-                    Flexible(
-                      flex: 1,
-                      child: TextFormField(
-                        // maxLength: 15,
-                        decoration: InputDecoration(
-                            prefixIcon: Icon(Icons.search),
-                            border: OutlineInputBorder(
-                              borderSide: const BorderSide(
-                                  color: Colors.white, width: 2.0),
-                              borderRadius: BorderRadius.circular(25.0),
-                            ),
-                            // icon: Icon(Icons.person,size:30,color: Colors.black),
-                            filled: true,
-                            hintStyle: TextStyle(
-                                color: Color.fromARGB(255, 117, 117, 117),
-                                fontWeight: FontWeight.w500),
-                            focusColor: Colors.red,
-                            hintText: "Search for plastics,wastes...",
-                            // suffixText: "10",
-                            // prefixIcon: Icon(Icons.mail,color: Colors.blueGrey[900]),
-                            fillColor: Color.fromARGB(255, 255, 255, 255)),
-                        controller: title,
-                      ),
+            title: Container(
+              child: Row(
+                children: [
+                  Flexible(
+                    flex: 1,
+                    child: TextFormField(
+                      // maxLength: 15,
+                      decoration: InputDecoration(
+                          prefixIcon: Icon(Icons.search),
+                          border: OutlineInputBorder(
+                            borderSide: const BorderSide(
+                                color: Colors.white, width: 2.0),
+                            borderRadius: BorderRadius.circular(25.0),
+                          ),
+                          // icon: Icon(Icons.person,size:30,color: Colors.black),
+                          filled: true,
+                          hintStyle: TextStyle(
+                              color: Color.fromARGB(255, 117, 117, 117),
+                              fontWeight: FontWeight.w500),
+                          focusColor: Colors.red,
+                          hintText: "Search for plastics,wastes...",
+                          // suffixText: "10",
+                          // prefixIcon: Icon(Icons.mail,color: Colors.blueGrey[900]),
+                          fillColor: Color.fromARGB(255, 255, 255, 255)),
+                      controller: title,
                     ),
-                    Icon(Icons.refresh, size: 35),
-                  ],
-                ),
+                  ),
+                  Icon(Icons.refresh, size: 35,color: kGreen),
+                ],
               ),
             ),
           ),

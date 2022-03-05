@@ -29,16 +29,13 @@ class _ItemsState extends State<Items> {
               image: DecorationImage(
                   image: AssetImage('assets/images/placeholder.png'),
                   fit: BoxFit.fitWidth)),
-              isScrollable: true,
+              // isScrollable: true,
               // ignore: prefer_const_literals_to_create_immutables
               tabs: [
-                Tab(
-                    icon:
-                        Icon(Icons.directions_transit, color: Colors.black)),
-                Tab(
-                    icon:
-                        Icon(Icons.directions_transit, color: Colors.black)),
-                Tab(icon: Icon(Icons.directions_car, color: Colors.black)),
+              Tab(icon: Icon(Icons.flight)),
+              Tab(icon: Icon(Icons.directions_transit)),
+              Tab(icon: Icon(Icons.directions_car)),
+      
               ],
             ),
             title: Container(

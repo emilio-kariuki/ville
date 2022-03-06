@@ -97,7 +97,7 @@ class DisplayItems extends StatelessWidget {
                       right: 5,
                       child: AppIcon(
                         iconUrl: "assets/images/add.png",
-                        func: () {},
+                        func: func,
                       ))
                 ],
               ),

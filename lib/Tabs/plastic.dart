@@ -3,7 +3,7 @@
 import 'package:colorful_safe_area/colorful_safe_area.dart';
 import 'package:flutter/material.dart';
 import 'package:ville/build/build_diagrams_items.dart';
-
+import 'package:ville/collect/collect.dart';
 
 class Plastic extends StatefulWidget {
   const Plastic({Key? key}) : super(key: key);
@@ -23,56 +23,61 @@ class _PlasticState extends State<Plastic> {
             // ignore: prefer_const_literals_to_create_immutables
             children: [
               DisplayItems(
-                func: (){},
+                func: () {
+                  setState(() {
+                    Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (context) => Collect()));
+                  });
+                },
                 category: "plastics",
                 imageUrl: 'assets/images/pastic.jpg',
                 location: 'Dedan Kimathi University,Nyeri',
                 distance: 2000,
               ),
               DisplayItems(
-                func: (){},
+                func: () {},
                 category: "plastics",
                 imageUrl: 'assets/images/p2.jpg',
                 location: 'Chuka University,Chuka',
                 distance: 500,
               ),
               DisplayItems(
-                func: (){},
+                func: () {},
                 category: "plastics",
                 imageUrl: 'assets/images/p3.jpg',
                 location: 'Kisii University,Kisii',
                 distance: 240,
               ),
               DisplayItems(
-                func: (){},
+                func: () {},
                 category: "plastics",
                 imageUrl: 'assets/images/p4.jpg',
                 location: 'Mt Kenya University,thika',
                 distance: 60,
               ),
               DisplayItems(
-                func: (){},
+                func: () {},
                 category: "plastics",
                 imageUrl: 'assets/images/p5.jpg',
                 location: 'University of Nairobi,Nairobi',
                 distance: 2000,
               ),
               DisplayItems(
-                func: (){},
+                func: () {},
                 category: "plastics",
                 imageUrl: 'assets/images/p3.jpg',
                 location: 'Multi Media University,Juja',
                 distance: 120,
               ),
               DisplayItems(
-                func: (){},
+                func: () {},
                 category: "plastics",
                 imageUrl: 'assets/images/p2.jpg',
                 location: 'Kiriri University,Nakuru',
                 distance: 670,
               ),
               DisplayItems(
-                func: (){},
+                func: () {},
                 category: "plastics",
                 imageUrl: 'assets/images/p1.jpg',
                 location: 'Kabarak University,Gilgil',

@@ -12,6 +12,7 @@ class Overview extends StatefulWidget {
 class _OverviewState extends State<Overview> {
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Scaffold(
       body: SafeArea(
         child: Column(
@@ -20,7 +21,12 @@ class _OverviewState extends State<Overview> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 // IconBuild(iconUrl: "assets/images/pin.png"),
-                Text("EcoVille",style: GoogleFonts.roboto(fontSize: 25,color: Color.fromARGB(255, 17, 17, 17),fontWeight: FontWeight.w500)),
+                Text("EcoVille",
+                    style: GoogleFonts.roboto(
+                        fontSize: 25,
+                        color: Color.fromARGB(255, 17, 17, 17),
+                        fontWeight: FontWeight.w500)),
+                Image.asset('assets/images/over.jpg', width: size.width),
               ],
             )
           ],

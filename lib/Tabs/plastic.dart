@@ -2,6 +2,7 @@
 
 import 'package:colorful_safe_area/colorful_safe_area.dart';
 import 'package:flutter/material.dart';
+import 'package:ville/Accounts/overview.dart';
 import 'package:ville/build/build_diagrams_items.dart';
 import 'package:ville/collect/collect.dart';
 
@@ -35,7 +36,12 @@ class _PlasticState extends State<Plastic> {
                 distance: 2000,
               ),
               DisplayItems(
-                func: () {},
+                func: () {
+                  setState(() {
+                    Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (context) => Overview()));
+                  });
+                },
                 category: "plastics",
                 imageUrl: 'assets/images/p2.jpg',
                 location: 'Chuka University,Chuka',

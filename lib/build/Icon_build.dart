@@ -9,7 +9,7 @@ class IconBuild extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return IconContainer(
-      child: Image.asset(iconUrl,color: Color.fromARGB(255, 5, 5, 5)),
+      child: Image.asset(iconUrl,color:Colors.black)
     );
   }
 }

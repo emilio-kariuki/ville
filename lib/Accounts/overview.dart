@@ -26,9 +26,10 @@ class _OverviewState extends State<Overview> {
                         fontSize: 25,
                         color: Color.fromARGB(255, 17, 17, 17),
                         fontWeight: FontWeight.w500)),
-                Image.asset('assets/images/over.jpg', width: size.width),
+                
               ],
-            )
+            ),
+            Image.asset('assets/images/over.jpg', width: size.width),
           ],
         ),
       ),

@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import 'package:google_fonts/google_fonts.dart';
 
 class Overview extends StatefulWidget {
   const Overview({Key? key}) : super(key: key);
@@ -14,7 +15,7 @@ class _OverviewState extends State<Overview> {
       body: SafeArea(
         child: Column(
           children: [
-            Text("EcoVille")
+            Text("EcoVille",style: GoogleFonts.roboto(fontSize: 25,color: Colors.white,fontWeight: FontWeight.w500))
           ],
         ),
       ),

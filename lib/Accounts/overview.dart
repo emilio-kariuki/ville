@@ -17,8 +17,9 @@ class _OverviewState extends State<Overview> {
         child: Column(
           children: [
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                IconBuild(iconUrl: "assets/images/pin.png"),
+                // IconBuild(iconUrl: "assets/images/pin.png"),
                 Text("EcoVille",style: GoogleFonts.roboto(fontSize: 25,color: Color.fromARGB(255, 17, 17, 17),fontWeight: FontWeight.w500)),
               ],
             )

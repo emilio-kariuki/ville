@@ -15,7 +15,12 @@ class _OverviewState extends State<Overview> {
       body: SafeArea(
         child: Column(
           children: [
-            Text("EcoVille",style: GoogleFonts.roboto(fontSize: 25,color: Colors.white,fontWeight: FontWeight.w500))
+            Row(
+              children: [
+                
+                Text("EcoVille",style: GoogleFonts.roboto(fontSize: 25,color: Color.fromARGB(255, 17, 17, 17),fontWeight: FontWeight.w500)),
+              ],
+            )
           ],
         ),
       ),

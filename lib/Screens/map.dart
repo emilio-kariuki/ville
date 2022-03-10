@@ -49,6 +49,17 @@ class _MappState extends State<Mapp> {
     latitude = locate.latitude;
     longitude = locate.longitude;
   }
+  // void _updatePosition(CameraPosition _position) {
+  //   Position newMarkerPosition = Position(
+  //       latitude: _position.target.latitude,
+  //       longitude: _position.target.longitude);
+  //   Marker marker = markers["1"];
+
+  //   setState(() {
+  //     markers["1"] = marker.copyWith(
+  //         positionParam: LatLng(newMarkerPosition.latitude, newMarkerPosition.longitude));
+  //   });
+  // }
    
 
   getLocation() {

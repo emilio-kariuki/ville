@@ -49,6 +49,7 @@ class _MappState extends State<Mapp> {
     latitude = locate.latitude;
     longitude = locate.longitude;
   }
+   
 
   getLocation() {
     getPermission().then((locate) {
@@ -95,6 +96,20 @@ class _MappState extends State<Mapp> {
             _controller.complete(controller);
             getLocation();
           },
+
+          markers: Set<Marker>.of(
+          <Marker>[
+            Marker(
+              draggable: true,
+              markerId: MarkerId("1"),
+              position: LatLng(latitude!, longitude!),
+              icon: BitmapDescriptor.defaultMarker,
+              infoWindow: const InfoWindow(
+                title: 'Usted está aquí',
+              ),
+            )
+          ],
+        ),
         ),
       ),
     );

@@ -46,6 +46,7 @@ class _PostState extends State<Post> {
     lat = locate.latitude;
     long = locate.longitude;
   }
+  
 
   getLocation() {
     getPermission().then((locate) {

@@ -92,13 +92,13 @@ class _MappState extends State<Mapp> {
         // top:true,
         overflowRules: OverflowRules.all(true),
         child: GoogleMap(
-          gestureRecognizers: Set()
-            ..add(Factory<PanGestureRecognizer>(() => PanGestureRecognizer()))
-            ..add(
-                Factory<ScaleGestureRecognizer>(() => ScaleGestureRecognizer()))
-            ..add(Factory<TapGestureRecognizer>(() => TapGestureRecognizer()))
-            ..add(Factory<VerticalDragGestureRecognizer>(
-                () => VerticalDragGestureRecognizer())),
+          // gestureRecognizers: Set()
+          //   ..add(Factory<PanGestureRecognizer>(() => PanGestureRecognizer()))
+          //   ..add(
+          //       Factory<ScaleGestureRecognizer>(() => ScaleGestureRecognizer()))
+          //   ..add(Factory<TapGestureRecognizer>(() => TapGestureRecognizer()))
+          //   ..add(Factory<VerticalDragGestureRecognizer>(
+          //       () => VerticalDragGestureRecognizer())),
           mapType: MapType.hybrid,
           myLocationEnabled: true,
           zoomControlsEnabled: false,

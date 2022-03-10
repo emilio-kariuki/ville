@@ -108,19 +108,19 @@ class _MappState extends State<Mapp> {
             getLocation();
           },
 
-        //   markers: Set<Marker>.of(
-        //   <Marker>[
-        //     Marker(
-        //       draggable: true,
-        //       markerId: MarkerId("1"),
-        //       position: LatLng(latitude!, longitude!),
-        //       icon: BitmapDescriptor.defaultMarker,
-        //       infoWindow: const InfoWindow(
-        //         title: 'Usted está aquí',
-        //       ),
-        //     )
-        //   ],
-        // ),
+          markers: Set<Marker>.of(
+          <Marker>[
+            Marker(
+              draggable: true,
+              markerId: MarkerId("1"),
+              position: LatLng(37.42796133580664, -122.085749655962),
+              icon: BitmapDescriptor.defaultMarker,
+              infoWindow: const InfoWindow(
+                title: 'Usted está aquí',
+              ),
+            )
+          ],
+        ),
         ),
       ),
     );

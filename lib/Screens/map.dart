@@ -21,7 +21,6 @@ import 'package:http/http.dart';
 import 'package:location_permissions/location_permissions.dart';
 import 'package:colorful_safe_area/colorful_safe_area.dart';
 
-
 class Mapp extends StatefulWidget {
   Mapp({Key? key}) : super(key: key);
 
@@ -30,6 +29,7 @@ class Mapp extends StatefulWidget {
 }
 
 class _MappState extends State<Mapp> {
+  Set<Marker> markers = {};
   GoogleMapController? newGoogleMapController;
   double? latitude;
   double? longitude;
@@ -80,25 +80,22 @@ class _MappState extends State<Mapp> {
         overflowRules: OverflowRules.all(true),
         child: GoogleMap(
           gestureRecognizers: Set()
-          ..add(Factory<PanGestureRecognizer>(() => PanGestureRecognizer()))
-          ..add(Factory<ScaleGestureRecognizer>(() => ScaleGestureRecognizer()))
-          ..add(Factory<TapGestureRecognizer>(() => TapGestureRecognizer()))
-          ..add(Factory<VerticalDragGestureRecognizer>(
-          () => VerticalDragGestureRecognizer())),
-            mapType: MapType.hybrid,
-            myLocationEnabled: true,
-            zoomControlsEnabled: false,
-            zoomGesturesEnabled: true,
-            initialCameraPosition:
-                _kGooglePlex,
-            onMapCreated:
-                (GoogleMapController
-                    controller) {
-              _controller
-                  .complete(controller);
-              getLocation();
-            },
-          ),
+            ..add(Factory<PanGestureRecognizer>(() => PanGestureRecognizer()))
+            ..add(
+                Factory<ScaleGestureRecognizer>(() => ScaleGestureRecognizer()))
+            ..add(Factory<TapGestureRecognizer>(() => TapGestureRecognizer()))
+            ..add(Factory<VerticalDragGestureRecognizer>(
+                () => VerticalDragGestureRecognizer())),
+          mapType: MapType.hybrid,
+          myLocationEnabled: true,
+          zoomControlsEnabled: false,
+          zoomGesturesEnabled: true,
+          initialCameraPosition: _kGooglePlex,
+          onMapCreated: (GoogleMapController controller) {
+            _controller.complete(controller);
+            getLocation();
+          },
+        ),
       ),
     );
   }

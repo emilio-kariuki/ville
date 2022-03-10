@@ -51,6 +51,7 @@ class _MappState extends State<Mapp> {
   }
   // void _updatePosition(CameraPosition _position) {
   //   Position newMarkerPosition = Position(
+  //       accuracy: Accuracy.high,
   //       latitude: _position.target.latitude,
   //       longitude: _position.target.longitude);
   //   Marker marker = markers["1"];
@@ -116,7 +117,7 @@ class _MappState extends State<Mapp> {
               position: LatLng(37.42796133580664, -122.085749655962),
               icon: BitmapDescriptor.defaultMarker,
               infoWindow: const InfoWindow(
-                title: 'Usted está aquí',
+                title: 'location marker',
               ),
             )
           ],

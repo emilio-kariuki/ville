@@ -33,7 +33,7 @@ class _OverviewState extends State<Overview> {
           ),
            Positioned(
             top: size.height * 0.2,
-            right:size.width * 0.4,
+            right:size.width * 0.39,
             child:Text("EcoVille",
                 style: GoogleFonts.roboto(
                     fontSize: 28,

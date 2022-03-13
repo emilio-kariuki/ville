@@ -29,7 +29,7 @@ class _SplashState extends State<Splash> {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: Color.fromARGB(239, 35, 156, 255),
+      backgroundColor: Color.fromARGB(236, 255, 255, 255),
       extendBodyBehindAppBar: true,
       body: Center(child: Image.asset('assets/images/ecoville.png'),)
     );

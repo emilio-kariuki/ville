@@ -3,6 +3,7 @@
 import 'package:ville/Screens/Home.dart';
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
+import 'package:ville/constants/constants.dart';
 
 
 class Introduction extends StatefulWidget {
@@ -20,9 +21,9 @@ class _IntroductionState extends State<Introduction> {
     PageDecoration pageDecoration = PageDecoration(
           titleTextStyle: TextStyle(fontSize: 28.0,
                     fontWeight: FontWeight.w700,
-                    color:Colors.white
+                    color:kGreen
                   ), //tile font size, weight and color
-          bodyTextStyle:TextStyle(fontSize: 19.0, color:Colors.white),
+          bodyTextStyle:TextStyle(fontSize: 19.0, color:kGreen),
           //body text size and color
           contentMargin: EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 16.0),
           //decription padding
@@ -33,17 +34,17 @@ class _IntroductionState extends State<Introduction> {
                   end: Alignment.bottomLeft,
                   stops: [0.1, 0.5, 0.7, 0.9],
                   colors: [
-                    Colors.orange,
-                    Colors.deepOrangeAccent,
-                    Colors.red,
-                    Colors.redAccent,
+                    Color.fromARGB(255, 248, 248, 248),
+                    Color.fromARGB(255, 255, 255, 255),
+                    Color.fromARGB(255, 255, 255, 255),
+                    Color.fromARGB(255, 255, 255, 255),
                   ],
             ),
           ), //show linear gradient background of page  
     );
 
     return IntroductionScreen(
-          globalBackgroundColor: Colors.deepOrangeAccent,
+          globalBackgroundColor: kGreen,
           //main background of screen
           pages: [ //set your page view here
             PageViewModel(

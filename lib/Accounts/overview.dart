@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ville/build/Icon_build.dart';
+import 'package:ville/build/social.dart';
 import 'package:ville/constants/constants.dart';
 
 class Overview extends StatefulWidget {
@@ -121,6 +122,23 @@ class _OverviewState extends State<Overview> {
                       )),
                 ),
               ]),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SocalIcon(
+                    iconSrc: "assets/svg/facebook-main.svg",
+                    press: () {},
+                  ),
+                  SocalIcon(
+                    iconSrc: "assets/svg/twitter-main.svg",
+                    press: () {},
+                  ),
+                  SocalIcon(
+                    iconSrc: "assets/svg/google.svg",
+                    press: () {},
+                  ),
+                ],
+              ),
         ],
       ),
     );

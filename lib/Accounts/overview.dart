@@ -17,6 +17,7 @@ class _OverviewState extends State<Overview> {
       body: SafeArea(
         child: Column(
           children: [
+            SizedBox(height:10),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

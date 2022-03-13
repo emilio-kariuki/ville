@@ -101,6 +101,7 @@ class _RegisterState extends State<Register> {
                 controller: password,
               ),
             ),
+            SizedBox(height:10),
             loading
                       ? CircularProgressIndicator()
                       : Padding(

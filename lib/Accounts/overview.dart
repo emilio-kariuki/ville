@@ -33,7 +33,7 @@ class _OverviewState extends State<Overview> {
             Positioned(
               bottom: 5,
               right:5,
-              child:Image.asset('assets/images/walking.png'),
+              child:Image.asset('assets/images/walking.png',height:size.height * 0.26),
             )
             ],
             // Positioned(

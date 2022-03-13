@@ -126,11 +126,11 @@ class _OverviewState extends State<Overview> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SocalIcon(
-                    iconSrc: "assets/images/facebook-main.svg",
+                    iconSrc: "assets/images/facebook.svg",
                     press: () {},
                   ),
                   SocalIcon(
-                    iconSrc: "assets/images/twitter-main.svg",
+                    iconSrc: "assets/images/twitter.svg",
                     press: () {},
                   ),
                   SocalIcon(

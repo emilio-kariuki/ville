@@ -50,7 +50,7 @@ class _OverviewState extends State<Overview> {
           //   child: ,
           // ),
           ),
-          SizedBox(height: size.height*0.13),
+          SizedBox(height: size.height*0.01),
           SvgPicture.asset('assets/images/chat.svg'),
 
           SizedBox(

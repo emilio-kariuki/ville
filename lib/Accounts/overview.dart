@@ -57,14 +57,14 @@ class _OverviewState extends State<Overview> {
             child: ElevatedButton(
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all(
-                    Color.fromARGB(255, 14, 14, 20)),
+                    kGreen),
                 // MaterialStateProperty<Color?>?
                 shape: MaterialStateProperty.all<
                     RoundedRectangleBorder>(
                   RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30.0),
                     side: BorderSide(
-                      color: Color.fromARGB(255, 14, 14, 20),
+                      color: kGreen,
                       width: 2.0,
                     ),
                   ),
@@ -83,14 +83,14 @@ class _OverviewState extends State<Overview> {
             child: ElevatedButton(
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all(
-                    Color.fromARGB(255, 14, 14, 20)),
+                    kGreen),
                 // MaterialStateProperty<Color?>?
                 shape: MaterialStateProperty.all<
                     RoundedRectangleBorder>(
                   RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30.0),
                     side: BorderSide(
-                      color: Color.fromARGB(255, 14, 14, 20),
+                      color: kGreen,
                       width: 2.0,
                     ),
                   ),

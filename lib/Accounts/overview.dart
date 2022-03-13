@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ville/build/Icon_build.dart';
 import 'package:ville/build/social.dart';
@@ -50,6 +51,7 @@ class _OverviewState extends State<Overview> {
           // ),
           ),
           SizedBox(height: size.height*0.13),
+          SvgPicture.asset('assets/images/chat.svg'),
 
           SizedBox(
             height: size.height * 0.06,

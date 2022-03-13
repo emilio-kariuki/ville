@@ -19,7 +19,7 @@ class _IntroductionState extends State<Introduction> {
 
     //this is a page decoration for intro screen
     PageDecoration pageDecoration = PageDecoration(
-          titleTextStyle: TextStyle(fontSize: 28.0,
+          titleTextStyle: TextStyle(fontSize: 32.0,
                     fontWeight: FontWeight.w700,
                     color:kGreen
                   ), //tile font size, weight and color

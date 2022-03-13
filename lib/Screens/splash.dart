@@ -31,7 +31,7 @@ class _SplashState extends State<Splash> {
     return Scaffold(
       backgroundColor: Color.fromARGB(236, 255, 255, 255),
       extendBodyBehindAppBar: true,
-      body: Center(child: Image.asset('assets/images/ecoville.png'),)
+      body: Center(child: Image.asset('assets/images/ville.png'),)
     );
   }
 }

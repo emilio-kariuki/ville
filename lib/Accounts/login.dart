@@ -29,15 +29,15 @@ class _LoginState extends State<Login> {
               ClipPath(
                 clipper: MyClipper(),
                 child: Container(
-                    height: size.height * 0.4,
+                    height: size.height * 0.3,
                     width: size.width,
                     decoration: BoxDecoration(
                       color: kGreen,
                     )),
               ),
               Positioned(
-                top: size.height * 0.3,
-                right: size.width * 0.1,
+                top: size.height * 0.2,
+                right: size.width * 0.15,
                 child: Text("Login",
                     style: GoogleFonts.roboto(
                         fontSize: 28,

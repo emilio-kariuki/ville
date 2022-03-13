@@ -3,6 +3,7 @@
 import "package:flutter/material.dart";
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:ville/Accounts/auth.dart';
 import 'package:ville/build/Icon_build.dart';
 import 'package:ville/build/social.dart';
 import 'package:ville/constants/constants.dart';
@@ -15,6 +16,7 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+  bool loading = false;
   final email = TextEditingController();
   final password = TextEditingController();
   @override
@@ -95,6 +97,75 @@ class _LoginState extends State<Login> {
               controller: password,
             ),
           ),
+          SizedBox(height:10),
+          loading
+              ? CircularProgressIndicator()
+              : Padding(
+                padding: const EdgeInsets.only(top:20),
+                child: Card(
+                    shadowColor: Colors.green[900],
+                    color: Colors.white,
+                    // elevation: 5,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: FlatButton(
+                        onPressed: () async {
+                          setState(() {
+                            loading = true;
+                          });
+                          if (email.text == "") {
+                            ScaffoldMessenger.of(context)
+                                .showSnackBar(SnackBar(
+                              content: Text("email required"),
+                              backgroundColor: Colors.red,duration: Duration(milliseconds: 500),
+                            ));
+                          } else if (password.text == "") {
+                            ScaffoldMessenger.of(context)
+                                .showSnackBar(SnackBar(
+                              content: Text("password required"),
+                              backgroundColor: Colors.red,duration: Duration(milliseconds: 500),
+                            ));
+                          } else {
+                            var result = await AuthService().login(
+                                email.text, password.text, context);
+                            if (result != null) {
+                              print("success");
+                              print(result.email);
+                            }
+                            ScaffoldMessenger.of(context)
+                                .showSnackBar(SnackBar(
+                              content: Text("Account created "),
+                              backgroundColor: Colors.blue[900],duration: Duration(milliseconds: 500),
+                            ));
+                          }
+                          setState(() {
+                            loading = false;
+                          });
+                          // setState(() {
+                          //   Navigator.of(context).pushReplacement(
+                          //       MaterialPageRoute(
+                          //           builder: (context) => Accounts()));
+                          // });
+                        },
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        // icon: Icon(
+                        //   Icons.create,
+                        //   size: 24,
+                        //   color: Colors.black,
+                        // ),
+                        child: Padding(
+                          padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
+                          child: Text("Sign Up",
+                              style: GoogleFonts.robotoCondensed(
+                                  fontSize: 15,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold)),
+                        )),
+                  ),
+              ),
           Row(children: [
             Expanded(
               // ignore: unnecessary_new

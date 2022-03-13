@@ -159,7 +159,7 @@ class _LoginState extends State<Login> {
                           // ),
                           child: Padding(
                             padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
-                            child: Text("Sign Up",
+                            child: Text("Login",
                                 style: GoogleFonts.robotoCondensed(
                                     fontSize: 15,
                                     color: Colors.black,

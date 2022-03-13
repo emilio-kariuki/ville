@@ -61,7 +61,7 @@ class _RegisterState extends State<Register> {
           ),
           SizedBox(height: size.height * 0.01),
           SvgPicture.asset('assets/images/signup.svg',
-              height: size.height * 0.24),
+              height: size.height * 0.2),
           SizedBox(height: size.height * 0.01),
            Padding(
                 padding: const EdgeInsets.fromLTRB(30, 1, 30, 0),

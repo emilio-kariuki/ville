@@ -109,8 +109,10 @@ class MyClipper extends CustomClipper<Path> {
     var endPoint = Offset(size.width / 2, size.height);
     path.quadraticBezierTo(
         controllPoint.dx, controllPoint.dy, endPoint.dx, endPoint.dy);
+    path.lineTo(size.width, size.height);
+    path.lineTo(size.width, 0);
     return path;
-    throw UnimplementedError();
+   
   }
 
   @override

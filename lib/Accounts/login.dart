@@ -56,7 +56,7 @@ class _LoginState extends State<Login> {
           ),
           SizedBox(height: size.height * 0.01),
           SvgPicture.asset('assets/images/login.svg',
-              height: size.height * 0.16),
+              height: size.height * 0.2),
           SizedBox(height: size.height * 0.01),
            Padding(
                 padding: const EdgeInsets.fromLTRB(30, 1, 30, 0),
@@ -70,7 +70,7 @@ class _LoginState extends State<Login> {
                       filled: true,
                       hintStyle: TextStyle(color: Colors.grey[800]),
                       hoverColor: Colors.red,
-                      hintText: "password",
+                      hintText: "Email",
                       prefixIcon: Icon(Icons.lock,color: Colors.blueGrey[900]),
                       fillColor: Colors.grey[200]),
                   controller: email,

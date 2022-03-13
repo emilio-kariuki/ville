@@ -13,6 +13,8 @@ class Overview extends StatefulWidget {
 }
 
 class _OverviewState extends State<Overview> {
+  final email = TextEditingController();
+  final password = TextEditingController();
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -22,47 +24,46 @@ class _OverviewState extends State<Overview> {
         children: [
           Stack(
             children: [
-            ClipPath(
-            clipper: MyClipper(),
-            child: Container(
-                height: size.height * 0.4,
-                width: size.width,
-                decoration: BoxDecoration(
-                  color: kGreen,
-                )),
+              ClipPath(
+                clipper: MyClipper(),
+                child: Container(
+                    height: size.height * 0.4,
+                    width: size.width,
+                    decoration: BoxDecoration(
+                      color: kGreen,
+                    )),
+              ),
+              Positioned(
+                top: size.height * 0.2,
+                right: size.width * 0.39,
+                child: Text("EcoVille",
+                    style: GoogleFonts.roboto(
+                        fontSize: 28,
+                        color: Color.fromARGB(255, 255, 255, 255),
+                        fontWeight: FontWeight.w500)),
+              ),
+              // Positioned(
+              //   bottom: 1,
+              //   right:20,
+              //   child:Image.asset('assets/images/walking.png',height:size.height * 0.26),
+              // )
+            ],
+            // Positioned(
+            //   child: ,
+            // ),
           ),
-           Positioned(
-            top: size.height * 0.2,
-            right:size.width * 0.39,
-            child:Text("EcoVille",
-                style: GoogleFonts.roboto(
-                    fontSize: 28,
-                    color: Color.fromARGB(255, 255, 255, 255),
-                    fontWeight: FontWeight.w500)),
-          ),
-          // Positioned(
-          //   bottom: 1,
-          //   right:20,
-          //   child:Image.asset('assets/images/walking.png',height:size.height * 0.26),
-          // )
-          ],
-          // Positioned(
-          //   child: ,
-          // ),
-          ),
-          SizedBox(height: size.height*0.01),
-          SvgPicture.asset('assets/images/chat.svg',height: size.height*0.24),
-          SizedBox(height: size.height*0.01),
+          SizedBox(height: size.height * 0.01),
+          SvgPicture.asset('assets/images/chat.svg',
+              height: size.height * 0.24),
+          SizedBox(height: size.height * 0.01),
           SizedBox(
             height: size.height * 0.06,
             width: size.width * 0.7,
             child: ElevatedButton(
               style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(
-                    kGreen),
+                backgroundColor: MaterialStateProperty.all(kGreen),
                 // MaterialStateProperty<Color?>?
-                shape: MaterialStateProperty.all<
-                    RoundedRectangleBorder>(
+                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                   RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30.0),
                     side: BorderSide(
@@ -72,75 +73,66 @@ class _OverviewState extends State<Overview> {
                   ),
                 ),
               ),
-              child: Text('Login',
-                  style: GoogleFonts.roboto(fontSize: 20)),
-              onPressed: (){
-              },
+              child: Text('Login', style: GoogleFonts.roboto(fontSize: 20)),
+              onPressed: () {},
             ),
           ),
-          SizedBox(height:5),
-          SizedBox(
-            height: size.height * 0.06,
-            width: size.width * 0.7,
-            child: ElevatedButton(
-              style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(
-                    kGreen),
-                // MaterialStateProperty<Color?>?
-                shape: MaterialStateProperty.all<
-                    RoundedRectangleBorder>(
-                  RoundedRectangleBorder(
+          SizedBox(height: 5),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(30, 1, 30, 0),
+            child: TextFormField(
+              obscureText: true,
+              decoration: InputDecoration(
+                  border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(30.0),
-                    side: BorderSide(
-                      color: kGreen,
-                      width: 2.0,
-                    ),
                   ),
-                ),
-              ),
-              child: Text('Register',
-                  style: GoogleFonts.roboto(fontSize: 20)),
-              onPressed: (){
-              },
+                  // icon: Icon(Icons.mail,size:30,color: Colors.black),
+                  filled: true,
+                  hintStyle: TextStyle(color: Colors.grey[800]),
+                  hoverColor: Colors.red,
+                  hintText: "password",
+                  prefixIcon: Icon(Icons.lock, color: Colors.blueGrey[900]),
+                  fillColor: Colors.grey[200]),
+              controller: password,
             ),
           ),
-           Row(children: [
-                Expanded(
-                  // ignore: unnecessary_new
-                  child: Container(
-                      margin: const EdgeInsets.only(left: 10.0, right: 30.0),
-                      child: Divider(
-                        color: kGreen,
-                        height: 90,
-                      )),
-                ),
-                Text("OR"),
-                Expanded(
-                  child: Container(
-                      margin: const EdgeInsets.only(left: 30.0, right: 10.0),
-                      child: Divider(
-                        color: kGreen,
-                        height: 50,
-                      )),
-                ),
-              ]),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SocalIcon(
-                    iconSrc: "assets/images/facebook.svg",
-                    press: () {},
-                  ),
-                  SocalIcon(
-                    iconSrc: "assets/images/twitter.svg",
-                    press: () {},
-                  ),
-                  SocalIcon(
-                    iconSrc: "assets/images/google.svg",
-                    press: () {},
-                  ),
-                ],
+          Row(children: [
+            Expanded(
+              // ignore: unnecessary_new
+              child: Container(
+                  margin: const EdgeInsets.only(left: 10.0, right: 30.0),
+                  child: Divider(
+                    color: kGreen,
+                    height: 90,
+                  )),
+            ),
+            Text("OR"),
+            Expanded(
+              child: Container(
+                  margin: const EdgeInsets.only(left: 30.0, right: 10.0),
+                  child: Divider(
+                    color: kGreen,
+                    height: 50,
+                  )),
+            ),
+          ]),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SocalIcon(
+                iconSrc: "assets/images/facebook.svg",
+                press: () {},
               ),
+              SocalIcon(
+                iconSrc: "assets/images/twitter.svg",
+                press: () {},
+              ),
+              SocalIcon(
+                iconSrc: "assets/images/google.svg",
+                press: () {},
+              ),
+            ],
+          ),
         ],
       ),
     );

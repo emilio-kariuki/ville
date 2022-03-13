@@ -24,7 +24,7 @@ class _HomeState extends State<Home> {
     Icon(Icons.map, size: 30,color:Colors.white),
     Icon(Icons.layers, size: 30,color:Colors.white),
     Icon(Icons.add, size: 30,color:Colors.white),
-    Icon(Icons.notifications, size: 30,color:Colors.white),
+    // Icon(Icons.notifications, size: 30,color:Colors.white),
     Icon(Icons.person, size: 30,color:Colors.white),
   ];
   final screen = [
@@ -52,7 +52,7 @@ class _HomeState extends State<Home> {
             Mapp(),
             Items(),
             Post(),
-            Notifications(),
+            // Notifications(),
             Accounts()
           ],
         ),

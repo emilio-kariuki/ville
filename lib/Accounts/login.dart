@@ -61,7 +61,7 @@ class _LoginState extends State<Login> {
            Padding(
                 padding: const EdgeInsets.fromLTRB(30, 1, 30, 0),
                 child: TextFormField(
-                  obscureText: true,
+                  obscureText: false,
                   decoration: InputDecoration(
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(30.0),
@@ -71,7 +71,7 @@ class _LoginState extends State<Login> {
                       hintStyle: TextStyle(color: Colors.grey[800]),
                       hoverColor: Colors.red,
                       hintText: "Email",
-                      prefixIcon: Icon(Icons.lock,color: Colors.blueGrey[900]),
+                      prefixIcon: Icon(Icons.mail,color: Colors.blueGrey[900]),
                       fillColor: Colors.grey[200]),
                   controller: email,
                 ),

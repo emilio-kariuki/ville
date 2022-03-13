@@ -56,6 +56,7 @@ class _OverviewState extends State<Overview> {
                 },
               ),
             ),
+            SizedBox(height:5),
             SizedBox(
               height: size.height * 0.06,
               width: size.width * 0.7,

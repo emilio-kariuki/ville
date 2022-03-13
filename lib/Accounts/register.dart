@@ -42,9 +42,9 @@ class _RegisterState extends State<Register> {
                       )),
                 ),
                 Positioned(
-                  top: size.height * 0.2,
-                  right: size.width * 0.15,
-                  child: Text("Login",
+                  top: size.height * 0.23,
+                  right: size.width * 0.1,
+                  child: Text("Register",
                       style: GoogleFonts.roboto(
                           fontSize: 30,
                           color: Color.fromARGB(255, 255, 255, 255),

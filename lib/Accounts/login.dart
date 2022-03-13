@@ -39,11 +39,11 @@ class _LoginState extends State<Login> {
                       )),
                 ),
                 Positioned(
-                  top: size.height * 0.2,
-                  right: size.width * 0.15,
+                  top: size.height * 0.23,
+                  right: size.width * 0.1,
                   child: Text("Login",
                       style: GoogleFonts.roboto(
-                          fontSize: 28,
+                          fontSize: 30,
                           color: Color.fromARGB(255, 255, 255, 255),
                           fontWeight: FontWeight.w500)),
                 ),

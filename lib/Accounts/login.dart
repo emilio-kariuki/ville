@@ -135,7 +135,7 @@ class _LoginState extends State<Login> {
                             }
                             ScaffoldMessenger.of(context)
                                 .showSnackBar(SnackBar(
-                              content: Text("Account created "),
+                              content: Text("Signed in "),
                               backgroundColor: Colors.blue[900],duration: Duration(milliseconds: 500),
                             ));
                           }

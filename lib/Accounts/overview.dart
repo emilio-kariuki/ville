@@ -52,7 +52,7 @@ class _OverviewState extends State<Overview> {
           ),
           SizedBox(height: size.height*0.01),
           SvgPicture.asset('assets/images/chat.svg',height: size.height*0.24),
-
+          SizedBox(height: size.height*0.01),
           SizedBox(
             height: size.height * 0.06,
             width: size.width * 0.7,

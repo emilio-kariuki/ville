@@ -7,14 +7,14 @@ import 'package:ville/build/Icon_build.dart';
 import 'package:ville/build/social.dart';
 import 'package:ville/constants/constants.dart';
 
-class Overview extends StatefulWidget {
-  const Overview({Key? key}) : super(key: key);
+class Login extends StatefulWidget {
+  const Login({Key? key}) : super(key: key);
 
   @override
-  State<Overview> createState() => _OverviewState();
+  State<Login> createState() => _LoginState();
 }
 
-class _OverviewState extends State<Overview> {
+class _LoginState extends State<Login> {
   final email = TextEditingController();
   final password = TextEditingController();
   @override
@@ -36,9 +36,9 @@ class _OverviewState extends State<Overview> {
                     )),
               ),
               Positioned(
-                top: size.height * 0.2,
-                right: size.width * 0.39,
-                child: Text("EcoVille",
+                top: size.height * 0.3,
+                right: size.width * 0.1,
+                child: Text("Login",
                     style: GoogleFonts.roboto(
                         fontSize: 28,
                         color: Color.fromARGB(255, 255, 255, 255),
@@ -58,27 +58,24 @@ class _OverviewState extends State<Overview> {
           SvgPicture.asset('assets/images/chat.svg',
               height: size.height * 0.24),
           SizedBox(height: size.height * 0.01),
-          SizedBox(
-            height: size.height * 0.06,
-            width: size.width * 0.7,
-            child: ElevatedButton(
-              style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(kGreen),
-                // MaterialStateProperty<Color?>?
-                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                  RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30.0),
-                    side: BorderSide(
-                      color: kGreen,
-                      width: 2.0,
-                    ),
-                  ),
+           Padding(
+                padding: const EdgeInsets.fromLTRB(30, 1, 30, 0),
+                child: TextFormField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(30.0),
+                      ),
+                      // icon: Icon(Icons.mail,size:30,color: Colors.black),
+                      filled: true,
+                      hintStyle: TextStyle(color: Colors.grey[800]),
+                      hoverColor: Colors.red,
+                      hintText: "password",
+                      prefixIcon: Icon(Icons.lock,color: Colors.blueGrey[900]),
+                      fillColor: Colors.grey[200]),
+                  controller: email,
                 ),
               ),
-              child: Text('Login', style: GoogleFonts.roboto(fontSize: 20)),
-              onPressed: () {},
-            ),
-          ),
           SizedBox(height: 5),
           Padding(
             padding: const EdgeInsets.fromLTRB(30, 1, 30, 0),

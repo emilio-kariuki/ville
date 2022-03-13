@@ -19,16 +19,16 @@ class _OverviewState extends State<Overview> {
         child: Column(
           // ignore: prefer_const_literals_to_create_immutables
           children: [
-            Container(
-              height:size.height * 0.4,
-              width:size.width,
-              decoration:BoxDecoration(
-                color:kGreen,
-
-              )
+            ClipPath(
+              clipper: MyClipper(),
+              child: Container(
+                  height: size.height * 0.4,
+                  width: size.width,
+                  decoration: BoxDecoration(
+                    color: kGreen,
+                  )),
             )
-            
-           
+
             // Row(
             //   mainAxisAlignment: MainAxisAlignment.center,
             //   children: [
@@ -38,10 +38,10 @@ class _OverviewState extends State<Overview> {
             //             fontSize: 25,
             //             color: Color.fromARGB(255, 17, 17, 17),
             //             fontWeight: FontWeight.w500)),
-                
+
             //   ],
             // ),
-           
+
             // SizedBox(
             //   height: size.height * 0.06,
             //   width: size.width * 0.7,
@@ -97,5 +97,24 @@ class _OverviewState extends State<Overview> {
         ),
       ),
     );
+  }
+}
+
+class MyClipper extends CustomClipper<Path> {
+  @override
+  Path getClip(Size size) {
+    var path = Path();
+    path.lineTo(0, size.height - 50);
+    var controllPoint = Offset(50, size.height);
+    var endPoint = Offset(size.width / 2, size.height);
+    path.quadraticBezierTo(
+        controllPoint.dx, controllPoint.dy, endPoint.dx, endPoint.dy);
+    return path;
+    throw UnimplementedError();
+  }
+
+  @override
+  bool shouldReclip(covariant CustomClipper<Path> oldClipper) {
+    throw UnimplementedError();
   }
 }

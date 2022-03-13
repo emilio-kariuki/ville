@@ -56,7 +56,7 @@ class _LoginState extends State<Login> {
           ),
           SizedBox(height: size.height * 0.01),
           SvgPicture.asset('assets/images/login.svg',
-              height: size.height * 0.24),
+              height: size.height * 0.16),
           SizedBox(height: size.height * 0.01),
            Padding(
                 padding: const EdgeInsets.fromLTRB(30, 1, 30, 0),

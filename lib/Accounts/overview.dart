@@ -30,20 +30,13 @@ class _OverviewState extends State<Overview> {
                 )),
           ),
            Positioned(
-            bottom: 1,
-            right:5,
-            child:Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              // IconBuild(iconUrl: "assets/images/pin.png"),
-              Text("EcoVille",
-                  style: GoogleFonts.roboto(
-                      fontSize: 25,
-                      color: Color.fromARGB(255, 255, 255, 255),
-                      fontWeight: FontWeight.w500)),
-
-            ],
-          ),
+            top: 30,
+            right:size.width * 0.4,
+            child:Text("EcoVille",
+                style: GoogleFonts.roboto(
+                    fontSize: 25,
+                    color: Color.fromARGB(255, 255, 255, 255),
+                    fontWeight: FontWeight.w500)),
           ),
           Positioned(
             bottom: 1,

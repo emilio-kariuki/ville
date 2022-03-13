@@ -19,7 +19,9 @@ class _OverviewState extends State<Overview> {
         child: Column(
           // ignore: prefer_const_literals_to_create_immutables
           children: [
-            ClipPath(
+            Stack(
+              children: [
+              ClipPath(
               clipper: MyClipper(),
               child: Container(
                   height: size.height * 0.4,
@@ -27,6 +29,16 @@ class _OverviewState extends State<Overview> {
                   decoration: BoxDecoration(
                     color: kGreen,
                   )),
+            ),
+            Positioned(
+              bottom: 5,
+              right:5,
+              child:Image.asset('assets/images/walking.png'),
+            )
+            ],
+            // Positioned(
+            //   child: ,
+            // ),
             )
 
             // Row(

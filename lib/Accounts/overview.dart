@@ -95,7 +95,7 @@ class _OverviewState extends State<Overview> {
                   ),
                 ),
               ),
-              child: Text('SignUp',
+              child: Text('Register',
                   style: GoogleFonts.roboto(fontSize: 20)),
               onPressed: (){
               },

@@ -30,7 +30,7 @@ class _OverviewState extends State<Overview> {
                 )),
           ),
            Positioned(
-            top: size.height * 0.09,
+            top: size.height * 0.2,
             right:size.width * 0.4,
             child:Text("EcoVille",
                 style: GoogleFonts.roboto(
@@ -38,11 +38,11 @@ class _OverviewState extends State<Overview> {
                     color: Color.fromARGB(255, 255, 255, 255),
                     fontWeight: FontWeight.w500)),
           ),
-          Positioned(
-            bottom: 1,
-            right:20,
-            child:Image.asset('assets/images/walking.png',height:size.height * 0.26),
-          )
+          // Positioned(
+          //   bottom: 1,
+          //   right:20,
+          //   child:Image.asset('assets/images/walking.png',height:size.height * 0.26),
+          // )
           ],
           // Positioned(
           //   child: ,

@@ -4,6 +4,7 @@ import "package:flutter/material.dart";
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ville/Accounts/login.dart';
+import 'package:ville/Accounts/register.dart';
 import 'package:ville/build/Icon_build.dart';
 import 'package:ville/build/social.dart';
 import 'package:ville/constants/constants.dart';
@@ -76,7 +77,10 @@ class _OverviewState extends State<Overview> {
               ),
               child: Text('Login', style: GoogleFonts.roboto(fontSize: 20)),
               onPressed: () {
-                Login();
+                setState(() {
+                  Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(builder: (context) => Login()));
+                });
               },
             ),
           ),
@@ -99,7 +103,12 @@ class _OverviewState extends State<Overview> {
                 ),
               ),
               child: Text('Register', style: GoogleFonts.roboto(fontSize: 20)),
-              onPressed: () {},
+              onPressed: () {
+                setState(() {
+                  Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(builder: (context) => Register()));
+                });
+              },
             ),
           ),
           Row(children: [

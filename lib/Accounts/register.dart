@@ -11,14 +11,14 @@ import 'package:ville/build/social.dart';
 import 'package:ville/constants/constants.dart';
 import 'package:firebase_core/firebase_core.dart';
 
-class Login extends StatefulWidget {
-  const Login({Key? key}) : super(key: key);
+class Register extends StatefulWidget {
+  const Register({Key? key}) : super(key: key);
 
   @override
-  State<Login> createState() => _LoginState();
+  State<Register> createState() => _RegisterState();
 }
 
-class _LoginState extends State<Login> {
+class _RegisterState extends State<Register> {
   bool loading = false;
   final email = TextEditingController();
   final password = TextEditingController();

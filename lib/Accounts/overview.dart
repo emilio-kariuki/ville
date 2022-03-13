@@ -30,11 +30,11 @@ class _OverviewState extends State<Overview> {
                 )),
           ),
            Positioned(
-            top: 30,
+            top: size.height * 0.09,
             right:size.width * 0.4,
             child:Text("EcoVille",
                 style: GoogleFonts.roboto(
-                    fontSize: 25,
+                    fontSize: 28,
                     color: Color.fromARGB(255, 255, 255, 255),
                     fontWeight: FontWeight.w500)),
           ),
@@ -48,19 +48,6 @@ class _OverviewState extends State<Overview> {
           //   child: ,
           // ),
           )
-
-          // Row(
-          //   mainAxisAlignment: MainAxisAlignment.center,
-          //   children: [
-          //     // IconBuild(iconUrl: "assets/images/pin.png"),
-          //     Text("EcoVille",
-          //         style: GoogleFonts.roboto(
-          //             fontSize: 25,
-          //             color: Color.fromARGB(255, 17, 17, 17),
-          //             fontWeight: FontWeight.w500)),
-
-          //   ],
-          // ),
 
           // SizedBox(
           //   height: size.height * 0.06,

@@ -55,7 +55,7 @@ class _LoginState extends State<Login> {
             // ),
           ),
           SizedBox(height: size.height * 0.01),
-          SvgPicture.asset('assets/images/chat.svg',
+          SvgPicture.asset('assets/images/login.svg',
               height: size.height * 0.24),
           SizedBox(height: size.height * 0.01),
            Padding(

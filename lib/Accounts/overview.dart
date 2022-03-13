@@ -17,7 +17,7 @@ class _OverviewState extends State<Overview> {
       body: SafeArea(
         child: Column(
           children: [
-            SizedBox(height:10),
+            SizedBox(height:30),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -30,7 +30,9 @@ class _OverviewState extends State<Overview> {
                 
               ],
             ),
+            SizedBox(height:10),
             Image.asset('assets/images/over.jpg', width: size.width),
+            SizedBox(height:10),
             SizedBox(
               height: size.height * 0.06,
               width: size.width * 0.7,

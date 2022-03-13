@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 // import 'package:flutter_auth/constants.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:ville/constants/constants.dart';
 
 class SocalIcon extends StatelessWidget {
   final String iconSrc;
@@ -16,7 +17,7 @@ class SocalIcon extends StatelessWidget {
         decoration: BoxDecoration(
           border: Border.all(
             width: 2,
-            color: Colors.white,
+            color: kGreen,
           ),
           shape: BoxShape.circle,
         ),

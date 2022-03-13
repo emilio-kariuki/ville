@@ -101,6 +101,26 @@ class _OverviewState extends State<Overview> {
               },
             ),
           ),
+           Row(children: [
+                Expanded(
+                  // ignore: unnecessary_new
+                  child: Container(
+                      margin: const EdgeInsets.only(left: 10.0, right: 30.0),
+                      child: Divider(
+                        color: kGreen,
+                        height: 90,
+                      )),
+                ),
+                Text("OR"),
+                Expanded(
+                  child: Container(
+                      margin: const EdgeInsets.only(left: 30.0, right: 10.0),
+                      child: Divider(
+                        color: kGreen,
+                        height: 50,
+                      )),
+                ),
+              ]),
         ],
       ),
     );

@@ -65,6 +65,7 @@ class DisplayItems extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
+                              SizedBox(height:5),
                               Text(category,
                                   style: GoogleFonts.roboto(
                                       fontSize: 20,

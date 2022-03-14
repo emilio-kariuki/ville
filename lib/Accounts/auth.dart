@@ -21,6 +21,7 @@ class AuthService {
     } catch (e) {
       print(e);
     }
+    return null;
   }
 
     Future<User?> login(

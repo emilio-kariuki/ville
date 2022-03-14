@@ -68,13 +68,13 @@ class DisplayItems extends StatelessWidget {
                               SizedBox(height:5),
                               Text(category,
                                   style: GoogleFonts.roboto(
-                                      fontSize: 20,
+                                      fontSize:  MediaQuery.of(context).size.width * 0.05,
                                       color: Color.fromARGB(255, 7, 6, 12),
                                       fontWeight: FontWeight.w500)),
                               const SizedBox(height: 5),
                               Text(location,
                                   style: GoogleFonts.roboto(
-                                      fontSize: 22,
+                                      fontSize:  MediaQuery.of(context).size.width * 0.05,
                                       color: kGreen,
                                       fontWeight: FontWeight.w500)),
                               const SizedBox(height: 5),

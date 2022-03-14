@@ -67,7 +67,7 @@ class _PostState extends State<Post> {
     'Glass',
     'Organic',
 
-    
+
   ];
   String? selectedType;
   File? image;
@@ -252,21 +252,24 @@ class _PostState extends State<Post> {
           ),
           Padding(
             padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-            child: TextFormField(
-              maxLength: 15,
-              decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10.0),
-                  ),
-                  // icon: Icon(Icons.person,size:30,color: Colors.black),
-                  filled: true,
-                  hintStyle: TextStyle(color: Colors.grey[800]),
-                  focusColor: Colors.red,
-                  hintText: "Enter Location",
-                  // suffixText: "10",
-                  // prefixIcon: Icon(Icons.mail,color: Colors.blueGrey[900]),
-                  fillColor: Colors.grey[200]),
-              controller: title,
+            child: GestureDetector(
+              onTap: getPermission,
+              child: TextFormField(
+                maxLength: 15,
+                decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    // icon: Icon(Icons.person,size:30,color: Colors.black),
+                    filled: true,
+                    hintStyle: TextStyle(color: Colors.grey[800]),
+                    focusColor: Colors.red,
+                    hintText: "Enter Location",
+                    // suffixText: "10",
+                    // prefixIcon: Icon(Icons.mail,color: Colors.blueGrey[900]),
+                    fillColor: Colors.grey[200]),
+                controller: title,
+              ),
             ),
           ),
           Padding(

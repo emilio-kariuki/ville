@@ -62,7 +62,7 @@ class _IntroductionState extends State<Introduction> {
             PageViewModel(
               title: "Recycle",
               body: "We protect the environment though recycling the trash and maintaining a cleaner world.",
-              image: introImage('assets/images/doggie.png'),
+              image: introImage('assets/images/Doggie.png'),
               decoration: pageDecoration,
             ),
 

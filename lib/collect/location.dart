@@ -30,6 +30,7 @@ class _MapCollectState extends State<MapCollect> {
           //   ..add(Factory<VerticalDragGestureRecognizer>(
           //       () => VerticalDragGestureRecognizer())),
           mapType: MapType.hybrid,
+          myLocationButtonEnabled:true,
           myLocationEnabled: true,
           zoomControlsEnabled: false,
           zoomGesturesEnabled: true,

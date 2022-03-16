@@ -9,6 +9,7 @@ import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:location_permissions/location_permissions.dart';
+import 'package:ville/Screens/items.dart';
 import 'package:ville/build/build_icon.dart';
 import 'package:ville/constants/constants.dart';
 import 'package:geolocator/geolocator.dart' hide ServiceStatus;
@@ -403,7 +404,12 @@ class _PostState extends State<Post> {
                     borderRadius: BorderRadius.circular(10.0),
                   ), // Background color
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  setState((){
+                    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: ((context) => Items()))
+                    );
+                  });
+                },
                 child: Padding(
                   padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
                   child: Text("Post",

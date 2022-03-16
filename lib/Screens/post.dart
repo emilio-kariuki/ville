@@ -14,6 +14,12 @@ import 'package:ville/constants/constants.dart';
 import 'package:geolocator/geolocator.dart' hide ServiceStatus;
 import 'package:image_picker/image_picker.dart';
 
+class User {
+  double? longitude;
+  double? latitude;
+  User({required this.longitude, required this.latitude});
+}
+
 class Post extends StatefulWidget {
   Post({Key? key}) : super(key: key);
 
@@ -25,8 +31,6 @@ class _PostState extends State<Post> {
   GoogleMapController? newGoogleMapController;
   double? latitude;
   double? longitude;
-  double? lat;
-  double? long;
 
   // LatLng ltPosition = LatLng(latitude!, longitude!);
   getPermission() async {
@@ -43,10 +47,7 @@ class _PostState extends State<Post> {
     // print(locate.longitude);
     latitude = locate.latitude;
     longitude = locate.longitude;
-    lat = locate.latitude;
-    long = locate.longitude;
   }
-  
 
   getLocation() {
     getPermission().then((locate) {
@@ -66,8 +67,6 @@ class _PostState extends State<Post> {
     'Metal',
     'Glass',
     'Organic',
-
-
   ];
   String? selectedType;
   File? image;
@@ -95,7 +94,7 @@ class _PostState extends State<Post> {
     return Scaffold(
         // backgroundColor: Color.fromARGB(255, 245, 96, 10),
         body: ColorfulSafeArea(
-          overflowRules: OverflowRules.all(true),
+      overflowRules: OverflowRules.all(true),
       child: SingleChildScrollView(
         child: Column(children: [
           Padding(
@@ -253,7 +252,7 @@ class _PostState extends State<Post> {
           Padding(
             padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
             child: GestureDetector(
-              onTap: getPermission,
+              onTap: getLocation,
               child: TextFormField(
                 maxLength: 15,
                 decoration: InputDecoration(
@@ -397,23 +396,22 @@ class _PostState extends State<Post> {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
+                style: ElevatedButton.styleFrom(
                   fixedSize: Size(size.width * 0.4, size.height * 0.04),
                   primary: kGreen,
-                  shape:  RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10.0),
-                 ), // Background color
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                  ), // Background color
                 ),
-              onPressed:(){},
-              child: Padding(
-                    padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
-                    child: Text("Post",
-                        style: GoogleFonts.robotoCondensed(
-                            fontSize: 23,
-                            color: Color.fromARGB(255, 255, 255, 255),
-                            fontWeight: FontWeight.bold)),
-                  )
-            ),
+                onPressed: () {},
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
+                  child: Text("Post",
+                      style: GoogleFonts.robotoCondensed(
+                          fontSize: 23,
+                          color: Color.fromARGB(255, 255, 255, 255),
+                          fontWeight: FontWeight.bold)),
+                )),
           )
         ]),
       ),

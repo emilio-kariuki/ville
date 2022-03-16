@@ -130,9 +130,20 @@ class _RegisterState extends State<Register> {
                                         gravity: ToastGravity.TOP,
                                         timeInSecForIosWeb: 1,
                                         fontSize: 16.0);
-                                  } else if (email.text.isEmpty) {
+                                        var result = await AuthService().register(
+                                        email.text, password.text, context);
+                                        if (result != null) {
+                                          print("success");
+                                          print(result.email);
+                                        }
+                                        ScaffoldMessenger.of(context)
+                                            .showSnackBar(SnackBar(
+                                          content: Text("Account created "),
+                                          backgroundColor: Colors.blue[900],duration: Duration(milliseconds: 500),
+                                        ));
+                                  } else if (email.text.isEmpty && password.text.isEmpty) {
                                     Fluttertoast.showToast(
-                                        msg: 'Enter Email',
+                                        msg: 'Fields Empty',
                                         toastLength: Toast.LENGTH_SHORT,
                                         gravity: ToastGravity.TOP,
                                         timeInSecForIosWeb: 1,
@@ -145,31 +156,7 @@ class _RegisterState extends State<Register> {
                                         timeInSecForIosWeb: 1,
                                         fontSize: 16.0);
                                   }
-                                  if (email.text == "") {
-                                    ScaffoldMessenger.of(context)
-                                        .showSnackBar(SnackBar(
-                                      content: Text("email required"),
-                                      backgroundColor: Colors.red,duration: Duration(milliseconds: 500),
-                                    ));
-                                  } else if (password.text == "") {
-                                    ScaffoldMessenger.of(context)
-                                        .showSnackBar(SnackBar(
-                                      content: Text("password required"),
-                                      backgroundColor: Colors.red,duration: Duration(milliseconds: 500),
-                                    ));
-                                  } else {
-                                    var result = await AuthService().register(
-                                        email.text, password.text, context);
-                                    if (result != null) {
-                                      print("success");
-                                      print(result.email);
-                                    }
-                                    ScaffoldMessenger.of(context)
-                                        .showSnackBar(SnackBar(
-                                      content: Text("Account created "),
-                                      backgroundColor: Colors.blue[900],duration: Duration(milliseconds: 500),
-                                    ));
-                                  }
+
                                   setState(() {
                                     loading = false;
                                   });

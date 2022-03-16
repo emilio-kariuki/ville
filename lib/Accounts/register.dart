@@ -1,4 +1,4 @@
-// ignore_for_file: unused_import, deprecated_member_use
+// ignore_for_file: unused_import, deprecated_member_use, avoid_print
 
 // import 'package:firebase/firebase.dart';
 import 'package:email_validator/email_validator.dart';

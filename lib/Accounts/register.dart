@@ -1,15 +1,18 @@
 // ignore_for_file: unused_import, deprecated_member_use
 
 // import 'package:firebase/firebase.dart';
+import 'package:email_validator/email_validator.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import "package:flutter/material.dart";
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ville/Accounts/auth.dart';
 import 'package:ville/build/Icon_build.dart';
 import 'package:ville/build/social.dart';
 import 'package:ville/constants/constants.dart';
 import 'package:firebase_core/firebase_core.dart';
+
 
 class Register extends StatefulWidget {
   const Register({Key? key}) : super(key: key);
@@ -19,6 +22,7 @@ class Register extends StatefulWidget {
 }
 
 class _RegisterState extends State<Register> {
+  bool _isValid = false;
   bool loading = false;
   final email = TextEditingController();
   final password = TextEditingController();
@@ -118,6 +122,29 @@ class _RegisterState extends State<Register> {
                                   setState(() {
                                     loading = true;
                                   });
+                                  _isValid = EmailValidator.validate(email.text);
+                                  if (_isValid) {
+                                    Fluttertoast.showToast(
+                                        msg: "Valid Email",
+                                        toastLength: Toast.LENGTH_SHORT,
+                                        gravity: ToastGravity.TOP,
+                                        timeInSecForIosWeb: 1,
+                                        fontSize: 16.0);
+                                  } else if (email.text.isEmpty) {
+                                    Fluttertoast.showToast(
+                                        msg: 'Enter Email',
+                                        toastLength: Toast.LENGTH_SHORT,
+                                        gravity: ToastGravity.TOP,
+                                        timeInSecForIosWeb: 1,
+                                        fontSize: 16.0);
+                                  } else {
+                                    Fluttertoast.showToast(
+                                        msg: 'Enter a Valid Email',
+                                        toastLength: Toast.LENGTH_SHORT,
+                                        gravity: ToastGravity.TOP,
+                                        timeInSecForIosWeb: 1,
+                                        fontSize: 16.0);
+                                  }
                                   if (email.text == "") {
                                     ScaffoldMessenger.of(context)
                                         .showSnackBar(SnackBar(

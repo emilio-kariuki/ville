@@ -7,6 +7,8 @@ import 'package:ville/Accounts/auth.dart';
 import 'package:ville/build/Icon_build.dart';
 import 'package:ville/build/social.dart';
 import 'package:ville/constants/constants.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:email_validator/email_validator.dart';
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
@@ -16,6 +18,7 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+  bool _isValid = false;
   bool loading = false;
   final email = TextEditingController();
   final password = TextEditingController();
@@ -61,24 +64,24 @@ class _LoginState extends State<Login> {
             SvgPicture.asset('assets/images/login.svg',
                 height: size.height * 0.2),
             SizedBox(height: size.height * 0.01),
-             Padding(
-                  padding: const EdgeInsets.fromLTRB(30, 1, 30, 0),
-                  child: TextFormField(
-                    obscureText: false,
-                    decoration: InputDecoration(
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(30.0),
-                        ),
-                        // icon: Icon(Icons.mail,size:30,color: Colors.black),
-                        filled: true,
-                        hintStyle: TextStyle(color: Colors.grey[800]),
-                        hoverColor: Colors.red,
-                        hintText: "Email",
-                        prefixIcon: Icon(Icons.mail,color: Colors.blueGrey[900]),
-                        fillColor: Colors.grey[200]),
-                    controller: email,
-                  ),
-                ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(30, 1, 30, 0),
+              child: TextFormField(
+                obscureText: false,
+                decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(30.0),
+                    ),
+                    // icon: Icon(Icons.mail,size:30,color: Colors.black),
+                    filled: true,
+                    hintStyle: TextStyle(color: Colors.grey[800]),
+                    hoverColor: Colors.red,
+                    hintText: "Email",
+                    prefixIcon: Icon(Icons.mail, color: Colors.blueGrey[900]),
+                    fillColor: Colors.grey[200]),
+                controller: email,
+              ),
+            ),
             SizedBox(height: 5),
             Padding(
               padding: const EdgeInsets.fromLTRB(30, 1, 30, 0),
@@ -98,12 +101,12 @@ class _LoginState extends State<Login> {
                 controller: password,
               ),
             ),
-            SizedBox(height:10),
+            SizedBox(height: 10),
             loading
                 ? CircularProgressIndicator()
                 : Padding(
-                  padding: const EdgeInsets.only(top:20),
-                  child: Card(
+                    padding: const EdgeInsets.only(top: 20),
+                    child: Card(
                       shadowColor: Colors.green[900],
                       color: Colors.white,
                       // elevation: 5,
@@ -115,21 +118,46 @@ class _LoginState extends State<Login> {
                             setState(() {
                               loading = true;
                             });
+                            _isValid = EmailValidator.validate(email.text);
+                            if (_isValid) {
+                              Fluttertoast.showToast(
+                                  msg: "Valid Email",
+                                  toastLength: Toast.LENGTH_SHORT,
+                                  gravity: ToastGravity.TOP,
+                                  timeInSecForIosWeb: 1,
+                                  fontSize: 16.0);
+                            } else if (email.text.isEmpty) {
+                              Fluttertoast.showToast(
+                                  msg: 'Enter Email',
+                                  toastLength: Toast.LENGTH_SHORT,
+                                  gravity: ToastGravity.TOP,
+                                  timeInSecForIosWeb: 1,
+                                  fontSize: 16.0);
+                            } else {
+                              Fluttertoast.showToast(
+                                  msg: 'Enter a Valid Email',
+                                  toastLength: Toast.LENGTH_SHORT,
+                                  gravity: ToastGravity.TOP,
+                                  timeInSecForIosWeb: 1,
+                                  fontSize: 16.0);
+                            }
                             if (email.text == "") {
                               ScaffoldMessenger.of(context)
                                   .showSnackBar(SnackBar(
                                 content: Text("email required"),
-                                backgroundColor: Colors.red,duration: Duration(milliseconds: 500),
+                                backgroundColor: Colors.red,
+                                duration: Duration(milliseconds: 500),
                               ));
                             } else if (password.text == "") {
                               ScaffoldMessenger.of(context)
                                   .showSnackBar(SnackBar(
                                 content: Text("password required"),
-                                backgroundColor: Colors.red,duration: Duration(milliseconds: 500),
+                                backgroundColor: Colors.red,
+                                duration: Duration(milliseconds: 500),
                               ));
                             } else {
-                              var result = await AuthService().login(
-                                  email.text, password.text, context);
+                              var result = await AuthService()
+                                  .login(email.text, password.text, context);
                               if (result != null) {
                                 print("success");
                                 print(result.email);
@@ -137,7 +165,8 @@ class _LoginState extends State<Login> {
                               ScaffoldMessenger.of(context)
                                   .showSnackBar(SnackBar(
                                 content: Text("Signed in "),
-                                backgroundColor: Colors.blue[900],duration: Duration(milliseconds: 500),
+                                backgroundColor: Colors.blue[900],
+                                duration: Duration(milliseconds: 500),
                               ));
                             }
                             setState(() {
@@ -166,7 +195,7 @@ class _LoginState extends State<Login> {
                                     fontWeight: FontWeight.bold)),
                           )),
                     ),
-                ),
+                  ),
             Row(children: [
               Expanded(
                 // ignore: unnecessary_new

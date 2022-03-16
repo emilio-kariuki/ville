@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:ville/Tabs/metal.dart';
 import 'package:ville/Tabs/plastic.dart';
+import 'package:ville/collect/location.dart';
 import 'package:ville/constants/constants.dart';
 
 class Collect extends StatefulWidget {
@@ -103,8 +104,8 @@ class _CollectState extends State<Collect> {
                                     // ignore: prefer_const_literals_to_create_immutables
                                     children: [
                                       Plastic(),
-                                      Icon(Icons.directions_boat,color: kGreen)
-                                      
+                                      // Icon(Icons.directions_boat,color: kGreen)
+                                      MapCollect(),
                                     ],
                                   ),
                             ),

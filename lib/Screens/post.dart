@@ -14,6 +14,7 @@ import 'package:ville/build/build_icon.dart';
 import 'package:ville/constants/constants.dart';
 import 'package:geolocator/geolocator.dart' hide ServiceStatus;
 import 'package:image_picker/image_picker.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class User {
   double? longitude;
@@ -406,6 +407,7 @@ class _PostState extends State<Post> {
                 ),
                 onPressed: () {
                   setState((){
+                    
                     Navigator.of(context).pushReplacement(MaterialPageRoute(builder: ((context) => Items()))
                     );
                   });

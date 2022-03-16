@@ -53,6 +53,7 @@ dependencies:
   # firebase: ^9.0.2
   firebase_auth: ^3.3.10
   firebase_database: ^9.0.8
+  fluttertoast: ^8.0.9
 flutter_icons:
   adaptive_icon_background: "000000"
   android: true

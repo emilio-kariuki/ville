@@ -63,7 +63,7 @@ class _HomeState extends State<Home> {
         animationDuration: Duration(milliseconds: 400),
         backgroundColor: Colors.transparent,
         index: index,
-        height: 47,
+        height: 50,
         items: items,
         onTap: (newIndex) {
           setState(() {

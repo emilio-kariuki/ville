@@ -127,6 +127,7 @@ class _MappState extends State<Mapp> {
                 ),
               ),
               Positioned(
+                top: 35,
                   child: SearchInput(
                 hintText: "Choose Location",
                 textController: search,

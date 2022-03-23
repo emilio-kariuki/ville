@@ -61,7 +61,6 @@ class _MappState extends State<Mapp> {
   //         positionParam: LatLng(newMarkerPosition.latitude, newMarkerPosition.longitude));
   //   });
   // }
-   
 
   getLocation() {
     getPermission().then((locate) {
@@ -88,42 +87,46 @@ class _MappState extends State<Mapp> {
       extendBody: true,
       backgroundColor: Color.fromARGB(255, 0, 0, 0),
       body: ColorfulSafeArea(
-        // maintainBottomViewPadding: true,
-        // top:true,
-        overflowRules: OverflowRules.all(true),
-        child: GoogleMap(
-          // gestureRecognizers: Set()
-          //   ..add(Factory<PanGestureRecognizer>(() => PanGestureRecognizer()))
-          //   ..add(
-          //       Factory<ScaleGestureRecognizer>(() => ScaleGestureRecognizer()))
-          //   ..add(Factory<TapGestureRecognizer>(() => TapGestureRecognizer()))
-          //   ..add(Factory<VerticalDragGestureRecognizer>(
-          //       () => VerticalDragGestureRecognizer())),
-          mapType: MapType.hybrid,
-          myLocationEnabled: true,
-          zoomControlsEnabled: false,
-          zoomGesturesEnabled: true,
-          initialCameraPosition: _kGooglePlex,
-          onMapCreated: (GoogleMapController controller) {
-            _controller.complete(controller);
-            getLocation();
-          },
+          // maintainBottomViewPadding: true,
+          // top:true,
+          overflowRules: OverflowRules.all(true),
+          child: Stack(
+            children: [
+              GoogleMap(
+                // gestureRecognizers: Set()
+                //   ..add(Factory<PanGestureRecognizer>(() => PanGestureRecognizer()))
+                //   ..add(
+                //       Factory<ScaleGestureRecognizer>(() => ScaleGestureRecognizer()))
+                //   ..add(Factory<TapGestureRecognizer>(() => TapGestureRecognizer()))
+                //   ..add(Factory<VerticalDragGestureRecognizer>(
+                //       () => VerticalDragGestureRecognizer())),
+                mapType: MapType.hybrid,
+                myLocationEnabled: true,
+                zoomControlsEnabled: false,
+                zoomGesturesEnabled: true,
+                initialCameraPosition: _kGooglePlex,
+                onMapCreated: (GoogleMapController controller) {
+                  _controller.complete(controller);
+                  getLocation();
+                },
 
-          markers: Set<Marker>.of(
-          <Marker>[
-            Marker(
-              draggable: true,
-              markerId: MarkerId("1"),
-              position: LatLng(37.42796133580664, -122.085749655962),
-              icon: BitmapDescriptor.defaultMarker,
-              infoWindow: const InfoWindow(
-                title: 'location marker',
+                markers: Set<Marker>.of(
+                  <Marker>[
+                    Marker(
+                      draggable: true,
+                      markerId: MarkerId("1"),
+                      position: LatLng(37.42796133580664, -122.085749655962),
+                      icon: BitmapDescriptor.defaultMarker,
+                      infoWindow: const InfoWindow(
+                        title: 'location marker',
+                      ),
+                    )
+                  ],
+                ),
               ),
-            )
-          ],
-        ),
-        ),
-      ),
+              
+            ],
+          )),
     );
   }
 }

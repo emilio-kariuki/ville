@@ -20,6 +20,7 @@ import 'package:http/http.dart';
 // import 'package:permission_handler/permission_handler.dart';
 import 'package:location_permissions/location_permissions.dart';
 import 'package:colorful_safe_area/colorful_safe_area.dart';
+import 'package:ville/build/search.dart';
 
 class Mapp extends StatefulWidget {
   Mapp({Key? key}) : super(key: key);
@@ -29,6 +30,7 @@ class Mapp extends StatefulWidget {
 }
 
 class _MappState extends State<Mapp> {
+  final search = TextEditingController();
   Set<Marker> markers = {};
   GoogleMapController? newGoogleMapController;
   double? latitude;
@@ -124,7 +126,11 @@ class _MappState extends State<Mapp> {
                   ],
                 ),
               ),
-              
+              Positioned(
+                  child: SearchInput(
+                hintText: "Choose Location",
+                textController: search,
+              ))
             ],
           )),
     );

@@ -420,10 +420,10 @@ class _PostState extends State<Post> {
 
                   };
                   database.child('post').push().set(order).then((_) => print("data has been written")).catchError((e)=>print(e));
-                  setState(() {
-                    Navigator.of(context).pushReplacement(
-                        MaterialPageRoute(builder: ((context) => Items())));
-                  });
+                  // setState(() {
+                  //   Navigator.of(context).pushReplacement(
+                  //       MaterialPageRoute(builder: ((context) => Items())));
+                  // });
                 },
                 child: Padding(
                   padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),

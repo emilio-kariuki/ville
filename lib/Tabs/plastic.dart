@@ -40,7 +40,7 @@ class _PlasticState extends State<Plastic> {
                             location: order.location,
                           )));
                     }
-                    return const CircularProgressIndicator();
+                    return Center(child: const CircularProgressIndicator());
                   }
                 ),
               // DisplayItems(

@@ -94,6 +94,7 @@ class _PostState extends State<Post> {
   final description = TextEditingController();
   @override
   Widget build(BuildContext context) {
+    final post = database.child('post');
     final size = MediaQuery.of(context).size;
     return Scaffold(
         // backgroundColor: Color.fromARGB(255, 245, 96, 10),

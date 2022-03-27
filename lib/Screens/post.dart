@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, avoid_print
 
 import 'dart:io';
 import 'dart:async';
@@ -415,8 +415,11 @@ class _PostState extends State<Post> {
                     'description': description.text,
                     'title': title.text,
                     'location': location.text,
+                    'type': selectedType,
+                    'image': image?.path,
 
                   };
+                  database.child('post').push().set(order).then((_) => print("data has been written")).catchError((e)=>print(e));
                   setState(() {
                     Navigator.of(context).pushReplacement(
                         MaterialPageRoute(builder: ((context) => Items())));

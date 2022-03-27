@@ -92,6 +92,8 @@ class _PostState extends State<Post> {
 
   final title = TextEditingController();
   final description = TextEditingController();
+  final location = TextEditingController();
+  final type = TextEditingController();
   @override
   Widget build(BuildContext context) {
     final post = database.child('post');
@@ -272,7 +274,7 @@ class _PostState extends State<Post> {
                     // suffixText: "10",
                     // prefixIcon: Icon(Icons.mail,color: Colors.blueGrey[900]),
                     fillColor: Colors.grey[200]),
-                controller: title,
+                controller: location,
               ),
             ),
           ),
@@ -408,7 +410,13 @@ class _PostState extends State<Post> {
                     borderRadius: BorderRadius.circular(10.0),
                   ), // Background color
                 ),
-                onPressed: () {
+                onPressed: () async {
+                  final order = <String, dynamic>{
+                    'description': description.text,
+                    'title': title.text,
+                    'location': location.text,
+
+                  };
                   setState(() {
                     Navigator.of(context).pushReplacement(
                         MaterialPageRoute(builder: ((context) => Items())));

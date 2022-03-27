@@ -3,6 +3,8 @@
 import 'package:colorful_safe_area/colorful_safe_area.dart';
 import 'package:flutter/material.dart';
 import 'package:ville/Stream/data_stream.dart';
+import 'package:ville/build/build_diagrams_items.dart';
+import '../Accounts/overview.dart';
 import '../firebase.dart/post_model.dart';
 
 class Plastic extends StatefulWidget {
@@ -25,30 +27,32 @@ class _PlasticState extends State<Plastic> {
               StreamBuilder(
                   stream: DataStream().getPostStream(),
                   builder: (context, snapshot) {
-                    final datalist = <ListTile>[];
+                    final datalist = <DisplayItems>[];
                     if (snapshot.hasData) {
                       final myOrders = snapshot.data as List<PostModel>;
                       print(myOrders);
-                      datalist.addAll(myOrders.map((order) => ListTile(
-                            leading: Icon(Icons.person),
-                            title: Text(order.title),
-                            subtitle: Text(order.location),
+                      datalist.addAll(myOrders.map((order) => DisplayItems(
+                            func: () {},
+                            imageUrl: order.image,
+                            distance: 200,
+                            category: order.title,
+                            location: order.location,
                           )));
                     }
                     return Center(child: const CircularProgressIndicator());
                   }),
-              // DisplayItems(
-              //   func: () {
-              //     setState(() {
-              //       Navigator.of(context).push(
-              //           MaterialPageRoute(builder: (context) => Overview()));
-              //     });
-              //   },
-              //   category: "plastics",
-              //   imageUrl: 'assets/images/p2.jpg',
-              //   location: 'Chuka University,Chuka',
-              //   distance: 500,
-              // ),
+              DisplayItems(
+                func: () {
+                  setState(() {
+                    Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => Overview()));
+                  });
+                },
+                category: "plastics",
+                imageUrl: 'assets/images/p2.jpg',
+                location: 'Chuka University,Chuka',
+                distance: 500,
+              ),
               // DisplayItems(
               //   func: () {},
               //   category: "plastics",

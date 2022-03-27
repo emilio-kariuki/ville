@@ -29,16 +29,15 @@ class _PlasticState extends State<Plastic> {
               StreamBuilder(
                   stream: DataStream().getPostStream(),
                   builder: (context, snapshot) {
-                    final datalist = <DisplayItems>[];
+                    final datalist = <ListTile>[];
                     if (snapshot.hasData) {
                       final myOrders = snapshot.data as List<PostModel>;
                       print(myOrders);
-                      datalist.addAll(myOrders.map((order) => DisplayItems(
-                            func: () {},
-                            distance: 200,
-                            imageUrl: order.image,
-                            category: order.title,
-                            location: order.location,
+                      datalist.addAll(myOrders.map((order) => ListTile(
+                            
+                            leading: Icon(Icons.person),
+                            title: Text(order.title),
+                            subtitle: Text(order.location),
                           )));
                     }
                     return Center(child: const CircularProgressIndicator());

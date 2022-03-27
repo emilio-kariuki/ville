@@ -32,6 +32,7 @@ class _PlasticState extends State<Plastic> {
                     final datalist = <DisplayItems>[];
                     if (snapshot.hasData) {
                       final myOrders = snapshot.data as List<PostModel>;
+                      print(myOrders);
                       datalist.addAll(myOrders.map((order) => DisplayItems(
                             func: () {},
                             distance: 200,
@@ -41,8 +42,7 @@ class _PlasticState extends State<Plastic> {
                           )));
                     }
                     return Center(child: const CircularProgressIndicator());
-                  }
-                ),
+                  }),
               // DisplayItems(
               //   func: () {
               //     setState(() {

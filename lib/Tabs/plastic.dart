@@ -2,11 +2,7 @@
 
 import 'package:colorful_safe_area/colorful_safe_area.dart';
 import 'package:flutter/material.dart';
-import 'package:ville/Accounts/overview.dart';
 import 'package:ville/Stream/data_stream.dart';
-import 'package:ville/build/build_diagrams_items.dart';
-import 'package:ville/collect/collect.dart';
-
 import '../firebase.dart/post_model.dart';
 
 class Plastic extends StatefulWidget {
@@ -34,7 +30,6 @@ class _PlasticState extends State<Plastic> {
                       final myOrders = snapshot.data as List<PostModel>;
                       print(myOrders);
                       datalist.addAll(myOrders.map((order) => ListTile(
-                            
                             leading: Icon(Icons.person),
                             title: Text(order.title),
                             subtitle: Text(order.location),

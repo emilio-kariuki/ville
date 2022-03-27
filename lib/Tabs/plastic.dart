@@ -49,7 +49,7 @@ class _PlasticState extends State<Plastic> {
                   });
                 },
                 category: "plastics",
-                imageUrl: 'assets/images/p2.jpg',
+                imageUrl: 'assets/imagesd/p2.jpg',
                 location: 'Chuka University,Chuka',
                 distance: 500,
               ),

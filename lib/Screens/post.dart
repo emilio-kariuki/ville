@@ -4,6 +4,7 @@ import 'dart:io';
 import 'dart:async';
 import 'package:colorful_safe_area/colorful_safe_area.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
+import 'package:firebase_database/firebase_database.dart';
 import "package:flutter/material.dart";
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -30,6 +31,7 @@ class Post extends StatefulWidget {
 }
 
 class _PostState extends State<Post> {
+  final database = FirebaseDatabase.instance.ref();
   GoogleMapController? newGoogleMapController;
   double? latitude;
   double? longitude;
@@ -406,10 +408,9 @@ class _PostState extends State<Post> {
                   ), // Background color
                 ),
                 onPressed: () {
-                  setState((){
-                    
-                    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: ((context) => Items()))
-                    );
+                  setState(() {
+                    Navigator.of(context).pushReplacement(
+                        MaterialPageRoute(builder: ((context) => Items())));
                   });
                 },
                 child: Padding(

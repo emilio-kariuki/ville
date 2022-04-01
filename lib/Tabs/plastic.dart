@@ -17,11 +17,11 @@ class Plastic extends StatefulWidget {
 
 class _PlasticState extends State<Plastic> {
   final _database = FirebaseDatabase.instance.ref();
-  void readData(){
-    _database.once().then((DataSnapshot snapshot) async {
-      print('Data : ${snapshot.value}');
-    });
-  }
+  // void readData(){
+  //   _database.once().then((DataSnapshot snapshot) async {
+  //     print('Data : ${snapshot.value}');
+  //   });
+  // }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,23 +31,23 @@ class _PlasticState extends State<Plastic> {
           child: Column(
             // ignore: prefer_const_literals_to_create_immutables
             children: [
-              StreamBuilder(
-                  stream: DataStream().getPostStream(),
-                  builder: (context, snapshot) {
-                    final datalist = <DisplayItems>[];
-                    if (snapshot.hasData) {
-                      final myOrders = Map<String, dynamic>.from(snapshot.data!.value);
-                      print(myOrders);
-                      datalist.addAll(myOrders.map((order) => DisplayItems(
-                            func: () {},
-                            imageUrl: order.image,
-                            distance: 200,
-                            category: order.title,
-                            location: order.location,
-                          )));
-                    }
-                    return Center(child: const CircularProgressIndicator());
-                  }),
+              // StreamBuilder(
+              //     stream: DataStream().getPostStream(),
+              //     builder: (context, snapshot) {
+              //       final datalist = <DisplayItems>[];
+              //       if (snapshot.hasData) {
+              //         final myOrders = Map<String, dynamic>.from(snapshot.data!.value);
+              //         print(myOrders);
+              //         datalist.addAll(myOrders.map((order) => DisplayItems(
+              //               func: () {},
+              //               imageUrl: order.image,
+              //               distance: 200,
+              //               category: order.title,
+              //               location: order.location,
+              //             )));
+              //       }
+              //       return Center(child: const CircularProgressIndicator());
+              //     }),
               DisplayItems(
                 func: () {
                   setState(() {

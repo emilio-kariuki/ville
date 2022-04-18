@@ -5,11 +5,13 @@ import 'dart:async';
 import 'package:colorful_safe_area/colorful_safe_area.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:firebase_database/firebase_database.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import "package:flutter/material.dart";
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:location_permissions/location_permissions.dart';
+import 'package:path/path.dart';
 import 'package:ville/Screens/items.dart';
 import 'package:ville/build/build_icon.dart';
 import 'package:ville/constants/constants.dart';
@@ -35,6 +37,7 @@ class _PostState extends State<Post> {
   GoogleMapController? newGoogleMapController;
   double? latitude;
   double? longitude;
+  String? url;
 
   // LatLng ltPosition = LatLng(latitude!, longitude!);
   getPermission() async {
@@ -87,6 +90,34 @@ class _PostState extends State<Post> {
       });
     } on PlatformException catch (e) {
       print("Failed to pick image $e");
+    }
+  }
+
+  Future uploadFile() async {
+    if (image == null) return;
+    final fileName = basename(image!.path);
+    final destination = 'files/$fileName';
+
+    try {
+      FirebaseStorage storage = FirebaseStorage.instance;
+      Reference ref = storage.ref().child(fileName);
+      await ref.putFile(image!);
+
+      // final ref = FirebaseStorage.instance.ref(destination).child('file/');
+      // await ref.putFile(image!);
+      String imageUrl = await ref.getDownloadURL();
+      url = imageUrl;
+      print(imageUrl);
+      Fluttertoast.showToast(
+          backgroundColor: Color.fromARGB(255, 49, 202, 74),
+          msg: "Image uploaded Successfully!!",
+          toastLength: Toast.LENGTH_SHORT,
+          gravity: ToastGravity.TOP,
+          timeInSecForIosWeb: 1,
+          fontSize: 16.0);
+      print("File uploaded");
+    } catch (e) {
+      print('error occured $e');
     }
   }
 
@@ -417,9 +448,13 @@ class _PostState extends State<Post> {
                     'location': location.text,
                     'type': selectedType,
                     'image': image?.path,
-
                   };
-                  database.child('post').push().set(order).then((_) => print("data has been written")).catchError((e)=>print(e));
+                  database
+                      .child('post')
+                      .push()
+                      .set(order)
+                      .then((_) => print("data has been written"))
+                      .catchError((e) => print(e));
                   // setState(() {
                   //   Navigator.of(context).pushReplacement(
                   //       MaterialPageRoute(builder: ((context) => Items())));

@@ -45,42 +45,48 @@ class DisplayItems extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Container(
-                          height: size.height * 0.17,
-                          width: size.width,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.only(
-                                  topLeft: Radius.circular(20),
-                                  topRight: Radius.circular(20)),
-                              shape: BoxShape.rectangle,
-                              image: DecorationImage(
-                                image: NetworkImage(imageUrl),
-                                fit: BoxFit.cover,
-                              ))),
+                      Expanded(
+                        flex: 1,
+                        child: Container(
+                            height: size.height * 0.17,
+                            width: size.width,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.only(
+                                    topLeft: Radius.circular(20),
+                                    topRight: Radius.circular(20)),
+                                shape: BoxShape.rectangle,
+                                image: DecorationImage(
+                                  image: NetworkImage(imageUrl),
+                                  fit: BoxFit.cover,
+                                ))),
+                      ),
                       Padding(
                         padding: const EdgeInsets.only(left: 10, top: 8),
-                        child: Container(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              SizedBox(height:5),
-                              Text(category,
-                                  style: GoogleFonts.roboto(
-                                      fontSize:  MediaQuery.of(context).size.width * 0.05,
-                                      color: Color.fromARGB(255, 7, 6, 12),
-                                      fontWeight: FontWeight.w500)),
-                              const SizedBox(height: 5),
-                              Text(location,
-                                  style: GoogleFonts.roboto(
-                                      fontSize:  MediaQuery.of(context).size.width * 0.05,
-                                      color: kGreen,
-                                      fontWeight: FontWeight.w500)),
-                              const SizedBox(height: 5),
-                              Text('$distance km',
-                                  style: GoogleFonts.roboto(
-                                      fontSize: 15, color: Colors.grey)),
-                            ],
+                        child: Expanded(
+                          flex: 1,
+                          child: Container(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                SizedBox(height:5),
+                                Text(category,
+                                    style: GoogleFonts.roboto(
+                                        fontSize:  MediaQuery.of(context).size.width * 0.05,
+                                        color: Color.fromARGB(255, 7, 6, 12),
+                                        fontWeight: FontWeight.w500)),
+                                const SizedBox(height: 5),
+                                Text(location,
+                                    style: GoogleFonts.roboto(
+                                        fontSize:  MediaQuery.of(context).size.width * 0.05,
+                                        color: kGreen,
+                                        fontWeight: FontWeight.w500)),
+                                const SizedBox(height: 5),
+                                Text('$distance km',
+                                    style: GoogleFonts.roboto(
+                                        fontSize: 15, color: Colors.grey)),
+                              ],
+                            ),
                           ),
                         ),
                       )

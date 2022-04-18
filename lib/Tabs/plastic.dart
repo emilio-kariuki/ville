@@ -31,77 +31,17 @@ class _PlasticState extends State<Plastic> {
           child: Column(
             // ignore: prefer_const_literals_to_create_immutables
             children: [
-              // StreamBuilder(
-              //     stream: DataStream().getPostStream(),
-              //     builder: (context, snapshot) {
-              //       final datalist = <DisplayItems>[];
-              //       if (snapshot.hasData) {
-              //         final myOrders = Map<String, dynamic>.from(snapshot.data!.value);
-              //         print(myOrders);
-              //         datalist.addAll(myOrders.map((order) => DisplayItems(
-              //               func: () {},
-              //               imageUrl: order.image,
-              //               distance: 200,
-              //               category: order.title,
-              //               location: order.location,
-              //             )));
-              //       }
-              //       return Center(child: const CircularProgressIndicator());
-              //     }),
+              
               DisplayItems(
                 func: () {
-                  setState(() {
-                    Navigator.of(context).push(
-                        MaterialPageRoute(builder: (context) => Overview()));
-                  });
+
                 },
                 category: "plastics",
                 imageUrl: 'assets/imagesd/p2.jpg',
                 location: 'Chuka University,Chuka',
                 distance: 500,
               ),
-              DisplayItems(
-                func: () {},
-                category: "plastics",
-                imageUrl: 'assets/images/p3.jpg',
-                location: 'Kisii University,Kisii',
-                distance: 240,
-              ),
-              DisplayItems(
-                func: () {},
-                category: "plastics",
-                imageUrl: 'assets/images/p4.jpg',
-                location: 'Mt Kenya University,thika',
-                distance: 60,
-              ),
-              DisplayItems(
-                func: () {},
-                category: "plastics",
-                imageUrl: 'assets/images/p5.jpg',
-                location: 'University of Nairobi,Nairobi',
-                distance: 2000,
-              ),
-              DisplayItems(
-                func: () {},
-                category: "plastics",
-                imageUrl: 'assets/images/p3.jpg',
-                location: 'Multi Media University,Juja',
-                distance: 120,
-              ),
-              DisplayItems(
-                func: () {},
-                category: "plastics",
-                imageUrl: 'assets/images/p2.jpg',
-                location: 'Kiriri University,Nakuru',
-                distance: 670,
-              ),
-              DisplayItems(
-                func: () {},
-                category: "plastics",
-                imageUrl: 'assets/images/p1.jpg',
-                location: 'Kabarak University,Gilgil',
-                distance: 90,
-              ),
+              
             ],
           ),
         ),

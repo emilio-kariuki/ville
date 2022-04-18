@@ -29,7 +29,7 @@ class _PlasticState extends State<Plastic> {
       body: ColorfulSafeArea(
         overflowRules: OverflowRules.all(true),
         child: StreamBuilder<QuerySnapshot>(
-          stream: FirebaseFirestore.instance.collection('notes').snapshots(),
+          stream: FirebaseFirestore.instance.collection('users').snapshots(),
           builder:
               (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
             if (snapshot.hasError) {

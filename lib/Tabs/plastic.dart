@@ -28,44 +28,43 @@ class _PlasticState extends State<Plastic> {
     return Scaffold(
       body: ColorfulSafeArea(
         overflowRules: OverflowRules.all(true),
-        child: SingleChildScrollView(
-            child: Expanded(
+        child: Expanded(
           flex: 1,
           child: StreamBuilder<QuerySnapshot>(
-            stream: FirebaseFirestore.instance.collection('notes').snapshots(),
-            builder:
-                (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
-              if (snapshot.hasError) {
-                return const Text('Something went wrong');
-              }
+        stream: FirebaseFirestore.instance.collection('notes').snapshots(),
+        builder:
+            (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
+          if (snapshot.hasError) {
+            return const Text('Something went wrong');
+          }
 
-              if (snapshot.connectionState == ConnectionState.waiting) {
-                return const Center(
-                    child: CircularProgressIndicator(color: Colors.white));
-              }
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return const Center(
+                child: CircularProgressIndicator(color: Colors.white));
+          }
 
-              final data = snapshot.requireData;
+          final data = snapshot.requireData;
 
-              return ListView.builder(
-                itemCount: data.size,
-                itemBuilder: (context, index) {
-                  // return DisplayItems(
-                  //   func: () {},
-                  //   category: "${data.docs[index]['type']}",
-                  //   imageUrl: '${data.docs[index]['url']}',
-                  //   location: '${data.docs[index]['location']}',
-                  //   distance: 500,
-                  // );
-                  return Card(
-                      child: Column(
-                    children: [
-                      Text("${data.docs[index]['type']}")],
-                  ));
-                },
-              );
+          return ListView.builder(
+            itemCount: data.size,
+            itemBuilder: (context, index) {
+              // return DisplayItems(
+              //   func: () {},
+              //   category: "${data.docs[index]['type']}",
+              //   imageUrl: '${data.docs[index]['url']}',
+              //   location: '${data.docs[index]['location']}',
+              //   distance: 500,
+              // );
+              return Card(
+                  child: Column(
+                children: [
+                  Text("${data.docs[index]['type']}")],
+              ));
             },
+          );
+        },
           ),
-        )),
+        ),
       ),
     );
   }

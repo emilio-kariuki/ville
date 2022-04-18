@@ -29,36 +29,35 @@ class _PlasticState extends State<Plastic> {
       body: ColorfulSafeArea(
         overflowRules: OverflowRules.all(true),
         child: StreamBuilder<QuerySnapshot>(
-        stream: FirebaseFirestore.instance.collection('notes').snapshots(),
-        builder:
-            (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
-          if (snapshot.hasError) {
-            return const Text('Something went wrong');
-          }
+          stream: FirebaseFirestore.instance.collection('notes').snapshots(),
+          builder:
+              (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
+            if (snapshot.hasError) {
+              return const Text('Something went wrong');
+            }
 
-          if (snapshot.connectionState == ConnectionState.waiting) {
-            return const Center(
-                child: CircularProgressIndicator(color: Colors.white));
-          }
+            if (snapshot.connectionState == ConnectionState.waiting) {
+              return const Center(
+                  child: CircularProgressIndicator(color: Colors.white));
+            }
 
-          final data = snapshot.requireData;
+            final data = snapshot.requireData;
+            print(data.docs);
 
-          return ListView.builder(
-            itemCount: data.size,
-            itemBuilder: (context, index) {
-              return DisplayItems(
-                func: () {},
-                category: "${data.docs[index]['type']}",
-                imageUrl: '${data.docs[index]['url']}',
-                location: '${data.docs[index]['location']}',
-                distance: 500,
-              );
-              
-            },
-          );
-        },
-          ),
-        
+            return ListView.builder(
+              itemCount: data.size,
+              itemBuilder: (context, index) {
+                return DisplayItems(
+                  func: () {},
+                  category: "${data.docs[index]['type']}",
+                  imageUrl: '${data.docs[index]['url']}',
+                  location: '${data.docs[index]['location']}',
+                  distance: 500,
+                );
+              },
+            );
+          },
+        ),
       ),
     );
   }

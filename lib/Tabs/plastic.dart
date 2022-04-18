@@ -49,13 +49,18 @@ class _PlasticState extends State<Plastic> {
               return ListView.builder(
                 itemCount: data.size,
                 itemBuilder: (context, index) {
-                  return DisplayItems(
-                    func: () {},
-                    category: "${data.docs[index]['type']}",
-                    imageUrl: '${data.docs[index]['url']}',
-                    location: '${data.docs[index]['location']}',
-                    distance: 500,
-                  );
+                  // return DisplayItems(
+                  //   func: () {},
+                  //   category: "${data.docs[index]['type']}",
+                  //   imageUrl: '${data.docs[index]['url']}',
+                  //   location: '${data.docs[index]['location']}',
+                  //   distance: 500,
+                  // );
+                  return Card(
+                      child: Column(
+                    children: [
+                      Text("${data.docs[index]['type']}")],
+                  ));
                 },
               );
             },

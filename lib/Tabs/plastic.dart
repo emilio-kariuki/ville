@@ -31,17 +31,13 @@ class _PlasticState extends State<Plastic> {
           child: Column(
             // ignore: prefer_const_literals_to_create_immutables
             children: [
-              
               DisplayItems(
-                func: () {
-
-                },
+                func: () {},
                 category: "plastics",
                 imageUrl: 'assets/imagesd/p2.jpg',
                 location: 'Chuka University,Chuka',
                 distance: 500,
               ),
-              
             ],
           ),
         ),

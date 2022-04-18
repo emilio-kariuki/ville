@@ -82,9 +82,12 @@ class DisplayItems extends StatelessWidget {
                                         color: kGreen,
                                         fontWeight: FontWeight.w500)),
                                 const SizedBox(height: 5),
-                                Text('$distance km',
-                                    style: GoogleFonts.roboto(
-                                        fontSize: 15, color: Colors.grey)),
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 5, bottom: 5),
+                                  child: Text('$distance km',
+                                      style: GoogleFonts.roboto(
+                                          fontSize: 15, color: Colors.grey)),
+                                ),
                               ],
                             ),
                           ),

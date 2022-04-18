@@ -40,30 +40,30 @@ class _PostState extends State<Post> {
   double? longitude;
   String? url;
 
-  // getPermission() async {
-  //   PermissionStatus permission =
-  //       await LocationPermissions().requestPermissions();
-  //   ServiceStatus serviceStatus =
-  //       await LocationPermissions().checkServiceStatus();
-  //   // bool isOpened = await LocationPermissions().openAppSettings();
-  //   bool isShown =
-  //       await LocationPermissions().shouldShowRequestPermissionRationale();
-  //   var locate = await Geolocator.getCurrentPosition(
-  //     desiredAccuracy: LocationAccuracy.best,
-  //   );
-  //   latitude = locate.latitude;
-  //   longitude = locate.longitude;
-  // }
+  getPermission() async {
+    PermissionStatus permission =
+        await LocationPermissions().requestPermissions();
+    ServiceStatus serviceStatus =
+        await LocationPermissions().checkServiceStatus();
+    // bool isOpened = await LocationPermissions().openAppSettings();
+    bool isShown =
+        await LocationPermissions().shouldShowRequestPermissionRationale();
+    var locate = await Geolocator.getCurrentPosition(
+      desiredAccuracy: LocationAccuracy.best,
+    );
+    latitude = locate.latitude;
+    longitude = locate.longitude;
+  }
 
-  // getLocation() {
-  //   getPermission().then((locate) {
-  //     LatLng ltPosition = LatLng(latitude!, longitude!);
-  //     CameraPosition cameraPosition =
-  //         CameraPosition(target: ltPosition, zoom: 10);
-  //     newGoogleMapController
-  //         ?.animateCamera(CameraUpdate.newCameraPosition(cameraPosition));
-  //   });
-  // }
+  getLocation() {
+    getPermission().then((locate) {
+      LatLng ltPosition = LatLng(latitude!, longitude!);
+      CameraPosition cameraPosition =
+          CameraPosition(target: ltPosition, zoom: 10);
+      newGoogleMapController
+          ?.animateCamera(CameraUpdate.newCameraPosition(cameraPosition));
+    });
+  }
 
   List<String> items = [
     'Plastic',
@@ -286,7 +286,7 @@ class _PostState extends State<Post> {
           Padding(
             padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
             child: GestureDetector(
-              onTap: Activity.getLocation(latitude,longitude),
+              onTap: getLocation,
               child: TextFormField(
                 maxLength: 15,
                 decoration: InputDecoration(

@@ -19,6 +19,7 @@ import 'package:ville/constants/constants.dart';
 import 'package:geolocator/geolocator.dart' hide ServiceStatus;
 import 'package:image_picker/image_picker.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class User {
   double? longitude;
@@ -438,23 +439,18 @@ class _PostState extends State<Post> {
                   ), // Background color
                 ),
                 onPressed: () async {
-                  final order = <String, dynamic>{
+                  
+                  CollectionReference users = FirebaseFirestore.instance.collection('users');
+                  users.add(
+                   {
                     'description': description.text,
                     'title': title.text,
                     'location': location.text,
                     'type': selectedType,
-                    'image': image?.path,
-                  };
-                  database
-                      .child('post')
-                      .push()
-                      .set(order)
-                      .then((_) => print("data has been written"))
-                      .catchError((e) => print(e));
-                  // setState(() {
-                  //   Navigator.of(context).pushReplacement(
-                  //       MaterialPageRoute(builder: ((context) => Items())));
-                  // });
+                    'image': url,
+                   }
+                  ).then(((value) => print("Saved")));
+                  
                 },
                 child: Padding(
                   padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),

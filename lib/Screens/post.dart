@@ -12,6 +12,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:location_permissions/location_permissions.dart';
 import 'package:path/path.dart';
+import 'package:ville/Activities/activities.dart';
 import 'package:ville/Screens/items.dart';
 import 'package:ville/build/build_icon.dart';
 import 'package:ville/constants/constants.dart';
@@ -39,35 +40,30 @@ class _PostState extends State<Post> {
   double? longitude;
   String? url;
 
-  // LatLng ltPosition = LatLng(latitude!, longitude!);
-  getPermission() async {
-    PermissionStatus permission =
-        await LocationPermissions().requestPermissions();
-    ServiceStatus serviceStatus =
-        await LocationPermissions().checkServiceStatus();
-    // bool isOpened = await LocationPermissions().openAppSettings();
-    bool isShown =
-        await LocationPermissions().shouldShowRequestPermissionRationale();
-    var locate = await Geolocator.getCurrentPosition(
-      desiredAccuracy: LocationAccuracy.best,
-    );
-    // print(locate.longitude);
-    latitude = locate.latitude;
-    longitude = locate.longitude;
-  }
+  // getPermission() async {
+  //   PermissionStatus permission =
+  //       await LocationPermissions().requestPermissions();
+  //   ServiceStatus serviceStatus =
+  //       await LocationPermissions().checkServiceStatus();
+  //   // bool isOpened = await LocationPermissions().openAppSettings();
+  //   bool isShown =
+  //       await LocationPermissions().shouldShowRequestPermissionRationale();
+  //   var locate = await Geolocator.getCurrentPosition(
+  //     desiredAccuracy: LocationAccuracy.best,
+  //   );
+  //   latitude = locate.latitude;
+  //   longitude = locate.longitude;
+  // }
 
-  getLocation() {
-    getPermission().then((locate) {
-      print(longitude);
-      print(latitude);
-      LatLng ltPosition = LatLng(latitude!, longitude!);
-      CameraPosition cameraPosition =
-          CameraPosition(target: ltPosition, zoom: 10);
-      // ignore: unused_local_variable
-      newGoogleMapController
-          ?.animateCamera(CameraUpdate.newCameraPosition(cameraPosition));
-    });
-  }
+  // getLocation() {
+  //   getPermission().then((locate) {
+  //     LatLng ltPosition = LatLng(latitude!, longitude!);
+  //     CameraPosition cameraPosition =
+  //         CameraPosition(target: ltPosition, zoom: 10);
+  //     newGoogleMapController
+  //         ?.animateCamera(CameraUpdate.newCameraPosition(cameraPosition));
+  //   });
+  // }
 
   List<String> items = [
     'Plastic',
@@ -290,7 +286,7 @@ class _PostState extends State<Post> {
           Padding(
             padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
             child: GestureDetector(
-              onTap: getLocation,
+              onTap: Activity.getLocation(latitude,longitude),
               child: TextFormField(
                 maxLength: 15,
                 decoration: InputDecoration(

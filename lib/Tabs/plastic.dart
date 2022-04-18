@@ -42,7 +42,7 @@ class _PlasticState extends State<Plastic> {
             }
 
             final data = snapshot.requireData;
-            print(data.docs);
+            // print(data.docs);
 
             return ListView.builder(
               itemCount: data.size,

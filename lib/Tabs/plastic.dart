@@ -50,7 +50,7 @@ class _PlasticState extends State<Plastic> {
                 return DisplayItems(
                   func: () {},
                   category: "${data.docs[index]['type']}",
-                  imageUrl: '${data.docs[index]['url']}',
+                  imageUrl: '${data.docs[index]['image']}',
                   location: '${data.docs[index]['location']}',
                   distance: 500,
                 );

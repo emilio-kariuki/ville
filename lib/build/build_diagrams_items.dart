@@ -54,7 +54,7 @@ class DisplayItems extends StatelessWidget {
                                   topRight: Radius.circular(20)),
                               shape: BoxShape.rectangle,
                               image: DecorationImage(
-                                image: AssetImage(imageUrl),
+                                image: NetworkImage(imageUrl),
                                 fit: BoxFit.cover,
                               ))),
                       Padding(

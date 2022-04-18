@@ -61,7 +61,7 @@ class DisplayItems extends StatelessWidget {
                                 ))),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 10, top: 8),
+                        padding: const EdgeInsets.only(left: 10, top: 3),
                         child: Expanded(
                           flex: 1,
                           child: Container(
@@ -83,7 +83,7 @@ class DisplayItems extends StatelessWidget {
                                         fontWeight: FontWeight.w500)),
                                 const SizedBox(height: 5),
                                 Padding(
-                                  padding: const EdgeInsets.only(top: 5, bottom: 5),
+                                  padding: const EdgeInsets.only(top: 2, bottom: 8),
                                   child: Text('$distance km',
                                       style: GoogleFonts.roboto(
                                           fontSize: 15, color: Colors.grey)),
